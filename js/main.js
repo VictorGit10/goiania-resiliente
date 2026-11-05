@@ -182,7 +182,7 @@
     });
     var aviso = el("div", "conv-aviso");
     aviso.appendChild(el("strong", null, "Mais perfis em breve"));
-    aviso.appendChild(el("p", null, "Os perfis dos demais convidados serão publicados assim que recebermos as minibios. Enquanto isso, veja todos os nomes na programação."));
+    aviso.appendChild(el("p", null, "Os perfis dos demais participantes serão publicados assim que recebermos as minibios. Enquanto isso, veja todos os nomes na programação."));
     var ir = el("a", "btn", "Ver programação ↑");
     ir.href = "#programacao";
     aviso.appendChild(ir);
