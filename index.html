@@ -1,0 +1,716 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Goiânia Resiliente — Enfrentando as mudanças climáticas nas áreas urbanas</title>
+<meta name="description" content="2ª edição do simpósio Goiânia Resiliente: da atmosfera à vulnerabilidade social. 25 e 26 de novembro, Auditório da ESA–OAB/GO, Goiânia.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Host+Grotesk:ital,wght@0,300..800;1,300..800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+
+<style id="estilos-novo-rodape">
+
+/* Hero: texto de apoio 2x maior (era 15px / max 340px) */
+.hero-sub { font-size: clamp(20px, 2.2vw, 30px); max-width: 680px; }
+
+/* Remove o texto provisório "Crédito editorial — imagem sem filtro..." */
+.foto-box .credito::before { content: none; }
+
+/* ============ NOVO FOOTER REESTRUTURADO (LINHA ÚNICA) ============ */
+footer {
+  background: var(--branco);
+  border-top: none;
+}
+footer .inner {
+  max-width: 1440px;
+  margin: 0 auto;
+}
+
+/* 1. Grid superior de informações */
+.foot-info-grid {
+  display: grid;
+  grid-template-columns: 1.3fr 1fr;
+  border-bottom: var(--borda-grossa);
+}
+.foot-info-grid > div {
+  padding: 36px 40px;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+.foot-info-grid > div + div {
+  border-left: var(--borda-grossa);
+  justify-content: space-between;
+}
+.foot-info-grid h2 {
+  font-size: clamp(26px, 3vw, 42px);
+  line-height: 1.05;
+}
+.foot-info-grid p.desc {
+  max-width: 58ch;
+  font-size: 15.5px;
+  line-height: 1.5;
+}
+.foot-local-box {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+.foot-local-box strong {
+  font-size: 16px;
+  font-weight: 800;
+  text-transform: uppercase;
+}
+.foot-local-box p {
+  font-size: 14px;
+}
+.foot-meta-links {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+  margin-top: 10px;
+  padding-top: 12px;
+  border-top: 1px solid var(--preto);
+}
+.btn-inscricao-mini {
+  display: inline-block;
+  background: var(--preto);
+  color: var(--amarelo);
+  font-size: 12px;
+  font-weight: 800;
+  text-transform: uppercase;
+  letter-spacing: .04em;
+  padding: 8px 16px;
+  text-decoration: none;
+  border: var(--borda);
+  transition: background-color .15s ease-out, color .15s ease-out;
+}
+.btn-inscricao-mini:hover {
+  background: var(--amarelo);
+  color: var(--preto);
+}
+
+/* 2. Faixa única com todos os logotipos na mesma linha */
+.foot-logos-strip {
+  padding: 32px 40px;
+  border-bottom: var(--borda);
+  background: var(--branco);
+}
+.foot-logos-row {
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
+  gap: 32px;
+  width: 100%;
+}
+.foot-logos-subgroup {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 14px;
+}
+.foot-logos-subgroup.realizadores {
+  flex: 1.45;
+}
+.foot-logos-subgroup.parcerias {
+  flex: 1;
+}
+.foot-kicker {
+  font-size: 13px;
+  font-weight: 800;
+  text-transform: uppercase;
+  letter-spacing: .06em;
+  color: var(--preto);
+  margin: 0;
+  padding: 0;
+}
+.foot-logos-items {
+  display: flex;
+  align-items: center;
+  gap: 28px;
+  flex-wrap: nowrap;
+}
+.foot-logos-items img {
+  max-height: 56px;
+  width: auto;
+  max-width: 170px;
+  object-fit: contain;
+  image-rendering: -webkit-optimize-contrast;
+  transition: transform .15s ease-out;
+}
+.foot-logos-items img:hover {
+  transform: scale(1.06);
+}
+.foot-logos-divider {
+  width: 2px;
+  height: 60px;
+  background: var(--preto);
+  flex-shrink: 0;
+  margin-bottom: 4px;
+}
+
+/* Equipe com 6 pessoas (3 colunas perfeitas) */
+.equipe-grid {
+  grid-template-columns: repeat(3, 1fr) !important;
+}
+
+/* 3. Responsividade */
+@media (max-width: 1240px) {
+  .foot-logos-row {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 24px;
+  }
+  .foot-logos-divider {
+    display: none;
+  }
+  .foot-logos-subgroup.realizadores,
+  .foot-logos-subgroup.parcerias {
+    width: 100%;
+  }
+  .foot-logos-items {
+    flex-wrap: wrap;
+    gap: 20px;
+  }
+  .equipe-grid {
+    grid-template-columns: repeat(2, 1fr) !important;
+  }
+}
+@media (max-width: 800px) {
+  .foot-info-grid {
+    grid-template-columns: 1fr;
+  }
+  .foot-info-grid > div {
+    padding: 24px 20px;
+  }
+  .foot-info-grid > div + div {
+    border-left: none;
+    border-top: var(--borda-grossa);
+  }
+  .foot-logos-strip {
+    padding: 24px 20px;
+  }
+  .foot-logos-items {
+    gap: 16px;
+  }
+  .equipe-grid {
+    grid-template-columns: 1fr !important;
+  }
+}
+
+</style>
+
+</head>
+<body>
+
+<header>
+  <div class="topbar">
+    <a class="brand" href="#inicio">
+      <span>Goiânia Resiliente<br>2ª edição</span>
+    </a>
+    <button class="toggle" id="menuToggle" aria-expanded="false" aria-controls="menu">Menu</button>
+    <nav class="menu" id="menu" aria-label="Navegação principal">
+      <a href="#inscricao" class="nav-inscricao">Inscrição (Grátis)</a>
+      <a href="#desafio">01. O Desafio</a>
+      <a href="#faces">02. Adaptação e Mitigação</a>
+      <a href="#goiania">03. E Goiânia?</a>
+      <a href="#programacao">04. Programação · 25–26 nov</a>
+      <a href="#quem-somos">05. Quem Somos</a>
+      <a href="#acervo">06. Acervo</a>
+    </nav>
+  </div>
+</header>
+
+<main>
+
+  <!-- ================= INSCRIÇÃO ================= -->
+  <section class="inscricao" id="inscricao">
+    <div class="inscricao-grid">
+      <div class="inscricao-info">
+        <span class="badge-gratuito">Inscrição 100% Gratuita · Vagas presenciais limitadas</span>
+        <h2>Garanta sua vaga na 2ª edição</h2>
+        <p>Participe do simpósio <strong>Goiânia Resiliente: da atmosfera à vulnerabilidade social</strong> nos dias <strong>25 e 26 de novembro</strong> no Auditório da ESA–OAB/GO. O evento é totalmente gratuito e aberto a cientistas, gestores públicos e toda a sociedade civil.</p>
+      </div>
+      <div class="inscricao-cta">
+        <a class="btn-inscricao" href="https://forms.gle/T5ER9YtRAucus4YP8" target="_blank" rel="noopener noreferrer">
+          Inscreva-se gratuitamente ↗
+        </a>
+        <p class="inscricao-obs">Credenciamento oficial · Emissão de certificado</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ================= HERO ================= -->
+  <section class="hero" id="inicio">
+    <div class="hero-grid">
+      <div class="hero-left">
+        <img class="logo-gr" src="assets/logo/lettering.svg" alt="Logo colorido Goiânia Resiliente">
+        <p class="hero-sub">Goiânia Resiliente — enfrentando as mudanças climáticas nas áreas urbanas</p>
+      </div>
+      <div class="hero-right">
+        <p class="kicker">2ª edição · Simpósio e debate público</p>
+        <h1>Da atmosfera à vulnerabilidade social.</h1>
+        <p>Congregando cientistas, gestores públicos, prefeitos e sociedade civil para formular estratégias de adaptação e mitigação climática nas cidades do Cerrado.</p>
+        <a class="btn" href="#programacao">Ver programação completa ↓</a>
+      </div>
+    </div>
+    <div class="info-strip">
+      <div>
+        <span class="label">Data do evento</span>
+        <strong>25 e 26 nov</strong>
+      </div>
+      <div>
+        <span class="label">Local presencial</span>
+        <strong>Auditório da Escola Superior de Advocacia</strong>
+        <p>ESA–OAB/GO · R. 101, 123 – Setor Sul, Goiânia/GO</p>
+      </div>
+    </div>
+        <figure class="hero-photo">
+      <img src="assets/img/hero-calor-pexels.jpg" alt="A cidade que já sente o novo clima — calor extremo e horizonte urbano" loading="eager">
+      <figcaption>A cidade que já sente o novo clima · Foto: <a href="https://www.pexels.com" target="_blank" rel="noopener">Pexels</a></figcaption>
+    </figure>
+  </section>
+
+  <!-- ================= 01 · O DESAFIO ================= -->
+  <section class="desafio" id="desafio">
+    <div class="sec-head">
+      <div class="num">01</div>
+      <div class="titles">
+        <span class="label">Contexto global e desigualdade</span>
+        <h2>Clima e vulnerabilidade humana.</h2>
+      </div>
+    </div>
+    <div class="desafio-body">
+      <div class="desafio-text">
+        <p>As mudanças climáticas são uma realidade, mas em cada região do planeta — e em lugares diferentes do Brasil — manifestam-se de maneiras distintas. A seca extrema na Amazônia e a tragédia das enchentes no Rio Grande do Sul, ambas em 2024, permanecem na memória recente. No Cerrado e na Amazônia, as secas prolongadas multiplicam as queimadas e impactam a saúde humana por meio da poluição do ar.</p>
+        <p>Desde o final do século XIX, a temperatura média da Terra aumentou aproximadamente 1,2&nbsp;°C. Projeções indicam que, se as emissões de gases de efeito estufa continuarem no ritmo atual, o nível do mar pode subir de 0,26 a 0,77 metros até o final do século.</p>
+        <p>Mas as mudanças climáticas não são somente um problema da natureza. Esses impactos afetam de maneira muito desigual as pessoas: são os mais socialmente vulneráveis os mais atingidos — seja por morarem em áreas de risco, por trabalharem expostos ao sol ou pelo menor acesso a serviços de saúde. Para responder, sobretudo em áreas urbanas, é preciso compreender como o clima e a vulnerabilidade se somam e interagem.</p>
+      </div>
+      <div class="foto-box">
+        <img src="assets/img/desafio-fumaca.jpg" alt="Colunas de fumaça de queimadas no horizonte do Cerrado" loading="lazy">
+        <p class="credito">Queimadas e aumento da poluição do ar na seca estão entre os impactos no Cerrado</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ================= 02 · ADAPTAÇÃO E MITIGAÇÃO ================= -->
+  <section class="faces" id="faces">
+    <div class="sec-head">
+      <div class="num">02</div>
+      <div class="titles">
+        <span class="label">Duas faces da mesma agenda</span>
+        <h2>Adaptação e mitigação.</h2>
+      </div>
+    </div>
+    <div class="faces-grid">
+      <article class="face">
+        <span class="kicker">Horizonte e compromisso global</span>
+        <h3>O que é mitigação?</h3>
+        <p>É tudo o que fazemos para reduzir as causas da crise climática: cortar emissões de gases de efeito estufa e proteger ou ampliar o que absorve carbono, como florestas e vegetação nativa. Na cidade, isso passa por transporte coletivo e ativo, eficiência energética, gestão de resíduos e matriz elétrica limpa. Seu efeito é global: ninguém sente na pele, em seu bairro, o resultado do que fez.</p>
+        <img src="assets/img/mitigacao-transporte.jpg" alt="Corredor de ônibus com árvores na calçada" loading="lazy">
+      </article>
+      <article class="face">
+        <span class="kicker">Porta de entrada e mobilização local</span>
+        <h3>O que é adaptação?</h3>
+        <p>É preparar territórios e pessoas para os efeitos que já estão aqui e os que ainda virão: calor extremo, chuvas intensas, alagamentos, estiagens longas, queimadas, crise hídrica. Na cidade, são arborização, drenagem, áreas permeáveis, proteção de nascentes e fundos de vale, alertas precoces, defesa civil e saúde preparada para o calor. Seu efeito é local e muitas vezes visível em meses ou poucos anos.</p>
+        <img src="assets/img/adaptacao-alagamento.jpg" alt="Rua alagada após chuva forte, moradores atravessando a água" loading="lazy">
+      </article>
+    </div>
+    <div class="quote">
+      <blockquote>“Quem já viveu um alagamento não precisa ser convencido de que o clima mudou; precisa saber o que a cidade vai fazer a respeito.”</blockquote>
+    </div>
+    <details class="expla">
+      <summary>Por que dar mais destaque à adaptação?</summary>
+      <div class="expla-body">
+        <p>Durante décadas, o debate climático foi dominado pela mitigação — e por boas razões: sem cortar emissões, o problema só cresce. Mas há um efeito colateral. Mitigação é, por natureza, uma tarefa coletiva e planetária. Quando a conversa começa por toneladas de carbono, metas de 2050 e negociações entre países, a maioria das pessoas se sente espectadora de um problema grande demais e distante demais. O resultado é desengajamento.</p>
+        <p>A adaptação inverte essa lógica. Ela fala de rua, bairro, córrego, escola, posto de saúde. Aqui, a pessoa enxerga o problema, reconhece o território e consegue cobrar uma solução com prazo, endereço e responsável. Isso faz da adaptação uma porta de entrada para a mobilização: é na defesa de um parque, de uma nascente ou de um bairro menos vulnerável que se constrói a base social necessária para qualquer política climática de longo prazo — inclusive a de mitigação.</p>
+      </div>
+    </details>
+    <details class="expla">
+      <summary>Sem opor uma à outra</summary>
+      <div class="expla-body">
+        <p>Dar destaque à adaptação não é abandonar a mitigação. Sem redução de emissões, os eventos extremos se intensificam e não há adaptação que acompanhe.</p>
+        <p>Além disso, muitas ações são complementares: árvores na cidade reduzem o calor (adaptação) e capturam carbono (mitigação); transporte coletivo de qualidade corta emissões e melhora a vida de quem mais sofre com a mobilidade. O desafio é de comunicação e de método: começar pelo que é próximo, tangível e mensurável, e mostrar que cada ação local também é uma contribuição ao esforço global.</p>
+        <p>Para Goiânia — e qualquer cidade — isso significa tratar a adaptação como a linguagem que aproxima a cidade da agenda climática, com a mitigação como horizonte e compromisso, não como ponto de partida.</p>
+      </div>
+    </details>
+  </section>
+
+  <!-- ================= 03 · E GOIÂNIA? ================= -->
+  <section class="goiania" id="goiania">
+    <div class="sec-head">
+      <div class="num">03</div>
+      <div class="titles">
+        <span class="label">A cidade e o novo clima</span>
+        <h2>E Goiânia?</h2>
+      </div>
+    </div>
+    <div class="goiania-body">
+      <p>Goiânia não está imune aos impactos das alterações climáticas, que afetam diretamente sua população, economia e ecossistemas. Ondas de calor, tempestades, alagamentos, enxurradas e a poluição do ar por queimadas já fazem parte do cotidiano da cidade — tudo isso no contexto das desigualdades sociais brasileiras, onde os mais vulneráveis também são os mais impactados.</p>
+      <p>O projeto Goiânia Resiliente tem por objetivo colocar a cidade na vanguarda das discussões e ações sobre mudanças climáticas, a partir da elaboração de estratégias e da realização de debates que congregam especialistas, empresários e gestores públicos para trocar experiências e formular respostas.</p>
+      <div class="goiania-fotos">
+        <figure>
+          <img src="assets/img/goiania-tempestade.jpg" alt="Tempestade intensa sobre o skyline de Goiânia" loading="lazy">
+          <figcaption>Eventos extremos como tempestades e ondas de calor já vêm afetando Goiânia</figcaption>
+        </figure>
+        <figure>
+          <img src="assets/img/goiania-calor-fumaca.jpg" alt="Sol alaranjado sobre o horizonte da cidade encoberto por fumaça e poluição" loading="lazy">
+          <figcaption>Ar poluído — queimadas no entorno do município</figcaption>
+        </figure>
+      </div>
+    </div>
+  </section>
+
+  <!-- ================= 04 · PROGRAMAÇÃO ================= -->
+  <section class="programacao" id="programacao">
+    <div class="sec-head">
+      <div class="num">04</div>
+      <div class="titles">
+        <span class="label">Agenda completa</span>
+        <h2>Programação · 2ª edição</h2>
+      </div>
+    </div>
+    <p class="prog-sub">25 e 26 de novembro · Auditório da Escola Superior de Advocacia (R. 101, 123, St. Sul, Goiânia)</p>
+
+    <div class="tabs" role="tablist" aria-label="Dias do evento">
+      <button class="tab dia1" id="tab-dia1" role="tab" aria-selected="true" aria-controls="painel-dia1">Dia 1 · 25 nov</button>
+      <button class="tab dia2" id="tab-dia2" role="tab" aria-selected="false" aria-controls="painel-dia2">Dia 2 · 26 nov</button>
+    </div>
+
+    <!-- DIA 1 -->
+    <div class="painel ativo" id="painel-dia1" role="tabpanel" aria-labelledby="tab-dia1">
+      <div class="sessao fixa"><div class="hora">8h30–9h</div><div class="conteudo">Credenciamento</div></div>
+      <div class="sessao">
+        <div class="hora">9h–9h30</div>
+        <div class="conteudo">
+          <details>
+            <summary>Abertura institucional <span class="seta">+</span></summary>
+            <div class="detalhe">
+              <div class="papel"><span class="label">Com</span><span>Zilma Peixoto (AMMA) · Karla Faria (CIAMB/UFG) · Paulo D’Ávila (IDESA) · Guilherme Franco Netto (Fiocruz Cerrados) · Manuel Ferreira (CEMPA-Cerrado/UFG) · Rodrigo Lustosa (OAB-GO) · Pedro Novaes (Iandé Verde e UFG)</span></div>
+            </div>
+          </details>
+        </div>
+      </div>
+      <div class="sessao">
+        <div class="hora">9h30–10h40</div>
+        <div class="conteudo">
+          <details>
+            <summary>As Cidades do Cerrado: ciência para entender o que muda debaixo dos nossos pés e sobre nossas cabeças <span class="seta">+</span></summary>
+            <div class="detalhe">
+              <div class="papel"><span class="label">Conferencista</span><span>Carlos Gurjão (CEMPA/UFG)</span></div>
+              <div class="papel"><span class="label">Debatedores</span><span>Celene Cunha (IESA/UFG) · João Batista de Deus (IESA/UFG)</span></div>
+              <div class="papel"><span class="label">Mediação</span><span>Pedro Novaes (UFG e Iandé Verde)</span></div>
+            </div>
+          </details>
+        </div>
+      </div>
+      <div class="sessao fixa"><div class="hora">10h40–11h</div><div class="conteudo">Intervalo</div></div>
+      <div class="sessao">
+        <div class="hora">11h–12h15</div>
+        <div class="conteudo">
+          <details>
+            <summary>Goiânia: onde estamos? Projetos estruturantes para adaptação <span class="seta">+</span></summary>
+            <div class="detalhe">
+              <div class="papel"><span class="label">Participantes</span><span>Gabriel Tenaglia (AMMA) · Pedro Baima (AMMA)</span></div>
+              <div class="papel"><span class="label">Mediação</span><span>José Moraes Neto (OAB-GO)</span></div>
+            </div>
+          </details>
+        </div>
+      </div>
+      <div class="sessao fixa"><div class="hora">12h15–14h</div><div class="conteudo">Almoço</div></div>
+      <div class="sessao">
+        <div class="hora">14h–15h</div>
+        <div class="conteudo">
+          <details>
+            <summary>Quem decide e quem paga a conta do clima? Governança e articulação federativa <span class="seta">+</span></summary>
+            <div class="detalhe">
+              <div class="papel"><span class="label">Participantes</span><span>Carolina Azevedo Moulin (SEMAD-GO) · Dep. Antônio Gomide (Alego) · Danielle Oliveira (SECAP/Goiânia) · Pollyana Borges (SVMA/Aparecida de Goiânia)</span></div>
+              <div class="papel"><span class="label">Mediação</span><span>Thomaz Ramalho (IPPUC/Curitiba)</span></div>
+            </div>
+          </details>
+        </div>
+      </div>
+      <div class="sessao">
+        <div class="hora">15h–16h</div>
+        <div class="conteudo">
+          <details>
+            <summary>Matchmaking: bons projetos para financiamentos reais <span class="seta">+</span></summary>
+            <div class="detalhe">
+              <div class="papel"><span class="label">Palestrante</span><span>Patrícia Freitas (Consultora)</span></div>
+              <div class="papel"><span class="label">Debatedor</span><span>Marcell Sant’Anna (BID)</span></div>
+              <div class="papel"><span class="label">Mediação</span><span>Manuel Ferreira (CEMPA/UFG)</span></div>
+            </div>
+          </details>
+        </div>
+      </div>
+      <div class="sessao fixa"><div class="hora">16h–16h15</div><div class="conteudo">Intervalo</div></div>
+      <div class="sessao">
+        <div class="hora">16h15–17h15</div>
+        <div class="conteudo">
+          <details>
+            <summary>Monitoramento, previsão meteorológica e adaptação: conhecer e monitorar para sobreviver <span class="seta">+</span></summary>
+            <div class="detalhe">
+              <div class="papel"><span class="label">Palestrante</span><span>Angel Chovert (CEMPA/UFG)</span></div>
+              <div class="papel"><span class="label">Debatedores</span><span>Elisabete Ferreira (INMET) · Robledo Farias (Defesa Civil/Goiânia)</span></div>
+              <div class="papel"><span class="label">Mediação</span><span>SECTI-GO</span></div>
+            </div>
+          </details>
+        </div>
+      </div>
+      <div class="sessao">
+        <div class="hora">17h15–18h</div>
+        <div class="conteudo">
+          <details>
+            <summary>Goiânia: clima, vulnerabilidade e gestão municipal <span class="seta">+</span></summary>
+            <div class="detalhe">
+              <div class="papel"><span class="label">Palestrante</span><span>Sandro Mabel (Prefeito de Goiânia)</span></div>
+              <div class="papel"><span class="label">Mediação</span><span>Pedro Novaes</span></div>
+            </div>
+          </details>
+        </div>
+      </div>
+      <div class="sessao fixa"><div class="hora">18h</div><div class="conteudo">Encerramento do dia 1</div></div>
+    </div>
+
+    <!-- DIA 2 -->
+    <div class="painel" id="painel-dia2" role="tabpanel" aria-labelledby="tab-dia2">
+      <div class="sessao fixa"><div class="hora">8h30–9h</div><div class="conteudo">Credenciamento</div></div>
+      <div class="sessao">
+        <div class="hora">9h–10h15</div>
+        <div class="conteudo">
+          <details>
+            <summary>Eixo Adaptação — Poluição, calor e território: mudanças climáticas, saúde e emergências <span class="seta">+</span></summary>
+            <div class="detalhe">
+              <div class="papel"><span class="label">Palestrante</span><span>José Alexandre Felizola (CETI Saúde/UFG)</span></div>
+              <div class="papel"><span class="label">Debatedora</span><span>Cristina Musmanno (SES-GO)</span></div>
+              <div class="papel"><span class="label">Mediação</span><span>Gabriel Tenaglia (AMMA)</span></div>
+            </div>
+          </details>
+        </div>
+      </div>
+      <div class="sessao fixa"><div class="hora">10h15–10h30</div><div class="conteudo">Intervalo</div></div>
+      <div class="sessao">
+        <div class="hora">10h30–12h</div>
+        <div class="conteudo">
+          <details>
+            <summary>Eixo Mitigação e Transição Energética — Biogás, Goiânia Solar e Frota Verde <span class="seta">+</span></summary>
+            <div class="detalhe">
+              <div class="papel"><span class="label">Conferencista</span><span>Thomaz Ramalho (IPPUC/Curitiba)</span></div>
+              <div class="papel"><span class="label">Debatedores</span><span>Gabriel Tenaglia (AMMA) · Adriano da Rocha Lima (ex-secretário de Governo do Estado de Goiás)</span></div>
+              <div class="papel"><span class="label">Mediação</span><span>Pedro Baima (AMMA)</span></div>
+            </div>
+          </details>
+        </div>
+      </div>
+      <div class="sessao fixa"><div class="hora">12h–14h</div><div class="conteudo">Intervalo para almoço</div></div>
+      <div class="sessao">
+        <div class="hora">14h–15h30</div>
+        <div class="conteudo">
+          <details>
+            <summary>Dois países, dois climas, duas cidades: Juárez (México) e Paragominas (PA) <span class="seta">+</span></summary>
+            <div class="detalhe">
+              <div class="papel"><span class="label">Palestrante</span><span>Felipe Adrián Vázquez (Universidade de Juárez, México)</span></div>
+              <div class="papel"><span class="label">Debatedores</span><span>Dominique Castanheira (Prefeitura de Paragominas) · Maxiely Scaramussa (Sindicato Rural de Paragominas)</span></div>
+              <div class="papel"><span class="label">Mediação</span><span>Thomaz Ramalho (IPPUC/Curitiba)</span></div>
+            </div>
+          </details>
+        </div>
+      </div>
+      <div class="sessao fixa"><div class="hora">15h30–16h</div><div class="conteudo">Intervalo</div></div>
+      <div class="sessao">
+        <div class="hora">16h–17h</div>
+        <div class="conteudo">
+          <details>
+            <summary>Como se governa uma cidade em que o clima já mudou? <span class="seta">+</span></summary>
+            <div class="detalhe">
+              <div class="papel"><span class="label">Palestrante</span><span>Silvio Barros (Prefeito de Maringá)</span></div>
+              <div class="papel"><span class="label">Mediação</span><span>Sabrina Garcêz (Segov/Goiânia)</span></div>
+            </div>
+          </details>
+        </div>
+      </div>
+      <div class="sessao">
+        <div class="hora">17h–17h30</div>
+        <div class="conteudo">
+          <details>
+            <summary>Recados finais e encerramento <span class="seta">+</span></summary>
+            <div class="detalhe">
+              <div class="papel"><span class="label">Com</span><span>Zilma Peixoto (AMMA) · Pedro Novaes (UFG e Iandé Verde)</span></div>
+            </div>
+          </details>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ================= 05 · QUEM SOMOS ================= -->
+  <section class="quem" id="quem-somos">
+    <div class="sec-head">
+      <div class="num">05</div>
+      <div class="titles">
+        <span class="label">Realização e equipe</span>
+        <h2>Quem somos.</h2>
+      </div>
+    </div>
+    <div class="regua">
+      <div>
+        <span class="tag">Realização</span>
+        <strong>Idesa</strong>
+        <p>Organização social de interesse público (OSCIP) criada em 2002 para incentivar, promover e apoiar a conservação e o manejo sustentável do meio ambiente.</p>
+      </div>
+      <div>
+        <span class="tag">Realização</span>
+        <strong>Prefeitura de Goiânia · Amma</strong>
+        <p>Autarquia municipal do meio ambiente, com Diretoria de Gestão Ambiental e Mudanças Climáticas e o Plano Municipal de Adaptação em elaboração.</p>
+      </div>
+      <div>
+        <span class="tag">Realização</span>
+        <strong>Iandé Verde</strong>
+        <p>Organização da sociedade civil criada em 2024, dedicada a debates sobre conhecimento científico, meio ambiente e políticas públicas.</p>
+      </div>
+      <div>
+        <span class="tag">Realização</span>
+        <strong>UFG · CEMPA-Cerrado</strong>
+        <p>Centro de Excelência em Estudos, Monitoramento e Previsões Ambientais do Cerrado — previsão de tempo e cenários climáticos para o Centro-Oeste.</p>
+      </div>
+    </div>
+    <div class="equipe">
+      <h3>Conselho consultivo e equipe 2026</h3>
+      <div class="equipe-grid">
+        <div class="pessoa">
+          <strong>Zilma Percussor Campos Peixoto</strong>
+          <span class="cargo">Presidente da Amma</span>
+          <p>Mais de 35 anos de experiência em gestão pública e privada. Graduada em Direito pela UFG, com especialização pela FGV. Foi secretária municipal de Planejamento Urbano e Habitação e de Finanças de Goiânia.</p>
+        </div>
+        <div class="pessoa">
+          <strong>Gabriel Tenaglia Carneiro</strong>
+          <span class="cargo">Gerente de Combate às Mudanças Climáticas · Amma</span>
+          <p>Doutor em Ciências Ambientais pela UFG e especialista em Políticas Públicas. Desenvolve políticas públicas e projetos ambientais estruturantes para o município.</p>
+        </div>
+        <div class="pessoa">
+          <strong>Pedro Baima</strong>
+          <span class="cargo">Gerente de Formulação de Educação, Política e Pesquisas Ambientais · Amma</span>
+          <p>Biólogo e cientista social, mestre e doutor em antropologia social. Analista em Obras e Urbanismo da Prefeitura de Goiânia.</p>
+        </div>
+        <div class="pessoa">
+          <strong>Manuel Eduardo Ferreira</strong>
+          <span class="cargo">Direção Executiva · CEMPA-Cerrado</span>
+          <p>Geógrafo, professor da UFG e pesquisador do LAPIG. Doutor em Ciências Ambientais, atua em sensoriamento remoto, agricultura regenerativa e REDD+.</p>
+        </div>
+        <div class="pessoa">
+          <strong>Pedro Novaes</strong>
+          <span class="cargo">Coordenação geral · Pesquisador LAPIG/UFG</span>
+          <p>Geógrafo e documentarista, mestre em Ciência Ambiental pela USP. Foi secretário adjunto de Meio Ambiente de Goiás e é fellow do programa LEAD.</p>
+        </div>
+        <div class="pessoa">
+          <strong>Paulo D’Ávila Ferreira</strong>
+          <span class="cargo">Consultor em mudanças climáticas · Presidente do Idesa</span>
+          <p>Consultor com mais de três décadas em gestão ambiental pública. Foi diretor de Ecossistemas da Agência Goiana de Meio Ambiente (2004–2008).</p>
+        </div>
+
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ================= 06 · ACERVO ================= -->
+  <section class="acervo" id="acervo">
+    <div class="sec-head">
+      <div class="num">06</div>
+      <div class="titles">
+        <span class="label">Materiais e registros</span>
+        <h2>Acervo.</h2>
+      </div>
+    </div>
+    <div class="filtros" role="group" aria-label="Filtrar por tipo de material">
+      <button class="chip" data-filtro="todos" aria-pressed="true">Todos</button>
+      <button class="chip" data-filtro="fotos" aria-pressed="false">Fotos</button>
+      <button class="chip" data-filtro="videos" aria-pressed="false">Vídeos</button>
+      <button class="chip" data-filtro="transcricoes" aria-pressed="false">Transcrições</button>
+      <button class="chip" data-filtro="apresentacoes" aria-pressed="false">Apresentações</button>
+      <button class="chip" data-filtro="relatorios" aria-pressed="false">Relatórios</button>
+      <button class="chip" data-filtro="artigos" aria-pressed="false">Artigos</button>
+    </div>
+    <div class="acervo-grid" id="acervoGrid">
+      <div class="item" data-tipo="fotos"><span class="tipo">Edição 2026 · Fotos</span><strong>Fotos do simpósio</strong><span class="status">Disponível após o evento</span></div>
+      <div class="item" data-tipo="videos"><span class="tipo">Edição 2026 · Vídeos</span><strong>Vídeos dos painéis</strong><span class="status">Disponível após o evento</span></div>
+      <div class="item" data-tipo="transcricoes"><span class="tipo">Edição 2026 · Transcrições</span><strong>Transcrições das atividades</strong><span class="status">Disponível após o evento</span></div>
+      <div class="item" data-tipo="apresentacoes"><span class="tipo">Edição 2026 · Apresentações</span><strong>Slides das palestras</strong><span class="status">Disponível após o evento</span></div>
+      <div class="item" data-tipo="relatorios"><span class="tipo">Edição 2026 · Relatórios</span><strong>Relatório preliminar</strong><span class="status">Disponível após o evento</span></div>
+      <div class="item" data-tipo="artigos"><span class="tipo">Edição 2026 · Artigos</span><strong>Documentos de referência</strong><span class="status">Disponível após o evento</span></div>
+      <div class="item" data-tipo="fotos"><span class="tipo">Edição 2024 · Fotos</span><strong>Registro fotográfico</strong><span class="status">Edição 2024</span></div>
+      <div class="item" data-tipo="videos"><span class="tipo">Edição 2024 · Vídeos</span><strong>Vídeos do evento</strong><span class="status">Edição 2024</span></div>
+      <div class="item" data-tipo="relatorios"><span class="tipo">Edição 2024 · Relatórios</span><strong>Relatório final</strong><span class="status">Edição 2024</span></div>
+    </div>
+
+  </section>
+
+</main>
+
+<footer>
+  <div class="inner">
+    <!-- Bloco superior do rodapé: Identidade e detalhes do evento -->
+    <div class="foot-info-grid">
+      <div>
+        <p class="kicker">Simpósio e debate público · 2ª edição</p>
+        <h2>Goiânia Resiliente</h2>
+        <p class="desc">Enfrentando as mudanças climáticas nas áreas urbanas: da atmosfera à vulnerabilidade social. 25 e 26 de novembro, Goiânia/GO.</p>
+      </div>
+      <div>
+        <div class="foot-local-box">
+          <span class="label">Local do evento</span>
+          <strong>Auditório da Escola Superior de Advocacia (ESA–OAB/GO)</strong>
+          <p>Rua 101, nº 123 – Setor Sul, Goiânia/GO</p>
+        </div>
+        <div class="foot-meta-links">
+          <p class="label" style="font-size:13px; font-weight:800;">goianiaresiliente.com</p>
+          <a class="btn-inscricao-mini" href="https://forms.gle/T5ER9YtRAucus4YP8" target="_blank" rel="noopener noreferrer">Inscrição gratuita ↗</a>
+        </div>
+      </div>
+    </div>
+
+    <!-- Faixa única com TODOS os logotipos em uma só linha horizontal -->
+    <div class="foot-logos-strip">
+      <div class="foot-logos-row">
+        <!-- Realização (5 marcas) -->
+        <div class="foot-logos-subgroup realizadores">
+          <p class="foot-kicker">Realização</p>
+          <div class="foot-logos-items">
+            <img src="assets/img/logos/idesa.png" alt="IDESA Brasil" height="52" title="Instituto de Desenvolvimento Econômico e Socioambiental (IDESA)">
+            <img src="assets/img/logos/prefeitura-goiania.png" alt="Prefeitura de Goiânia · AMMA" height="48" title="Prefeitura de Goiânia · Agência Municipal do Meio Ambiente (AMMA)">
+            <img src="assets/img/logos/iande-verde.png" alt="Iandé Verde" height="40" title="Iandé Verde">
+            <img src="assets/img/logos/ufg.png" alt="UFG" height="48" title="Universidade Federal de Goiás (UFG)">
+            <img src="assets/img/logos/cempa.png" alt="CEMPA-Cerrado" height="52" title="Centro de Excelência em Estudos, Monitoramento e Previsões Ambientais do Cerrado (CEMPA-Cerrado)">
+          </div>
+        </div>
+
+        <!-- Divisor vertical entre Realização e Parcerias -->
+        <div class="foot-logos-divider" aria-hidden="true"></div>
+
+        <!-- Parcerias Estratégicas (3 marcas) -->
+        <div class="foot-logos-subgroup parcerias">
+          <p class="foot-kicker">Parcerias estratégicas</p>
+          <div class="foot-logos-items">
+            <img src="assets/img/logos/ciamb.png" alt="CIAMB" height="48" title="Programa de Pós-Graduação em Ciências Ambientais (CIAMB/UFG)">
+            <img src="assets/img/logos/fiocruz.png" alt="Fiocruz Cerrados" height="46" title="Fiocruz Cerrados">
+            <img src="assets/img/logos/oab.png" alt="ESA–OAB/GO" height="42" title="Escola Superior de Advocacia (ESA–OAB/GO)">
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Rodapé inferior com copyright e volta ao topo -->
+    <div class="voltar">
+      <span>© <span id="ano"></span> Goiânia Resiliente · NB–Studio</span>
+      <a href="#inicio">Voltar ao topo ↑</a>
+    </div>
+  </div>
+</footer>
+
+  <script src="js/main.js" defer></script>
+
+</body>
+</html>
