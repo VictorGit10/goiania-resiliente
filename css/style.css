@@ -683,9 +683,9 @@ a.conv-link:focus-visible, .conv-agenda a:focus-visible, .ler-mais summary:focus
 .item-link:focus-visible, .item-thumb:focus-visible, .modal-fechar:focus-visible { outline: 3px solid var(--azul); outline-offset: 2px; }
 
 /* ============ CONVIDADOS ============ */
-.convidados { background: var(--azul); }
-.convidados .sec-head { color: var(--branco); border-bottom-color: var(--preto); }
-.conv-sub { padding: 20px 40px; border-bottom: var(--borda-grossa); font-size: 15px; font-weight: 600; text-transform: uppercase; color: var(--branco); }
+.convidados { background: var(--verde); }
+
+.conv-sub { padding: 20px 40px; border-bottom: var(--borda-grossa); font-size: 15px; font-weight: 600; text-transform: uppercase; }
 .conv-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 2px; background: var(--preto); }
 .conv-vazio { padding: 28px 40px; background: var(--branco); }
 .convidado { background: var(--branco); display: flex; flex-direction: column; scroll-margin-top: 70px; }
