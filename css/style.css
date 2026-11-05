@@ -833,3 +833,110 @@ a.conv-link:focus-visible, .conv-agenda a:focus-visible, .ler-mais summary:focus
   .ed24-fotos { display: flex; overflow-x: auto; scroll-snap-type: x mandatory; gap: 2px; }
   .ed24-fotos figure { flex: 0 0 85%; scroll-snap-align: start; }
 }
+
+/* =====================================================================
+   SESSÕES: detalhe com perfis, materiais e resumo
+   ===================================================================== */
+.sessao[id] { scroll-margin-top: 70px; }
+.sessao-descricao { font-size: 15.5px; line-height: 1.5; max-width: 75ch; }
+.sessao-bloco .sessao-bloco-conteudo { min-width: 0; }
+.perfis-mini { display: flex; flex-wrap: wrap; gap: 8px; }
+a.conv-link.perfil-mini {
+  display: inline-flex; align-items: center; gap: 10px; padding: 6px 12px 6px 6px;
+  border: var(--borda); background: var(--branco); text-decoration: none; max-width: 100%;
+  transition: background-color .15s ease-out;
+}
+a.conv-link.perfil-mini:hover { background: var(--amarelo); }
+.mini-foto {
+  position: relative; flex-shrink: 0; width: 40px; height: 40px; border-radius: 50%; overflow: hidden;
+  border: var(--borda); background: var(--cinza); display: flex; align-items: center; justify-content: center;
+}
+.mini-foto img { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; object-position: center 25%; }
+.mini-iniciais { font-size: 14px; font-weight: 800; }
+.perfil-mini-texto { display: flex; flex-direction: column; line-height: 1.2; min-width: 0; }
+.perfil-mini-texto strong { font-size: 13px; font-weight: 800; text-transform: uppercase; }
+.perfil-mini-texto span { font-size: 11px; font-weight: 600; text-transform: uppercase; letter-spacing: .03em; }
+.sessao-materiais { display: flex; flex-wrap: wrap; gap: 8px; }
+.sessao-material {
+  display: inline-flex; align-items: stretch; border: var(--borda); text-decoration: none;
+  font-size: 13px; font-weight: 700; background: var(--branco); transition: background-color .15s ease-out;
+}
+.sessao-material > span { padding: 8px 12px; }
+.sessao-material-tipo { background: var(--preto); color: var(--amarelo); text-transform: uppercase; font-size: 11px; letter-spacing: .05em; display: flex; align-items: center; }
+.sessao-material:hover { background: var(--amarelo); }
+.sessao-embreve { font-size: 14px; }
+.sessao-resumo { border-top: none; padding-top: 0; }
+.sessao-resumo summary { justify-content: flex-start; gap: 12px; }
+.texto-rico { display: flex; flex-direction: column; gap: 12px; margin-top: 10px; max-width: 75ch; }
+.texto-rico p, .texto-rico li { font-size: 15px; line-height: 1.55; }
+.texto-rico h4 { font-size: 14px; font-weight: 800; text-transform: uppercase; letter-spacing: .02em; margin-top: 6px; }
+.texto-rico ul { padding-left: 20px; display: flex; flex-direction: column; gap: 4px; }
+.sessao-resumo-nota { font-size: 12px; font-weight: 600; text-transform: uppercase; letter-spacing: .03em; margin-top: 12px; border-top: 1px solid var(--preto); padding-top: 8px; }
+.sessao-rodape { border-top: 1px solid var(--preto); padding-top: 10px; display: flex; justify-content: flex-end; }
+.sessao-copiar { font-size: 12px; font-weight: 800; text-transform: uppercase; letter-spacing: .04em; text-underline-offset: 3px; }
+.sessao-selo {
+  margin-left: auto; flex-shrink: 0; font-size: 11px; font-weight: 800; letter-spacing: .05em;
+  background: var(--verde); border: var(--borda); padding: 4px 8px; line-height: 1.2;
+}
+.sessao-material:focus-visible, .sessao-copiar:focus-visible, a.conv-link.perfil-mini:focus-visible { outline: 3px solid var(--azul); outline-offset: 2px; }
+@media (max-width: 760px) {
+  .sessao-selo { display: none; }
+  .sessao-rodape { justify-content: flex-start; }
+}
+
+/* ============ TODOS OS PARTICIPANTES ============ */
+.todos { border-top: var(--borda-grossa); background: var(--branco); scroll-margin-top: 65px; }
+.todos-cabeca { padding: 28px 40px; border-bottom: var(--borda-grossa); background: var(--verde); display: flex; flex-direction: column; gap: 6px; }
+.todos-cabeca h3 { font-size: clamp(22px, 2.4vw, 32px); }
+.todos-cabeca p { font-size: 15px; max-width: 70ch; }
+.todos-lista { list-style: none; display: grid; grid-template-columns: 1fr 1fr; }
+.todos-lista li { display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1.4fr); gap: 16px; padding: 14px 24px; border-bottom: 1px solid var(--preto); }
+.todos-lista li:nth-child(odd) { border-right: var(--borda); }
+.todos-quem { display: flex; flex-direction: column; gap: 2px; min-width: 0; }
+.todos-quem strong, .todos-quem a { font-size: 15px; font-weight: 800; text-transform: uppercase; line-height: 1.2; }
+.todos-quem .cargo { font-size: 11px; font-weight: 700; text-transform: uppercase; letter-spacing: .03em; }
+.todos-sessoes { display: flex; flex-direction: column; gap: 6px; min-width: 0; }
+.todos-sessoes > span { display: flex; flex-direction: column; }
+.todos-sessoes a { font-size: 13.5px; font-weight: 600; line-height: 1.3; text-underline-offset: 3px; }
+@media (max-width: 1100px) {
+  .todos-lista { grid-template-columns: 1fr; }
+  .todos-lista li:nth-child(odd) { border-right: none; }
+}
+@media (max-width: 700px) {
+  .todos-cabeca { padding: 22px 20px; }
+  .todos-lista li { grid-template-columns: 1fr; gap: 8px; padding: 14px 20px; }
+}
+
+/* ============ QUEM SOMOS: ler mais, parcerias, perfil da equipe ============ */
+.regua > div { scroll-margin-top: 70px; }
+.regua .ler-mais p { font-size: 13.5px; }
+.parceiros > div { flex-wrap: wrap; scroll-margin-top: 70px; align-items: flex-start; flex-direction: column; gap: 6px; }
+.parceiro-nome { display: flex; flex-direction: column; gap: 2px; }
+.parceiro-nome small { font-size: 12px; font-weight: 600; text-transform: none; letter-spacing: 0; }
+.parceiro-site { font-size: 12px; font-weight: 800; letter-spacing: .04em; text-underline-offset: 3px; }
+.regua > div:target, .parceiros > div:target { background: var(--amarelo); }
+a.conv-link.pessoa-perfil {
+  margin-top: auto; padding-top: 6px; font-size: 12px; font-weight: 800; text-transform: uppercase;
+  letter-spacing: .04em; text-decoration-color: var(--preto);
+}
+
+/* ============ RODAPÉ: logos com link ============ */
+.foot-logo-link { display: inline-flex; }
+.foot-logo-link:focus-visible { outline: 3px solid var(--azul); outline-offset: 4px; }
+
+/* ============ ACERVO: filtro por atividade ============ */
+.filtros-atividade { background: var(--branco); align-items: stretch; }
+.filtro-select {
+  font: inherit; font-size: 13px; font-weight: 700; border: none; border-right: var(--borda); background: var(--branco);
+  padding: 12px 16px; min-height: 44px; flex: 1; max-width: 720px; min-width: 0; cursor: pointer;
+}
+.filtro-select:focus-visible { outline: 3px solid var(--azul); outline-offset: -3px; }
+.item-painel a { text-underline-offset: 3px; }
+@media (max-width: 600px) { .filtros-atividade .filtro-rotulo { display: none; } .filtro-select { border-right: none; } }
+/* O "ler mais" dentro da programação não herda o estilo das linhas de sessão */
+.sessao .ler-mais summary {
+  padding: 0; min-height: 36px; font-size: 12px; text-transform: uppercase; letter-spacing: .04em;
+  justify-content: flex-start; gap: 12px; background: none;
+}
+.sessao .ler-mais summary:hover { background: none; text-decoration: underline; text-underline-offset: 3px; }
+@media (max-width: 760px) { .sessao .ler-mais summary { padding: 0; } }

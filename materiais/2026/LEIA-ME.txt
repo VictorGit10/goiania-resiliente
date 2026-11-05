@@ -1,0 +1,3 @@
+Coloque aqui os PDFs da 2ª edição (slides, transcrições, relatório).
+Nomes sem acento nem espaço, de preferência começando pelo código da sessão:
+  d1-matchmaking-slides-patricia-freitas.pdf

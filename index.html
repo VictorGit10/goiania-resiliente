@@ -385,7 +385,7 @@ footer .inner {
     <!-- DIA 1 -->
     <div class="painel ativo" id="painel-dia1" role="tabpanel" aria-labelledby="tab-dia1">
       <div class="sessao fixa"><div class="hora">8h30–9h</div><div class="conteudo">Credenciamento</div></div>
-      <div class="sessao">
+      <div class="sessao" id="sessao-d1-abertura">
         <div class="hora">9h–9h30</div>
         <div class="conteudo">
           <details>
@@ -396,7 +396,7 @@ footer .inner {
           </details>
         </div>
       </div>
-      <div class="sessao">
+      <div class="sessao" id="sessao-d1-cidades-cerrado">
         <div class="hora">9h30–10h40</div>
         <div class="conteudo">
           <details>
@@ -410,7 +410,7 @@ footer .inner {
         </div>
       </div>
       <div class="sessao fixa"><div class="hora">10h40–11h</div><div class="conteudo">Intervalo</div></div>
-      <div class="sessao">
+      <div class="sessao" id="sessao-d1-goiania-onde-estamos">
         <div class="hora">11h–12h15</div>
         <div class="conteudo">
           <details>
@@ -423,7 +423,7 @@ footer .inner {
         </div>
       </div>
       <div class="sessao fixa"><div class="hora">12h15–14h</div><div class="conteudo">Almoço</div></div>
-      <div class="sessao">
+      <div class="sessao" id="sessao-d1-governanca">
         <div class="hora">14h–15h</div>
         <div class="conteudo">
           <details>
@@ -435,7 +435,7 @@ footer .inner {
           </details>
         </div>
       </div>
-      <div class="sessao">
+      <div class="sessao" id="sessao-d1-matchmaking">
         <div class="hora">15h–16h</div>
         <div class="conteudo">
           <details>
@@ -449,7 +449,7 @@ footer .inner {
         </div>
       </div>
       <div class="sessao fixa"><div class="hora">16h–16h15</div><div class="conteudo">Intervalo</div></div>
-      <div class="sessao">
+      <div class="sessao" id="sessao-d1-monitoramento">
         <div class="hora">16h15–17h15</div>
         <div class="conteudo">
           <details>
@@ -462,7 +462,7 @@ footer .inner {
           </details>
         </div>
       </div>
-      <div class="sessao">
+      <div class="sessao" id="sessao-d1-gestao-municipal">
         <div class="hora">17h15–18h</div>
         <div class="conteudo">
           <details>
@@ -480,7 +480,7 @@ footer .inner {
     <!-- DIA 2 -->
     <div class="painel" id="painel-dia2" role="tabpanel" aria-labelledby="tab-dia2">
       <div class="sessao fixa"><div class="hora">8h30–9h</div><div class="conteudo">Credenciamento</div></div>
-      <div class="sessao">
+      <div class="sessao" id="sessao-d2-saude-emergencias">
         <div class="hora">9h–10h15</div>
         <div class="conteudo">
           <details>
@@ -494,7 +494,7 @@ footer .inner {
         </div>
       </div>
       <div class="sessao fixa"><div class="hora">10h15–10h30</div><div class="conteudo">Intervalo</div></div>
-      <div class="sessao">
+      <div class="sessao" id="sessao-d2-transicao-energetica">
         <div class="hora">10h30–12h</div>
         <div class="conteudo">
           <details>
@@ -508,7 +508,7 @@ footer .inner {
         </div>
       </div>
       <div class="sessao fixa"><div class="hora">12h–14h</div><div class="conteudo">Intervalo para almoço</div></div>
-      <div class="sessao">
+      <div class="sessao" id="sessao-d2-juarez-paragominas">
         <div class="hora">14h–15h30</div>
         <div class="conteudo">
           <details>
@@ -522,7 +522,7 @@ footer .inner {
         </div>
       </div>
       <div class="sessao fixa"><div class="hora">15h30–16h</div><div class="conteudo">Intervalo</div></div>
-      <div class="sessao">
+      <div class="sessao" id="sessao-d2-governar-cidade">
         <div class="hora">16h–17h</div>
         <div class="conteudo">
           <details>
@@ -534,7 +534,7 @@ footer .inner {
           </details>
         </div>
       </div>
-      <div class="sessao">
+      <div class="sessao" id="sessao-d2-encerramento">
         <div class="hora">17h–17h30</div>
         <div class="conteudo">
           <details>
@@ -562,6 +562,13 @@ footer .inner {
     <p class="conv-sub">Toque no nome sublinhado de um participante na programação para ver o perfil. Novos perfis são publicados à medida que chegam.</p>
     <noscript><p class="conv-vazio">Ative o JavaScript do navegador para ver os perfis dos participantes.</p></noscript>
     <div class="conv-grid" id="convidadosGrid"></div>
+    <div class="todos" id="todos-participantes">
+      <div class="todos-cabeca">
+        <h3>Todos os participantes · <span id="todosConta">2ª edição</span></h3>
+        <p>Nomes da programação em ordem alfabética, com as atividades de cada um. Os nomes sublinhados têm perfil.</p>
+      </div>
+      <ul class="todos-lista" id="todosLista"></ul>
+    </div>
   </section>
 
   <!-- ================= 06 · QUEM SOMOS ================= -->
@@ -574,25 +581,43 @@ footer .inner {
       </div>
     </div>
     <div class="regua">
-      <div>
+      <div id="org-idesa">
         <span class="tag">Realização</span>
         <strong>Idesa</strong>
         <p>Organização social de interesse público (OSCIP) criada em 2002 para incentivar, promover e apoiar a conservação e o manejo sustentável do meio ambiente.</p>
+        <details class="ler-mais"><summary>Ler mais</summary><p>Criado em 2002, o IDESA é uma organização social de interesse público (OSCIP) que tem como objetivo central incentivar, promover e apoiar a conservação e o manejo sustentável do meio ambiente. Entre seus parceiros, estão a Vale, a Enel, o Governo de Goiás, a Prefeitura de Goiânia e a BMV Global.</p></details>
       </div>
-      <div>
+      <div id="org-amma">
         <span class="tag">Realização</span>
         <strong>Prefeitura de Goiânia · Amma</strong>
         <p>Autarquia municipal do meio ambiente, com Diretoria de Gestão Ambiental e Mudanças Climáticas e o Plano Municipal de Adaptação em elaboração.</p>
+        <details class="ler-mais"><summary>Ler mais</summary><p>A Agência Municipal de Meio Ambiente de Goiânia foi criada pela Lei 8.537, de 20 de junho de 2007. É uma autarquia municipal e o órgão local do Sistema Nacional do Meio Ambiente (Sisnama). Conta, desde 2025, com uma Diretoria de Gestão Ambiental e Mudanças Climáticas e, dentro dela, com a Gerência de Combate às Mudanças Climáticas e Fomento à Política de Redução de Carbono. A Amma também iniciou a elaboração do Plano Municipal de Adaptação às Mudanças Climáticas, com foco em calor, poluição e escassez hídrica. Também desde 2025, a cidade conta com o Fórum Goianiense de Mudanças Climáticas, criado pela Lei 11.381/2025. Por isso, Goiânia está entre as 18 cidades brasileiras reconhecidas pelo Pacto Global de Prefeitas e Prefeitos pelo Clima e Energia (GCoM).</p></details>
       </div>
-      <div>
+      <div id="org-iande">
         <span class="tag">Realização</span>
         <strong>Iandé Verde</strong>
         <p>Organização da sociedade civil criada em 2024, dedicada a debates sobre conhecimento científico, meio ambiente e políticas públicas.</p>
       </div>
-      <div>
+      <div id="org-cempa">
         <span class="tag">Realização</span>
         <strong>UFG · CEMPA-Cerrado</strong>
         <p>Centro de Excelência em Estudos, Monitoramento e Previsões Ambientais do Cerrado — previsão de tempo e cenários climáticos para o Centro-Oeste.</p>
+        <details class="ler-mais"><summary>Ler mais</summary><p>O Centro de Excelência em Estudos, Monitoramento e Previsões Ambientais do Cerrado (CEMPA-Cerrado) tem por objetivo gerar estudos utilizando modelagem numérica e dados de satélite, permitindo gerar com precisão e nível inéditos a previsão de tempo para toda a região Centro-Oeste (intervalos de 5 a 10 dias), cenários climáticos e modelos de produção agroclimáticos, entre outros produtos. O Centro busca reunir academia, governo e entes privados buscando soluções para o desenvolvimento sustentável do estado por meio de tecnologias, serviços e políticas públicas. O CEMPA-Cerrado é fruto de uma parceria entre a Universidade Federal de Goiás, o Governo de Goiás, através da Secretaria de Ciência, Tecnologia e Inovação, e o Instituto Nacional de Pesquisas Espaciais, que são responsáveis por sua gestão.</p></details>
+      </div>
+    </div>
+    <div class="parceiros">
+      <div id="org-ciamb">
+        <span class="tag">Parceria estratégica</span>
+        <span class="parceiro-nome">CIAMB/UFG<small>Programa de Pós-Graduação em Ciências Ambientais da UFG</small></span>
+        <a class="parceiro-site" href="https://ciamb.prpg.ufg.br/" target="_blank" rel="noopener noreferrer">Site ↗</a>
+      </div>
+      <div id="org-fiocruz">
+        <span class="tag">Parceria estratégica</span>
+        <span class="parceiro-nome">Fiocruz Cerrados<small>Iniciativa Fiocruz Cerrados</small></span>
+      </div>
+      <div id="org-esa">
+        <span class="tag">Parceria estratégica</span>
+        <span class="parceiro-nome">ESA–OAB/GO<small>Escola Superior de Advocacia · OAB/GO</small></span>
       </div>
     </div>
     <div class="equipe">
@@ -602,31 +627,37 @@ footer .inner {
           <strong>Zilma Percussor Campos Peixoto</strong>
           <span class="cargo">Presidente da Amma</span>
           <p>Mais de 35 anos de experiência em gestão pública e privada. Graduada em Direito pela UFG, com especialização pela FGV. Foi secretária municipal de Planejamento Urbano e Habitação e de Finanças de Goiânia.</p>
+          <a class="conv-link pessoa-perfil" href="#convidado-zilma-peixoto" data-convidado="zilma-peixoto">Ver perfil completo →</a>
         </div>
         <div class="pessoa">
           <strong>Gabriel Tenaglia Carneiro</strong>
           <span class="cargo">Gerente de Combate às Mudanças Climáticas · Amma</span>
           <p>Doutor em Ciências Ambientais pela UFG e especialista em Políticas Públicas. Desenvolve políticas públicas e projetos ambientais estruturantes para o município.</p>
+          <a class="conv-link pessoa-perfil" href="#convidado-gabriel-tenaglia" data-convidado="gabriel-tenaglia">Ver perfil completo →</a>
         </div>
         <div class="pessoa">
           <strong>Pedro Baima</strong>
           <span class="cargo">Gerente de Formulação de Educação, Política e Pesquisas Ambientais · Amma</span>
           <p>Biólogo e cientista social, mestre e doutor em antropologia social. Analista em Obras e Urbanismo da Prefeitura de Goiânia.</p>
+          <a class="conv-link pessoa-perfil" href="#convidado-pedro-baima" data-convidado="pedro-baima">Ver perfil completo →</a>
         </div>
         <div class="pessoa">
           <strong>Manuel Eduardo Ferreira</strong>
           <span class="cargo">Direção Executiva · CEMPA-Cerrado</span>
           <p>Geógrafo, professor da UFG e pesquisador do LAPIG. Doutor em Ciências Ambientais, atua em sensoriamento remoto, agricultura regenerativa e REDD+.</p>
+          <a class="conv-link pessoa-perfil" href="#convidado-manuel-ferreira" data-convidado="manuel-ferreira">Ver perfil completo →</a>
         </div>
         <div class="pessoa">
           <strong>Pedro Novaes</strong>
           <span class="cargo">Coordenação geral · Pesquisador LAPIG/UFG</span>
           <p>Geógrafo e documentarista, mestre em Ciência Ambiental pela USP. Foi secretário adjunto de Meio Ambiente de Goiás e é fellow do programa LEAD.</p>
+          <a class="conv-link pessoa-perfil" href="#convidado-pedro-novaes" data-convidado="pedro-novaes">Ver perfil completo →</a>
         </div>
         <div class="pessoa">
           <strong>Paulo D’Ávila Ferreira</strong>
           <span class="cargo">Consultor em mudanças climáticas · Presidente do Idesa</span>
           <p>Consultor com mais de três décadas em gestão ambiental pública. Foi diretor de Ecossistemas da Agência Goiana de Meio Ambiente (2004–2008).</p>
+          <a class="conv-link pessoa-perfil" href="#convidado-paulo-davila-ferreira" data-convidado="paulo-davila-ferreira">Ver perfil completo →</a>
         </div>
 
 
@@ -682,7 +713,7 @@ footer .inner {
     <h3 class="ed24-titulo">Programação 2024</h3>
     <div class="ed24-prog">
       <div class="ed24-dia">Dia 1 · 25 nov 2024</div>
-      <div class="sessao">
+      <div class="sessao" id="sessao-2024-abertura">
         <div class="hora">9h</div>
         <div class="conteudo">
           <details>
@@ -693,7 +724,7 @@ footer .inner {
           </details>
         </div>
       </div>
-      <div class="sessao">
+      <div class="sessao" id="sessao-2024-cerrado">
         <div class="hora">10h</div>
         <div class="conteudo">
           <details>
@@ -705,7 +736,7 @@ footer .inner {
           </details>
         </div>
       </div>
-      <div class="sessao">
+      <div class="sessao" id="sessao-2024-niteroi">
         <div class="hora">14h</div>
         <div class="conteudo">
           <details>
@@ -719,7 +750,7 @@ footer .inner {
         </div>
       </div>
       <div class="ed24-dia">Dia 2 · 26 nov 2024</div>
-      <div class="sessao">
+      <div class="sessao" id="sessao-2024-estrategias">
         <div class="hora">9h</div>
         <div class="conteudo">
           <details>
@@ -733,7 +764,7 @@ footer .inner {
         </div>
       </div>
       <div class="sessao fixa"><div class="hora">10h40</div><div class="conteudo">Intervalo</div></div>
-      <div class="sessao fixa"><div class="hora">11h</div><div class="conteudo">Debate com o público</div></div>
+      <div class="sessao fixa" id="sessao-2024-debate"><div class="hora">11h</div><div class="conteudo">Debate com o público</div></div>
       <div class="sessao fixa"><div class="hora">12h</div><div class="conteudo">Encerramento</div></div>
     </div>
 
@@ -788,6 +819,7 @@ footer .inner {
     </div>
     <div class="filtros filtros-tipo" role="group" aria-label="Filtrar por tipo de material">
       <button class="chip" data-filtro="todos" aria-pressed="true">Todos</button>
+      <button class="chip" data-filtro="resumos" aria-pressed="false">Resumos</button>
       <button class="chip" data-filtro="fotos" aria-pressed="false">Fotos</button>
       <button class="chip" data-filtro="videos" aria-pressed="false">Vídeos</button>
       <button class="chip" data-filtro="transcricoes" aria-pressed="false">Transcrições</button>
@@ -800,6 +832,12 @@ footer .inner {
       <button class="chip" data-edicao="todas" aria-pressed="true">Todas</button>
       <button class="chip" data-edicao="2026" aria-pressed="false">2026</button>
       <button class="chip" data-edicao="2024" aria-pressed="false">2024</button>
+    </div>
+    <div class="filtros filtros-atividade">
+      <label class="filtro-rotulo" for="filtroAtividade">Atividade</label>
+      <select id="filtroAtividade" class="filtro-select">
+        <option value="">Todas as atividades</option>
+      </select>
     </div>
     <div class="acervo-grid" id="acervoGrid">
       <noscript><p class="acervo-vazio">Ative o JavaScript do navegador para ver o acervo.</p></noscript>
@@ -839,11 +877,11 @@ footer .inner {
         <div class="foot-logos-subgroup realizadores">
           <p class="foot-kicker">Realização</p>
           <div class="foot-logos-items">
-            <img src="assets/img/logos/idesa.png" alt="IDESA Brasil" height="52" title="Instituto de Desenvolvimento Econômico e Socioambiental (IDESA)">
-            <img src="assets/img/logos/prefeitura-goiania.png" alt="Prefeitura de Goiânia · AMMA" height="48" title="Prefeitura de Goiânia · Agência Municipal do Meio Ambiente (AMMA)">
-            <img src="assets/img/logos/iande-verde.png" alt="Iandé Verde" height="40" title="Iandé Verde">
-            <img src="assets/img/logos/ufg.png" alt="UFG" height="48" title="Universidade Federal de Goiás (UFG)">
-            <img src="assets/img/logos/cempa.png" alt="CEMPA-Cerrado" height="52" title="Centro de Excelência em Estudos, Monitoramento e Previsões Ambientais do Cerrado (CEMPA-Cerrado)">
+            <a href="#org-idesa" class="foot-logo-link"><img src="assets/img/logos/idesa.png" alt="IDESA Brasil" height="52" title="Instituto de Desenvolvimento Econômico e Socioambiental (IDESA)"></a>
+            <a href="#org-amma" class="foot-logo-link"><img src="assets/img/logos/prefeitura-goiania.png" alt="Prefeitura de Goiânia · AMMA" height="48" title="Prefeitura de Goiânia · Agência Municipal do Meio Ambiente (AMMA)"></a>
+            <a href="#org-iande" class="foot-logo-link"><img src="assets/img/logos/iande-verde.png" alt="Iandé Verde" height="40" title="Iandé Verde"></a>
+            <a href="#org-cempa" class="foot-logo-link"><img src="assets/img/logos/ufg.png" alt="UFG" height="48" title="Universidade Federal de Goiás (UFG)"></a>
+            <a href="#org-cempa" class="foot-logo-link"><img src="assets/img/logos/cempa.png" alt="CEMPA-Cerrado" height="52" title="Centro de Excelência em Estudos, Monitoramento e Previsões Ambientais do Cerrado (CEMPA-Cerrado)"></a>
           </div>
         </div>
 
@@ -854,9 +892,9 @@ footer .inner {
         <div class="foot-logos-subgroup parcerias">
           <p class="foot-kicker">Parcerias estratégicas</p>
           <div class="foot-logos-items">
-            <img src="assets/img/logos/ciamb.png" alt="CIAMB" height="48" title="Programa de Pós-Graduação em Ciências Ambientais (CIAMB/UFG)">
-            <img src="assets/img/logos/fiocruz.png" alt="Fiocruz Cerrados" height="46" title="Fiocruz Cerrados">
-            <img src="assets/img/logos/oab.png" alt="ESA–OAB/GO" height="42" title="Escola Superior de Advocacia (ESA–OAB/GO)">
+            <a href="#org-ciamb" class="foot-logo-link"><img src="assets/img/logos/ciamb.png" alt="CIAMB" height="48" title="Programa de Pós-Graduação em Ciências Ambientais (CIAMB/UFG)"></a>
+            <a href="#org-fiocruz" class="foot-logo-link"><img src="assets/img/logos/fiocruz.png" alt="Fiocruz Cerrados" height="46" title="Fiocruz Cerrados"></a>
+            <a href="#org-esa" class="foot-logo-link"><img src="assets/img/logos/oab.png" alt="ESA–OAB/GO" height="42" title="Escola Superior de Advocacia (ESA–OAB/GO)"></a>
           </div>
         </div>
       </div>
@@ -880,6 +918,7 @@ footer .inner {
 </dialog>
 
   <script src="dados/convidados.js" defer></script>
+  <script src="dados/sessoes.js" defer></script>
   <script src="dados/acervo.js" defer></script>
   <script src="js/main.js" defer></script>
 

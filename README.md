@@ -1,73 +1,84 @@
-# Goiânia Resiliente — Versão Estática (Sem Node.js)
+# Goiânia Resiliente — site do simpósio
 
-Esta pasta contém a versão estática completa do website **Goiânia Resiliente** (2ª edição), totalmente independente de Node.js, npm, Vite ou qualquer ferramenta de build.
+Site da 2ª edição do simpósio **Goiânia Resiliente: da atmosfera à vulnerabilidade social** (25 e 26 de novembro de 2026, Auditório da ESA–OAB/GO, Goiânia), com a memória da 1ª edição (2024).
 
-## Estrutura de Arquivos
+Visual e estrutura originais: **NB–Studio**. É um site estático: HTML, CSS e JavaScript puros, **sem build e sem dependências**. Funciona abrindo o `index.html` direto no navegador.
+
+## O que a página tem
+
+| Seção | O que mostra | De onde vem o conteúdo |
+|---|---|---|
+| Inscrição, 01–03 | Inscrição, contexto, adaptação e mitigação, Goiânia | `index.html` |
+| 04 · Programação | Abas dos dois dias. Ao abrir uma sessão: participantes (com perfis), descrição, materiais, resumo e link direto | `index.html` + `dados/` |
+| 05 · Participantes | Perfis com foto e minibio e a lista de todos os participantes, com links para as atividades | `dados/convidados.js` |
+| 06 · Quem somos | Realizadores (com "ler mais"), parcerias estratégicas e equipe 2026 | `index.html` |
+| 07 · Edição 2024 | Números, fotos, programação e equipe da 1ª edição | `index.html` |
+| 08 · Acervo | Materiais filtráveis por tipo, edição e atividade | `dados/acervo.js` + resumos de `dados/sessoes.js` |
+| Rodapé | Logos com link para os textos de cada instituição | `index.html` |
+
+## Estrutura de arquivos
 
 ```
-versao-html/
-├── index.html               # Página principal (estrutura modular)
-├── index-standalone.html    # Versão alternativa completa (tudo em um único arquivo HTML)
-├── css/
-│   └── style.css            # Estilos CSS completos e responsivos
-├── js/
-│   └── main.js              # JavaScript puro (menu mobile, abas da programação, filtros)
-└── assets/
-    ├── fonts/               # Fontes locais Host Grotesk (Regular, Medium, SemiBold, Bold, ExtraBold)
-    ├── img/                 # Fotos em alta resolução e subpasta logos/ com as marcas
-    └── logo/                # Identidade visual em vetor (SVG)
+index.html              página única (textos fixos, programação, seções)
+css/style.css           estilos (cores e bordas em variáveis: --preto, --amarelo…)
+js/main.js              junta a programação com os dados abaixo
+dados/
+  convidados.js         perfis dos participantes (nome, cargo, minibio)
+  sessoes.js            descrição e resumo de cada sessão, pelo código da sessão
+  acervo.js             vídeos, slides, transcrições, fotos, relatórios
+assets/
+  img/convidados/       fotos dos perfis: <id>.jpg (ex.: carlos-gurjao.jpg)
+  img/edicao-2024/      fotos da 1ª edição
+  img/logos/, logo/, fonts/   identidade visual (não alterar)
+materiais/2026/, 2024/  PDFs publicados no próprio site
+docs/
+  resumos-das-sessoes.md   gravação → NotebookLM → revisão → publicação, com os prompts
+  pendencias.md            o que falta e de quem depende
+  capturas/                capturas de tela (computador e celular)
 ```
 
-## Como Usar / Visualizar
+As listas em `dados/` são arquivos `.js` (e não `.json`) de propósito: assim o site funciona mesmo aberto direto do computador, sem servidor.
 
-1. **Abertura direta no navegador**:
-   - Basta dar um clique duplo em `index.html` (ou `index-standalone.html`). Ele abrirá imediatamente em qualquer navegador (Safari, Chrome, Firefox, Edge) via protocolo de arquivo local (`file://`).
+## Como atualizar (sem programar)
 
-2. **Servidor local simples (opcional)**:
-   - Se preferir rodar via HTTP local sem instalar nada extra no macOS, abra o Terminal nesta pasta e execute:
-     ```bash
-     python3 -m http.server 8000
-     ```
-   - Acesse no navegador: `http://localhost:8000`
+Abra o arquivo, copie um bloco de exemplo, troque os textos e salve. Cada bloco termina com uma vírgula: `{ ... },`. As instruções completas estão no topo de cada arquivo.
 
-3. **Publicação / Hospedagem**:
-   - Pronto para publicação direta em qualquer hospedagem estática (GitHub Pages, Vercel, Netlify, Cloudflare Pages, servidores Apache, Nginx, cPanel ou AWS S3).
-   - Não requer compilação ou instalação de dependências no servidor.
-
----
-
-## Como atualizar o site (sem programar)
-
-Tudo o que muda com frequência fica em **duas listas de texto** na pasta `dados/`.
-Abra o arquivo, copie um bloco de exemplo, troque os textos e salve. Cada bloco
-termina com uma vírgula: `{ ... },`. As instruções completas estão no topo de cada arquivo.
-
-### Acrescentar um perfil de convidado — `dados/convidados.js`
+### Perfil novo — `dados/convidados.js`
 
 1. Copie um bloco `{ ... },` e cole antes do `];` final.
 2. Preencha `id` (ex.: `"joao-silva"`), `nome`, `cargo`, `resumo` e, se houver, `minibio`.
-3. Em `naProgramacao`, escreva o nome **exatamente como está na programação**
-   (sem a instituição entre parênteses). É isso que transforma o nome da
-   programação num link para o perfil.
-4. Salve a foto como `assets/img/convidados/<id>.jpg` (ex.: `joao-silva.jpg`).
-   Sem a foto, o cartão mostra as iniciais e "Foto em breve".
+3. Em `naProgramacao`, escreva o nome **exatamente como está na programação** (sem a instituição entre parênteses). Isso liga o nome ao perfil, cria o cartão na sessão e o link na lista de participantes.
+4. Salve a foto como `assets/img/convidados/<id>.jpg`. Sem foto, aparecem as iniciais.
 
-Nome sem perfil continua como texto comum na programação.
-
-### Acrescentar um vídeo, PDF ou transcrição ao acervo — `dados/acervo.js`
+### Slides, vídeo ou transcrição — `dados/acervo.js`
 
 ```
-{ tipo: "videos", edicao: 2026, painel: "Dia 1 · As Cidades do Cerrado",
-  titulo: "Conferência de Carlos Gurjão",
+{ tipo: "videos", edicao: 2026, sessao: "d1-cidades-cerrado",
+  titulo: "Vídeo completo da sessão",
   link: "https://www.youtube.com/watch?v=XXXXXXXXXXX" },
 ```
 
 - `tipo`: `videos`, `apresentacoes`, `transcricoes`, `fotos`, `relatorios` ou `artigos`.
-- `link`: vídeo do YouTube (o cartão mostra a miniatura), link público do Google
-  Drive, ou um PDF guardado no próprio site (ponha o arquivo em `materiais/2026/`
-  e escreva `"materiais/2026/nome.pdf"`).
-- O aviso "Disponível após o evento" daquele tipo e edição some sozinho quando
-  entra o primeiro material com link.
+- `sessao`: o código da sessão (lista em `dados/sessoes.js`). O material aparece dentro da sessão na programação **e** no acervo.
+- `link`: YouTube (o cartão mostra a miniatura), link público do Drive, ou um PDF em `materiais/2026/` (`"materiais/2026/nome.pdf"`).
+- O aviso "Disponível após o evento" de um tipo some quando entra o primeiro material daquele tipo.
 
-As listas são arquivos `.js` (e não `.json`) de propósito: assim o site também
-funciona abrindo o `index.html` direto no computador, sem servidor.
+### Resumo de uma sessão — `dados/sessoes.js`
+
+Cole o texto revisado e aprovado no campo `resumo` da sessão, entre crases. O passo a passo completo, com os prompts do NotebookLM, está em [`docs/resumos-das-sessoes.md`](docs/resumos-das-sessoes.md).
+
+### Link direto para uma sessão ou perfil
+
+- Sessão: `goianiaresiliente.com/#sessao-d1-matchmaking` (abre a aba e a sessão). Dentro de cada sessão há o botão "Copiar link desta sessão".
+- Perfil: `goianiaresiliente.com/#convidado-carlos-gurjao`.
+
+**Não mude os códigos** das sessões nem os `id` dos perfis depois de publicados: eles são os endereços.
+
+## Visualizar
+
+- Clique duplo em `index.html`, ou
+- `python3 -m http.server 8000` nesta pasta e abra `http://localhost:8000`.
+
+## Publicação
+
+Pronto para qualquer hospedagem estática (Hostinger, GitHub Pages etc.). A troca de hospedagem e de DNS é uma decisão à parte, combinada com o Pedro e o Marck.
