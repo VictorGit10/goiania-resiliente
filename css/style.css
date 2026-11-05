@@ -650,3 +650,167 @@ footer .inner {
     grid-template-columns: 1fr !important;
   }
 }
+
+
+/* =====================================================================
+   ACRÉSCIMOS (nov/2026): convidados, 1ª edição, acervo alimentado por
+   dados/acervo.js e janela de perfil.
+   ===================================================================== */
+
+/* Menu: com 9 itens, espaçamento menor nas telas médias */
+@media (max-width: 1600px) and (min-width: 1321px) {
+  nav.menu a { padding: 0 11px; font-size: 11.5px; letter-spacing: .02em; }
+  .brand { padding: 12px 16px; }
+}
+@media (max-width: 1320px) {
+  .toggle { display: block; }
+  nav.menu {
+    display: none; position: absolute; left: 0; right: 0; top: 100%;
+    background: var(--amarelo); border-bottom: var(--borda-grossa);
+    flex-direction: column;
+  }
+  nav.menu.open { display: flex; }
+  nav.menu a { border-left: none; border-top: var(--borda); padding: 14px 20px; min-height: 44px; }
+}
+
+/* Nome com perfil, na programação */
+a.conv-link {
+  font-weight: 700; text-decoration: underline; text-decoration-thickness: 2px;
+  text-underline-offset: 3px; text-decoration-color: var(--azul);
+}
+a.conv-link:hover { background: var(--amarelo); text-decoration-color: var(--preto); }
+a.conv-link:focus-visible, .conv-agenda a:focus-visible, .ler-mais summary:focus-visible,
+.item-link:focus-visible, .item-thumb:focus-visible, .modal-fechar:focus-visible { outline: 3px solid var(--azul); outline-offset: 2px; }
+
+/* ============ CONVIDADOS ============ */
+.convidados { background: var(--azul); }
+.convidados .sec-head { color: var(--branco); border-bottom-color: var(--preto); }
+.conv-sub { padding: 20px 40px; border-bottom: var(--borda-grossa); font-size: 15px; font-weight: 600; text-transform: uppercase; color: var(--branco); }
+.conv-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 2px; background: var(--preto); }
+.conv-vazio { padding: 28px 40px; background: var(--branco); }
+.convidado { background: var(--branco); display: flex; flex-direction: column; scroll-margin-top: 70px; }
+.conv-foto {
+  position: relative; aspect-ratio: 4 / 3; border-bottom: var(--borda); overflow: hidden;
+  background: repeating-linear-gradient(135deg, var(--cinza) 0 14px, #e8e8e8 14px 28px);
+  display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 6px;
+}
+.conv-foto img { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; object-position: center 25%; }
+.conv-iniciais {
+  font-size: 44px; font-weight: 800; line-height: 1; width: 96px; height: 96px; border: var(--borda-grossa);
+  border-radius: 50%; display: flex; align-items: center; justify-content: center; background: var(--branco);
+}
+.conv-embreve { font-size: 11px; font-weight: 700; text-transform: uppercase; letter-spacing: .05em; background: var(--branco); border: var(--borda); padding: 4px 10px; }
+.conv-texto { padding: 22px 24px 24px; display: flex; flex-direction: column; gap: 8px; flex: 1; }
+.conv-nome { font-size: 19px; font-weight: 800; text-transform: uppercase; line-height: 1.15; }
+.convidado .cargo { font-size: 12px; font-weight: 700; text-transform: uppercase; letter-spacing: .04em; }
+.conv-resumo { font-size: 14.5px; line-height: 1.5; }
+.ler-mais { border-top: 1px solid var(--preto); padding-top: 8px; }
+.ler-mais summary {
+  cursor: pointer; list-style: none; font-size: 12px; font-weight: 800; text-transform: uppercase; letter-spacing: .04em;
+  display: flex; justify-content: space-between; align-items: center; min-height: 32px;
+}
+.ler-mais summary::-webkit-details-marker { display: none; }
+.ler-mais summary::after { content: "+"; font-size: 20px; }
+.ler-mais[open] summary::after { content: "–"; }
+.ler-mais p { font-size: 14px; line-height: 1.5; margin-top: 8px; }
+.conv-agenda { margin-top: auto; border-top: var(--borda); padding-top: 12px; display: flex; flex-direction: column; gap: 8px; }
+.conv-agenda ul { list-style: none; display: flex; flex-direction: column; gap: 10px; }
+.conv-agenda li { display: flex; flex-direction: column; gap: 2px; }
+.conv-quando { font-size: 11px; font-weight: 700; text-transform: uppercase; letter-spacing: .04em; color: #333; }
+.conv-agenda a { font-size: 14px; font-weight: 700; line-height: 1.3; text-decoration: underline; text-underline-offset: 3px; }
+.conv-agenda a:hover { background: var(--amarelo); }
+.conv-aviso { background: var(--amarelo); padding: 28px 24px; display: flex; flex-direction: column; gap: 12px; justify-content: center; }
+.conv-aviso strong { font-size: clamp(22px, 2.2vw, 30px); font-weight: 800; text-transform: uppercase; line-height: 1.05; }
+.conv-aviso p { font-size: 14.5px; max-width: 40ch; }
+@media (max-width: 1100px) { .conv-grid { grid-template-columns: repeat(2, 1fr); } }
+@media (max-width: 700px) {
+  .conv-grid { grid-template-columns: 1fr; }
+  .conv-sub { padding: 14px 20px; }
+  .conv-texto { padding: 18px 20px 22px; }
+  .conv-foto { aspect-ratio: 16 / 10; }
+}
+
+/* Janela do perfil */
+.perfil-modal {
+  border: var(--borda-grossa); padding: 0; margin: auto; width: min(560px, calc(100% - 24px));
+  max-height: calc(100% - 24px); background: var(--branco); color: var(--preto);
+  box-shadow: 8px 8px 0 var(--preto);
+}
+.perfil-modal::backdrop { background: rgba(0, 0, 0, .55); }
+.perfil-modal[open] { display: flex; flex-direction: column; }
+.modal-barra {
+  display: flex; justify-content: space-between; align-items: center; gap: 12px;
+  background: var(--amarelo); border-bottom: var(--borda-grossa); padding-left: 20px; flex-shrink: 0;
+}
+.modal-fechar {
+  font: inherit; font-weight: 800; font-size: 13px; text-transform: uppercase; cursor: pointer;
+  background: var(--preto); color: var(--amarelo); border: none; border-left: var(--borda); padding: 0 18px; min-height: 48px;
+}
+.modal-fechar:hover { background: var(--branco); color: var(--preto); }
+.modal-corpo { overflow-y: auto; -webkit-overflow-scrolling: touch; }
+.modal-corpo .convidado { box-shadow: none; }
+.modal-corpo .conv-foto { aspect-ratio: 16 / 10; }
+.modal-todos {
+  display: block; padding: 16px 24px; border-top: var(--borda); font-size: 13px; font-weight: 800;
+  text-transform: uppercase; text-decoration: none; background: var(--cinza);
+}
+.modal-todos:hover { background: var(--amarelo); }
+@media (max-width: 700px) {
+  .perfil-modal { width: 100%; max-width: 100%; max-height: 92%; margin: auto 0 0; box-shadow: none; border-left: none; border-right: none; border-bottom: none; }
+}
+
+/* ============ 1ª EDIÇÃO (2024) ============ */
+.ed24 { background: var(--rosa); }
+.ed24-numeros { display: grid; grid-template-columns: 1.6fr 1fr 1fr 1fr; border-bottom: var(--borda-grossa); background: var(--branco); }
+.ed24-numeros > div { padding: 22px 28px; display: flex; flex-direction: column; gap: 6px; }
+.ed24-numeros > div + div { border-left: var(--borda); }
+.ed24-numeros strong { font-size: clamp(26px, 3vw, 44px); font-weight: 800; text-transform: uppercase; line-height: 1; }
+.ed24-intro { padding: 36px 40px; display: flex; flex-direction: column; gap: 16px; border-bottom: var(--borda-grossa); }
+.ed24-intro p { max-width: 75ch; }
+.ed24-titulo { font-size: clamp(24px, 2.6vw, 36px); padding: 28px 40px; border-bottom: var(--borda-grossa); }
+.ed24-prog { background: var(--branco); border-bottom: var(--borda-grossa); }
+.ed24-dia { padding: 14px 24px; font-size: 14px; font-weight: 800; text-transform: uppercase; letter-spacing: .04em; background: var(--preto); color: var(--rosa); }
+.ed24-prog .sessao:last-child { border-bottom: none; }
+.ed24-prog .papel a { font-weight: 700; text-underline-offset: 3px; }
+.ed24-equipe { display: grid; grid-template-columns: repeat(2, 1fr); gap: 2px; border: var(--borda); background: var(--preto); }
+.ed24-equipe .pessoa { background: var(--branco); scroll-margin-top: 70px; }
+.ed24-equipe .pessoa:target { background: var(--amarelo); }
+.ed24 .equipe { border-bottom: var(--borda-grossa); }
+.ed24-materiais { display: flex; justify-content: space-between; align-items: center; gap: 20px; padding: 28px 40px; flex-wrap: wrap; }
+.ed24-materiais h3 { font-size: clamp(22px, 2.2vw, 30px); margin-bottom: 6px; }
+@media (max-width: 900px) {
+  .ed24-numeros { grid-template-columns: 1fr 1fr; }
+  .ed24-numeros > div:nth-child(3) { border-left: none; }
+  .ed24-numeros > div:nth-child(n+3) { border-top: var(--borda); }
+}
+@media (max-width: 760px) {
+  .ed24-intro { padding: 28px 20px; }
+  .ed24-titulo { padding: 20px; }
+  .ed24-dia { padding: 12px 20px; }
+  .ed24-numeros > div { padding: 18px 20px; }
+  .ed24-equipe { grid-template-columns: 1fr; }
+  .ed24-materiais { padding: 24px 20px; }
+  .ed24-materiais .btn { width: 100%; text-align: center; }
+}
+
+/* ============ ACERVO (dados) ============ */
+.filtros-edicao { align-items: stretch; background: var(--branco); }
+.filtros-edicao .chip { background: var(--branco); }
+.filtros-edicao .chip:hover { background: var(--amarelo); }
+.filtros-edicao .chip[aria-pressed="true"] { background: var(--preto); color: var(--amarelo); }
+.filtro-rotulo { display: flex; align-items: center; padding: 0 18px; font-size: 12px; font-weight: 800; text-transform: uppercase; letter-spacing: .05em; border-right: var(--borda); }
+.item[data-edicao="2024"] .status { background: var(--rosa); }
+.item.publicado { background: var(--branco); }
+.item-thumb { position: relative; display: block; margin: -28px -24px 4px; border-bottom: var(--borda); aspect-ratio: 16 / 9; overflow: hidden; background: var(--preto); }
+.item-thumb img { width: 100%; height: 100%; object-fit: cover; }
+.item-play { position: absolute; left: 16px; bottom: 16px; background: var(--amarelo); border: var(--borda); font-size: 16px; padding: 6px 12px; }
+.item-painel { font-size: 12px; font-weight: 700; text-transform: uppercase; letter-spacing: .03em; }
+.item-texto { font-size: 14px; line-height: 1.45; }
+.item-link {
+  margin-top: auto; display: inline-block; width: fit-content; background: var(--preto); color: var(--amarelo);
+  font-size: 12px; font-weight: 800; text-transform: uppercase; letter-spacing: .04em; padding: 10px 14px; text-decoration: none; border: var(--borda);
+}
+.item-link:hover { background: var(--amarelo); color: var(--preto); }
+.acervo-vazio { padding: 22px 40px; font-size: 15px; font-weight: 600; border-bottom: var(--borda-grossa); }
+@media (max-width: 900px) { .acervo-vazio { padding: 18px 20px; } }
+@media (max-width: 760px) { .filtros .chip { padding: 12px 16px; min-height: 44px; } }
