@@ -37,7 +37,7 @@ window.GR_SESSOES = {
   "d1-abertura":               { descricao: "", resumo: `` }, /* Abertura institucional */
   "d1-cidades-cerrado":        { descricao: "", resumo: `` }, /* As Cidades do Cerrado: ciência para entender o que muda… */
   "d1-goiania-onde-estamos":   { descricao: "", resumo: `` }, /* Goiânia: onde estamos? Projetos estruturantes para adaptação */
-  "d1-governanca":             { descricao: "", resumo: `` }, /* Quem decide e quem paga a conta do clima? */
+  "d1-governanca":             { descricao: "", resumo: `` }, /* Quem decide e quem paga a conta do clima? Um debate sobre governança e articulação federativa */
   "d1-matchmaking":            { descricao: "", resumo: `` }, /* Matchmaking: bons projetos para financiamentos reais */
   "d1-monitoramento":          { descricao: "", resumo: `` }, /* Monitoramento, previsão meteorológica e adaptação */
   "d1-gestao-municipal":       { descricao: "", resumo: `` }, /* Goiânia: clima, vulnerabilidade e gestão municipal */
