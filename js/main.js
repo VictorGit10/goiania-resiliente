@@ -295,6 +295,10 @@
   var blocoTodos = document.getElementById("todos-participantes");
   if (blocoTodos && blocoTodos.tagName === "DETAILS") {
     var abrirTodos = function () { blocoTodos.open = true; };
+    var cabecaTodos = blocoTodos.querySelector(".todos-cabeca");
+    if (cabecaTodos && listaTodos) {
+      cabecaTodos.setAttribute("aria-label", "Todos os participantes: " + listaTodos.children.length + " nomes. Abrir ou fechar a lista.");
+    }
     document.addEventListener("click", function (e) {
       var atalho = e.target.closest && e.target.closest('a[href="#todos-participantes"]');
       if (atalho) abrirTodos();
@@ -629,10 +633,30 @@
      deslocar a página. Reancora o endereço direto, a menos que a pessoa já
      tenha começado a rolar. */
   var usuarioMexeu = false;
-  ["wheel", "touchstart", "keydown"].forEach(function (ev) {
+  ["wheel", "touchstart", "keydown", "click"].forEach(function (ev) {
     window.addEventListener(ev, function () { usuarioMexeu = true; }, { passive: true, once: true });
   });
-  function reancorar() { if (!usuarioMexeu) seguirEndereco(false); }
+  function alvoDoHash() {
+    var h = decodeURIComponent(location.hash || "");
+    if (/^#sessao-/.test(h)) return sessoes[h.slice(8)] && sessoes[h.slice(8)].box;
+    if (/^#convidado-/.test(h)) return document.getElementById(h.slice(1));
+    if (h === "#todos-participantes") return document.getElementById("todos-participantes");
+    return null;
+  }
+  var jaReancorou = false;
+  function reancorar() {
+    if (usuarioMexeu) return;
+    var alvo = alvoDoHash();
+    if (!alvo) return;
+    /* O primeiro ajuste sempre acontece. Nos seguintes, se a pessoa já
+       rolou para longe do alvo, não puxa a página de volta. */
+    if (jaReancorou) {
+      var r = alvo.getBoundingClientRect();
+      if (r.bottom < -200 || r.top > window.innerHeight + 200) return;
+    }
+    seguirEndereco(false);
+    jaReancorou = true;
+  }
   window.addEventListener("load", reancorar);
   if (document.fonts && document.fonts.ready) document.fonts.ready.then(reancorar);
 

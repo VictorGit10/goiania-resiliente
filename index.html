@@ -18,7 +18,7 @@
 /* Remove o texto provisório "Crédito editorial — imagem sem filtro..." */
 .foto-box .credito::before { content: none; }
 
-/* ============ NOVO FOOTER REESTRUTURADO (LINHA ÚNICA) ============ */
+/* ============ NOVO FOOTER REESTRUTURADO (DUAS LINHAS) ============ */
 footer {
   background: var(--branco);
   border-top: none;
@@ -146,13 +146,6 @@ footer .inner {
 .foot-logos-items img:hover {
   transform: scale(1.06);
 }
-.foot-logos-divider {
-  width: 2px;
-  height: 60px;
-  background: var(--preto);
-  flex-shrink: 0;
-  margin-bottom: 4px;
-}
 
 /* Equipe com 6 pessoas (3 colunas perfeitas) */
 .equipe-grid {
@@ -165,9 +158,6 @@ footer .inner {
     flex-direction: column;
     align-items: flex-start;
     gap: 24px;
-  }
-  .foot-logos-divider {
-    display: none;
   }
   .foot-logos-subgroup.realizadores,
   .foot-logos-subgroup.parcerias {
@@ -879,7 +869,7 @@ footer .inner {
       </div>
     </div>
 
-    <!-- Faixa única com TODOS os logotipos em uma só linha horizontal -->
+    <!-- Faixa de logotipos: Realização e Parcerias em duas linhas -->
     <div class="foot-logos-strip">
       <div class="foot-logos-row">
         <!-- Realização (5 marcas) -->
@@ -888,9 +878,9 @@ footer .inner {
           <div class="foot-logos-items">
             <a href="#org-idesa" class="foot-logo-link"><img src="assets/img/logos/idesa.png" alt="IDESA Brasil" height="56" title="Instituto de Desenvolvimento Econômico e Socioambiental (IDESA)"></a>
             <a href="#org-amma" class="foot-logo-link"><img class="logo-amma" src="assets/img/logos/prefeitura-goiania-amma-segov.svg" alt="AMMA · SEGOV · Prefeitura de Goiânia" height="64" title="Prefeitura de Goiânia · Agência Municipal do Meio Ambiente (AMMA) · Secretaria Municipal de Governo (SEGOV)"></a>
-            <a href="#org-cempa" class="foot-logo-link"><img src="assets/img/logos/ufg.png" alt="UFG" height="48" title="Universidade Federal de Goiás (UFG)"></a>
-            <a href="#org-cempa" class="foot-logo-link"><img src="assets/img/logos/cempa.png" alt="CEMPA-Cerrado" height="52" title="Centro de Excelência em Estudos, Monitoramento e Previsões Ambientais do Cerrado (CEMPA-Cerrado)"></a>
-            <a href="#org-iande" class="foot-logo-link"><img src="assets/img/logos/iande-verde.png" alt="Iandé Verde" height="40" title="Iandé Verde"></a>
+            <a href="#org-cempa" class="foot-logo-link"><img src="assets/img/logos/ufg.png" alt="UFG" height="40" title="Universidade Federal de Goiás (UFG)"></a>
+            <a href="#org-cempa" class="foot-logo-link"><img src="assets/img/logos/cempa.png" alt="CEMPA-Cerrado" height="56" title="Centro de Excelência em Estudos, Monitoramento e Previsões Ambientais do Cerrado (CEMPA-Cerrado)"></a>
+            <a href="#org-iande" class="foot-logo-link"><img src="assets/img/logos/iande-verde.png" alt="Iandé Verde" height="32" title="Iandé Verde"></a>
           </div>
         </div>
 
@@ -899,7 +889,7 @@ footer .inner {
           <p class="foot-kicker">Parcerias estratégicas</p>
           <div class="foot-logos-items">
             <a href="#org-ciamb" class="foot-logo-link"><img src="assets/img/logos/ciamb.png" alt="CIAMB" height="48" title="Programa de Pós-Graduação em Ciências Ambientais (CIAMB/UFG)"></a>
-            <a href="#org-fiocruz" class="foot-logo-link"><img src="assets/img/logos/fiocruz.png" alt="Fiocruz Cerrados" height="46" title="Fiocruz Cerrados"></a>
+            <a href="#org-fiocruz" class="foot-logo-link"><img src="assets/img/logos/fiocruz.png" alt="Fiocruz Cerrados" height="48" title="Fiocruz Cerrados"></a>
             <a href="#org-esa" class="foot-logo-link"><img src="assets/img/logos/oab.png" alt="OAB · CASAG · ESA–OAB/GO" height="36" title="OAB-GO · CASAG · Escola Superior de Advocacia (ESA–OAB/GO)"></a>
             <img src="assets/img/logos/sabrina-garcez.svg" alt="Sabrina Garcez" height="34" title="Sabrina Garcez">
           </div>
