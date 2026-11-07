@@ -15,7 +15,7 @@
    cargo       → cargo / instituição (uma linha).
    resumo      → duas ou três frases, aparecem sempre no cartão.
    minibio     → texto completo (opcional). Se houver, aparece o botão
-                 "Ler minibio completa".
+                 "Ler biografia completa".
    pendente    → (opcional) true enquanto o texto for provisório.
 
    Só publique o que é público: nome, cargo, minibio e foto.

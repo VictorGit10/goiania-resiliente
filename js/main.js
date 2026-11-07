@@ -223,7 +223,7 @@
     if (c.resumo) txt.appendChild(el("p", "conv-resumo", c.resumo));
     if (c.minibio && c.minibio !== c.resumo) {
       var d = el("details", "ler-mais");
-      d.appendChild(el("summary", null, "Ler minibio completa"));
+      d.appendChild(el("summary", null, "Ler biografia completa"));
       d.appendChild(el("p", null, c.minibio));
       txt.appendChild(d);
     }
@@ -250,7 +250,7 @@
     convidados.forEach(function (c) { gridConv.appendChild(cartaoConvidado(c)); });
     var aviso = el("div", "conv-aviso");
     aviso.appendChild(el("strong", null, "Mais perfis em breve"));
-    aviso.appendChild(el("p", null, "Os perfis dos demais participantes serão publicados assim que recebermos as minibios. Todos os nomes estão na lista abaixo."));
+    aviso.appendChild(el("p", null, "Os perfis dos demais participantes serão publicados em breve. Todos os nomes estão na lista abaixo."));
     var ir = el("a", "btn", "Ver todos os participantes ↓");
     ir.href = "#todos-participantes";
     aviso.appendChild(ir);
