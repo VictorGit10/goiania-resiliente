@@ -8,6 +8,7 @@ Atualizado em 07/11/2026. O site funciona com tudo o que está abaixo em aberto:
 |---|---|---|
 | **Nome da Carolina**: o formulário diz "Carolina **Stange** Moulin"; a programação diz "Carolina **Azevedo** Moulin". O perfil já está ligado aos dois; a programação não foi alterada. | `index.html` (programação) | Confirmar com ela |
 | **"Dr. Pedro Baima"**: nome pedido por ele no formulário; a programação e "Quem somos" dizem "Pedro Baima". | `index.html` | Pedro Novaes decide |
+| **Troca de "minibio" por "biografia"** no texto visível (branch `texto-biografia`, commit `fee7862`). | `index.html`, `js/main.js` | Publicar após o "ok" do Victor |
 | Aprovação do visual das seções novas (Participantes em verde, 1ª edição em rosa, detalhe das sessões) | — | Pedro e Marck (NB–Studio) |
 
 ## Fotos dos perfis
@@ -38,6 +39,12 @@ As fotos enviadas pelo formulário estão numa pasta do Drive do Pedro que ainda
 | "Fotos Dia 2" de 2024 não está visível no Drive compartilhado | — | Pedro compartilhar |
 | Links de 2024: fotos, vídeos e relatório final | `dados/acervo.js` | Relatório com link público |
 | Grafias: Thomaz/Tomaz (usado: Thomaz); Sabrina Garcez/Garcêz; Antonio/Antônio Zayek | — | Só confirmar |
+| **Mediação da mesa "Como se governa uma cidade em que o clima já mudou?"**: o site está com Sabrina Garcêz (Segov/Goiânia); o original no ar está com Sara Moraes (Segov). O zip do Marck já vinha com Sabrina. | `index.html` (programação) e `dados/convidados.js` | Pedro |
+| **Mediação da mesa de monitoramento** (Dia 1, 16h15): está como "SECTI-GO", sem nome de pessoa. | `index.html` (programação) | Pedro |
+| **Materiais de 2024**: a seção diz que fotos, vídeos e relatório "ficam reunidos no acervo", mas os cards de 2024 não têm links. | `index.html` e `dados/acervo.js` | Pedro / links |
+| **SEGOV no "Quem somos"**: o rodapé tem AMMA · SEGOV · Prefeitura; o texto fala só "Prefeitura de Goiânia · AMMA". | `index.html` (Quem somos) | Pedro |
+| **Sabrina Garcez no rodapé** sem entrada correspondente em "Quem somos". | `index.html` | Pedro (opcional) |
+| Pontos completos para a conversa com o Pedro | `materiais/2026-11-07-pontos-para-pedro.md` (fora do repositório) | Pedro |
 
 ## Depois do evento (25 e 26/11)
 
