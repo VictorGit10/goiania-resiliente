@@ -127,15 +127,15 @@ SESSÕES DO DIA, na ordem em que aconteceram. O código entre colchetes identifi
 - 9h–10h15 · Eixo Adaptação — Poluição, calor e território: mudanças climáticas, saúde e emergências [d2-saude-emergencias]
     Palestrante: José Alexandre Felizola (CETI Saúde/UFG)
     Debatedora: Cristina Musmanno (SES-GO)
-    Mediação: Gabriel Tenaglia (AMMA)
-- 10h30–12h · Eixo Mitigação e Transição Energética — Biogás, Goiânia Solar e Frota Verde [d2-transicao-energetica]
-    Conferencista: Thomaz Ramalho (IPPUC/Curitiba)
-    Debatedores: Gabriel Tenaglia (AMMA) · Adriano da Rocha Lima (ex-secretário de Governo do Estado de Goiás)
+    Mediação: Natalia Almeida Brito (SEMAD-GO)
+- 10h30–12h · Eixo Mitigação — Energia e Resíduos [d2-transicao-energetica]
+    Conferencista: Adriano da Rocha Lima (ex-secretário de Governo do Estado de Goiás)
+    Debatedores: Gabriel Tenaglia (AMMA) · Fabiana Nunes (SECTI-GO)
     Mediação: Pedro Baima (AMMA)
-- 14h–15h30 · Dois países, dois climas, duas cidades: Juárez (México) e Paragominas (PA) [d2-juarez-paragominas]
+- 14h–15h30 · 2 países, 3 climas, 3 cidades: Juárez (México), Paragominas (PA) e Curitiba (PR) [d2-juarez-paragominas]
     Palestrante: Felipe Adrián Vázquez (Universidade de Juárez, México)
-    Debatedores: Dominique Castanheira (Prefeitura de Paragominas) · Maxiely Scaramussa (Sindicato Rural de Paragominas)
-    Mediação: Thomaz Ramalho (IPPUC/Curitiba)
+    Debatedores: Dominique Castanheira (Prefeitura de Paragominas) · Maxiely Scaramussa (Sindicato Rural de Paragominas) · Thomaz Ramalho (IPPUC/Curitiba)
+    Mediação: Márcia Lobo (SECTI-GO)
 - 16h–17h · Como se governa uma cidade em que o clima já mudou? [d2-governar-cidade]
     Palestrante: Silvio Barros (Prefeito de Maringá)
     Mediação: Sabrina Garcêz (Segov/Goiânia)
