@@ -779,6 +779,7 @@ a.conv-link:focus-visible, .conv-agenda a:focus-visible, .ler-mais summary:focus
 .ed24-equipe .pessoa:target { background: var(--amarelo); }
 .ed24 .equipe { border-bottom: var(--borda-grossa); }
 .ed24-materiais { display: flex; justify-content: space-between; align-items: center; gap: 20px; padding: 28px 40px; flex-wrap: wrap; }
+.ed24-materiais-links { display: flex; gap: 12px; flex-wrap: wrap; }
 .ed24-materiais h3 { font-size: clamp(22px, 2.2vw, 30px); margin-bottom: 6px; }
 @media (max-width: 900px) {
   .ed24-numeros { grid-template-columns: 1fr 1fr; }
@@ -792,6 +793,8 @@ a.conv-link:focus-visible, .conv-agenda a:focus-visible, .ler-mais summary:focus
   .ed24-numeros > div { padding: 18px 20px; }
   .ed24-equipe { grid-template-columns: 1fr; }
   .ed24-materiais { padding: 24px 20px; }
+  .ed24-materiais-links { width: 100%; }
+  .ed24-materiais-links .btn { flex: 1 1 100%; }
   .ed24-materiais .btn { width: 100%; text-align: center; }
 }
 

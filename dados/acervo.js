@@ -50,7 +50,7 @@ window.GR_ACERVO = [
   { tipo: "artigos",       edicao: 2026, titulo: "Documentos de referência" },
 
   /* ---------- Edição 2024 ---------- */
-  { tipo: "fotos",         edicao: 2024, titulo: "Registro fotográfico", status: "Edição 2024" },
+  { tipo: "fotos",         edicao: 2024, titulo: "Registro fotográfico", status: "Edição 2024", link: "https://drive.google.com/drive/folders/1snxriQ215CqaEChSuAAd2QYgyBJwv_UK" },
   { tipo: "videos",        edicao: 2024, titulo: "Vídeos do evento",     status: "Edição 2024" },
   { tipo: "relatorios",    edicao: 2024, titulo: "Relatório final",      status: "Edição 2024" },
 
