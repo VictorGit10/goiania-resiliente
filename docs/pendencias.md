@@ -37,7 +37,9 @@ As fotos enviadas pelo formulário estão numa pasta do Drive do Pedro que ainda
 | Descrição de cada mesa (opcional) | `dados/sessoes.js`, campo `descricao` | Pedro |
 | Sites oficiais da Fiocruz Cerrados e da ESA–OAB/GO (hoje só o CIAMB tem link) | `index.html`, seção Quem somos | Confirmar endereços |
 | **Fotos da 1ª edição**: 4 das 5 fotos da seção foram trocadas por versões em alta resolução do Drive (1000 px); o álbum completo está linkado. A foto do painel final continua a do relatório (525 px). | `assets/img/edicao-2024/`, `index.html` e `dados/acervo.js` | Publicar o branch `fotos-2024` |
-| **Vídeos e relatório final de 2024**: ainda sem links; as fotos já estão no álbum do Drive. | `dados/acervo.js` | Relatório com link público |
+| **Vídeos e relatório final de 2024**: ainda sem links; as fotos já estão no álbum do Drive. O PDF da pasta `Materiais 2024` é o capítulo 6 (evento), não o relatório final completo. | `dados/acervo.js` | Relatório completo com link público |
+| **Programação 2024**: Gislaine Cristina Luiz e Klebber Formiga aparecem na programação do Drive, mas não no site. | `index.html` (seção 2024) | Pedro |
+| **Foto do painel final**: a atual é a do PDF (525 px); alternativas em alta: `_MG_9473` (Thomaz apresentando) e `_MG_9481` (mesa do painel). | `assets/img/edicao-2024/painel-goiania-resiliente.jpg` | Victor escolher |
 | Grafias: Thomaz/Tomaz (usado: Thomaz); Sabrina Garcez/Garcêz; Antonio/Antônio Zayek | — | Só confirmar |
 | **Mediação da mesa "Como se governa uma cidade em que o clima já mudou?"**: o site está com Sabrina Garcêz (Segov/Goiânia); o original no ar está com Sara Moraes (Segov). O zip do Marck já vinha com Sabrina. | `index.html` (programação) e `dados/convidados.js` | Pedro |
 | **Mediação da mesa de monitoramento** (Dia 1, 16h15): está como "SECTI-GO", sem nome de pessoa. | `index.html` (programação) | Pedro |
