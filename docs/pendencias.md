@@ -1,6 +1,6 @@
 # Pendências
 
-Atualizado em 05/11/2026. O site funciona com tudo o que está abaixo em aberto: o que falta aparece como "Foto em breve", "Disponível após o evento" ou simplesmente não aparece.
+Atualizado em 07/11/2026. O site funciona com tudo o que está abaixo em aberto: o que falta aparece como "Foto em breve", "Disponível após o evento" ou simplesmente não aparece.
 
 ## Antes de publicar
 

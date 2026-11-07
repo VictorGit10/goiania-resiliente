@@ -10,7 +10,7 @@ Visual e estrutura originais: **NB–Studio**. É um site estático: HTML, CSS e
 |---|---|---|
 | Inscrição, 01–03 | Inscrição, contexto, adaptação e mitigação, Goiânia | `index.html` |
 | 04 · Programação | Abas dos dois dias. Ao abrir uma sessão: participantes (com perfis), descrição, materiais, resumo e link direto | `index.html` + `dados/` |
-| 05 · Participantes | Perfis com foto e minibio e a lista de todos os participantes, com links para as atividades | `dados/convidados.js` |
+| 05 · Participantes | Perfis com foto e minibio e um índice recolhível de todos os participantes, com links para as atividades | `dados/convidados.js` |
 | 06 · Quem somos | Realizadores (com "ler mais"), parcerias estratégicas e equipe 2026 | `index.html` |
 | 07 · Edição 2024 | Números, fotos, programação e equipe da 1ª edição | `index.html` |
 | 08 · Acervo | Materiais filtráveis por tipo, edição e atividade | `dados/acervo.js` + resumos de `dados/sessoes.js` |

@@ -287,7 +287,22 @@
         listaTodos.appendChild(li);
       });
     var conta = document.getElementById("todosConta");
-    if (conta) conta.textContent = String(listaTodos.children.length);
+    if (conta) conta.textContent = listaTodos.children.length + " nomes";
+  }
+
+  /* A lista geral começa fechada. Os atalhos ("Ver todos os participantes")
+     abrem o bloco antes de rolar até ele. */
+  var blocoTodos = document.getElementById("todos-participantes");
+  if (blocoTodos && blocoTodos.tagName === "DETAILS") {
+    var abrirTodos = function () { blocoTodos.open = true; };
+    document.addEventListener("click", function (e) {
+      var atalho = e.target.closest && e.target.closest('a[href="#todos-participantes"]');
+      if (atalho) abrirTodos();
+    });
+    if (window.location.hash === "#todos-participantes") abrirTodos();
+    window.addEventListener("hashchange", function () {
+      if (window.location.hash === "#todos-participantes") abrirTodos();
+    });
   }
 
   /* Janela do perfil: abre sem sair do lugar. Sem <dialog>, o link leva ao cartão. */
@@ -306,7 +321,7 @@
       art.removeAttribute("id");
       corpo.appendChild(art);
       var ver = el("a", "modal-todos", "Ver todos os participantes →");
-      ver.href = "#convidados";
+      ver.href = "#todos-participantes";
       ver.addEventListener("click", function () { modal.close(); });
       corpo.appendChild(ver);
       modal.showModal();
@@ -599,9 +614,27 @@
       var alvo = document.getElementById(h.slice(1));
       if (alvo) alvo.scrollIntoView();
     }
+    else if (h === "#todos-participantes") {
+      var lista = document.getElementById("todos-participantes");
+      if (lista) {
+        if (lista.tagName === "DETAILS") lista.open = true;
+        lista.scrollIntoView();
+      }
+    }
   }
   window.addEventListener("hashchange", function () { seguirEndereco(true); });
   seguirEndereco(false);
+
+  /* Fontes e imagens terminam de carregar depois do primeiro salto e podem
+     deslocar a página. Reancora o endereço direto, a menos que a pessoa já
+     tenha começado a rolar. */
+  var usuarioMexeu = false;
+  ["wheel", "touchstart", "keydown"].forEach(function (ev) {
+    window.addEventListener(ev, function () { usuarioMexeu = true; }, { passive: true, once: true });
+  });
+  function reancorar() { if (!usuarioMexeu) seguirEndereco(false); }
+  window.addEventListener("load", reancorar);
+  if (document.fonts && document.fonts.ready) document.fonts.ready.then(reancorar);
 
   /* Ano no rodapé */
   document.getElementById("ano").textContent = new Date().getFullYear();

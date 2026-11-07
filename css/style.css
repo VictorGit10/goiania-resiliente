@@ -31,7 +31,7 @@ body {
 }
 img { display: block; max-width: 100%; }
 a { color: inherit; }
-h1, h2, h3 { font-weight: 800; text-transform: uppercase; letter-spacing: 0; line-height: 1.0; }
+h1, h2, h3 { font-weight: 800; text-transform: uppercase; letter-spacing: 0; line-height: 1.0; overflow-wrap: break-word; }
 
 .kicker { font-size: 13px; font-weight: 700; text-transform: uppercase; letter-spacing: .04em; }
 .num { font-size: 44px; font-weight: 800; line-height: 1; }
@@ -489,6 +489,7 @@ footer .inner {
   display: flex;
   flex-direction: column;
   gap: 12px;
+  min-width: 0;
 }
 .foot-info-grid > div + div {
   border-left: var(--borda-grossa);
@@ -524,6 +525,7 @@ footer .inner {
   margin-top: 10px;
   padding-top: 12px;
   border-top: 1px solid var(--preto);
+  flex-wrap: wrap;
 }
 .btn-inscricao-mini {
   display: inline-block;
@@ -543,7 +545,7 @@ footer .inner {
   color: var(--preto);
 }
 
-/* 2. Faixa única com todos os logotipos na mesma linha */
+/* 2. Faixa de logotipos: Realização e Parcerias em duas linhas */
 .foot-logos-strip {
   padding: 32px 40px;
   border-bottom: var(--borda);
@@ -551,9 +553,9 @@ footer .inner {
 }
 .foot-logos-row {
   display: flex;
-  align-items: flex-end;
-  justify-content: space-between;
-  gap: 32px;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 28px;
   width: 100%;
 }
 .foot-logos-subgroup {
@@ -561,12 +563,12 @@ footer .inner {
   flex-direction: column;
   align-items: flex-start;
   gap: 14px;
+  width: 100%;
 }
-.foot-logos-subgroup.realizadores {
-  flex: 1.45;
-}
+.foot-logos-subgroup.realizadores,
 .foot-logos-subgroup.parcerias {
-  flex: 1;
+  flex: none;
+  width: 100%;
 }
 .foot-kicker {
   font-size: 13px;
@@ -580,13 +582,13 @@ footer .inner {
 .foot-logos-items {
   display: flex;
   align-items: center;
-  gap: 28px;
-  flex-wrap: nowrap;
+  gap: 20px 40px;
+  flex-wrap: wrap;
 }
 .foot-logos-items img {
-  max-height: 56px;
+  max-height: none;
   width: auto;
-  max-width: 170px;
+  max-width: 100%;
   object-fit: contain;
   image-rendering: -webkit-optimize-contrast;
   transition: transform .15s ease-out;
@@ -623,7 +625,10 @@ footer .inner {
   }
   .foot-logos-items {
     flex-wrap: wrap;
-    gap: 20px;
+    gap: 16px;
+  }
+  .foot-logos-items img.logo-amma {
+    height: 54px;
   }
   .equipe-grid {
     grid-template-columns: repeat(2, 1fr) !important;
@@ -645,6 +650,9 @@ footer .inner {
   }
   .foot-logos-items {
     gap: 16px;
+  }
+  .foot-logos-items img.logo-amma {
+    height: 48px;
   }
   .equipe-grid {
     grid-template-columns: 1fr !important;
@@ -886,9 +894,23 @@ a.conv-link.perfil-mini:hover { background: var(--amarelo); }
 
 /* ============ TODOS OS PARTICIPANTES ============ */
 .todos { border-top: var(--borda-grossa); background: var(--branco); scroll-margin-top: 65px; }
-.todos-cabeca { padding: 28px 40px; border-bottom: var(--borda-grossa); background: var(--verde); display: flex; flex-direction: column; gap: 6px; }
+.todos-cabeca {
+  padding: 24px 40px; background: var(--verde); cursor: pointer; list-style: none;
+  display: grid; grid-template-columns: minmax(0, 1fr) auto; align-items: center; gap: 6px 24px;
+}
+.todos-cabeca::-webkit-details-marker { display: none; }
+.todos-cabeca::marker { content: ""; }
 .todos-cabeca h3 { font-size: clamp(22px, 2.4vw, 32px); }
-.todos-cabeca p { font-size: 15px; max-width: 70ch; }
+.todos-sub { font-size: 15px; max-width: 78ch; line-height: 1.45; }
+.todos-seta {
+  grid-column: 2; grid-row: 1 / span 2; width: 38px; height: 38px;
+  border: 2px solid var(--preto); border-radius: 50%; display: grid; place-items: center;
+  font-size: 24px; font-weight: 800; line-height: 1; transition: transform .2s ease-out;
+}
+.todos[open] .todos-seta { transform: rotate(45deg); }
+.todos[open] .todos-cabeca { border-bottom: var(--borda-grossa); }
+.todos-cabeca:hover h3 { text-decoration: underline; text-underline-offset: 4px; }
+.todos-cabeca:focus-visible { outline: 3px solid var(--azul); outline-offset: -3px; }
 .todos-lista { list-style: none; display: grid; grid-template-columns: 1fr 1fr; }
 .todos-lista li { display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1.4fr); gap: 16px; padding: 14px 24px; border-bottom: 1px solid var(--preto); }
 .todos-lista li:nth-child(odd) { border-right: var(--borda); }
@@ -903,7 +925,8 @@ a.conv-link.perfil-mini:hover { background: var(--amarelo); }
   .todos-lista li:nth-child(odd) { border-right: none; }
 }
 @media (max-width: 700px) {
-  .todos-cabeca { padding: 22px 20px; }
+  .todos-cabeca { padding: 20px; gap: 4px 16px; }
+  .todos-seta { width: 32px; height: 32px; font-size: 20px; }
   .todos-lista li { grid-template-columns: 1fr; gap: 8px; padding: 14px 20px; }
 }
 
