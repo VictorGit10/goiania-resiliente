@@ -10,6 +10,7 @@ Atualizado em 07/11/2026. O site funciona com tudo o que está abaixo em aberto:
 | **"Dr. Pedro Baima"**: nome pedido por ele no formulário; a programação e "Quem somos" dizem "Pedro Baima". | `index.html` | Pedro Novaes decide |
 | **Troca de "minibio" por "biografia"** — publicada na `main` em 07/11/2026 (commit `e50733b`). | `index.html`, `js/main.js` | — |
 | **Atualização das fotos de 2024** (branch `fotos-2024`): publicada na `main` em 07/11/2026 (commit `eb3833a`). | `index.html`, `dados/acervo.js`, `assets/img/edicao-2024/` | — |
+| **Divergências do zip alinhadas ao site no ar** (rodapé, SEGOV, Abertura/Zilma, Pedro Baima, título da Governança, Sandro/Silvio): publicadas na `main` em 07/11/2026 (commit `98fbcd9`). | `index.html`, `docs/resumos-das-sessoes.md`, `dados/sessoes.js` | — |
 | Aprovação do visual das seções novas (Participantes em verde, 1ª edição em rosa, detalhe das sessões) | — | Pedro e Marck (NB–Studio) |
 
 ## Fotos dos perfis
@@ -41,9 +42,8 @@ As fotos enviadas pelo formulário estão numa pasta do Drive do Pedro que ainda
 | **Programação 2024**: Gislaine Cristina Luiz e Klebber Formiga aparecem na programação do Drive, mas não no site. | `index.html` (seção 2024) | Pedro |
 | **Foto do painel final**: mantida a do PDF (525 px) por decisão do Victor em 07/11/2026; alternativas em alta eram `_MG_9473` (Thomaz apresentando) e `_MG_9481` (mesa do painel). | `assets/img/edicao-2024/painel-goiania-resiliente.jpg` | — |
 | Grafias: Thomaz/Tomaz (usado: Thomaz); Sabrina Garcez/Garcêz; Antonio/Antônio Zayek | — | Só confirmar |
-| **Mediação da mesa "Como se governa uma cidade em que o clima já mudou?"**: o site está com Sabrina Garcêz (Segov/Goiânia); o original no ar está com Sara Moraes (Segov). O zip do Marck já vinha com Sabrina. | `index.html` (programação) e `dados/convidados.js` | Pedro |
+| **Mediação da mesa "Como se governa uma cidade em que o clima já mudou?"**: o site está com Sabrina Garcêz (Segov/Goiânia); o original no ar está com Sara Moraes (Segov). O zip do Marck já vinha com Sabrina; é a única divergência do zip ainda pendente. | `index.html` (programação) e `dados/convidados.js` | Pedro |
 | **Mediação da mesa de monitoramento** (Dia 1, 16h15): está como "SECTI-GO", sem nome de pessoa. | `index.html` (programação) | Pedro |
-| **SEGOV no "Quem somos"**: o rodapé tem AMMA · SEGOV · Prefeitura; o texto fala só "Prefeitura de Goiânia · AMMA". | `index.html` (Quem somos) | Pedro |
 | **Sabrina Garcez no rodapé** sem entrada correspondente em "Quem somos". | `index.html` | Pedro (opcional) |
 | Pontos completos para a conversa com o Pedro | `materiais/2026-11-07-pontos-para-pedro.md` (fora do repositório) | Pedro |
 
