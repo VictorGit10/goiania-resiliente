@@ -6,7 +6,7 @@ Atualizado em 08/11/2026. O site funciona com tudo o que está abaixo em aberto:
 
 | O que | Onde mexer | Depende de |
 |---|---|---|
-| **Respostas do Pedro de 08/11/2026** — branch `respostas-pedro-08-11`, aguardando o "ok" do Victor: Sara Moraes, Carolina Stange Moulin, Sabrina Garcez, Dr. Pedro Baima, Antônio, Conselho Consultivo/Equipe 2026, relatório final de 2024 e foto do Pedro Novaes. | `index.html`, `dados/convidados.js`, `dados/acervo.js`, `js/main.js`, `css/style.css`, `materiais/2024/` e `assets/img/convidados/` | Victor publicar |
+| **Respostas do Pedro de 08/11/2026** — publicadas na `main` em 08/11/2026 (commits `c5f6cf0` e `91107f9`): Sara Moraes, Carolina Stange Moulin, Sabrina Garcez, Dr. Pedro Baima, Antônio, Conselho Consultivo/Equipe 2026, relatório final de 2024 e foto do Pedro Novaes. | `index.html`, `dados/convidados.js`, `dados/acervo.js`, `js/main.js`, `css/style.css`, `materiais/2024/` e `assets/img/convidados/` | — |
 | **Troca de "minibio" por "biografia"** — publicada na `main` em 07/11/2026 (commit `e50733b`). | `index.html`, `js/main.js` | — |
 | **Atualização das fotos de 2024** (branch `fotos-2024`): publicada na `main` em 07/11/2026 (commit `eb3833a`). | `index.html`, `dados/acervo.js`, `assets/img/edicao-2024/` | — |
 | **Divergências do zip alinhadas ao site no ar** (rodapé, SEGOV, Abertura/Zilma, Pedro Baima, título da Governança, Sandro/Silvio): publicadas na `main` em 07/11/2026 (commit `98fbcd9`). | `index.html`, `docs/resumos-das-sessoes.md`, `dados/sessoes.js` | — |
@@ -43,7 +43,7 @@ As fotos enviadas pelo formulário estão numa pasta do Drive do Pedro que ainda
 | **Relatório final de 2024**: publicado na branch `respostas-pedro-08-11` em `materiais/2024/relatorio-final-2024.pdf` (versão final, março de 2025, 59 páginas). Os vídeos de 2024 saíram do acervo a pedido do Pedro. | `dados/acervo.js`, `index.html`, `materiais/2024/` | — |
 | **Foto do painel final**: mantida a do PDF (525 px) por decisão do Victor em 07/11/2026; alternativas em alta eram `_MG_9473` (Thomaz apresentando) e `_MG_9481` (mesa do painel). | `assets/img/edicao-2024/painel-goiania-resiliente.jpg` | — |
 | **Mediação da mesa de monitoramento** (Dia 1, 16h15): está como "SECTI-GO", sem nome de pessoa. O Pedro pediu para manter por enquanto. | `index.html` (programação) | Pedro (futuro) |
-| **Logo**: confirmar qual logo o Pedro quer corrigir — a do evento no topo, a assinatura da Sabrina no rodapé ou a marca Prefeitura/AMMA/SEGOV. Nenhuma foi alterada. Os arquivos oficiais estão na pasta `materiais/` do projeto (fora do repositório), em `logo-goiania-resiliente-2026.zip`. | `assets/logo/`, `assets/img/logos/` | Pedro |
+| **Logo do CEMPA**: corrigida em 08/11/2026 — a versão horizontal oficial entrou no rodapé, no lugar da vertical antiga. Os arquivos para o Pedro estão em `materiais/logo-cempa.zip`. | `index.html`, `assets/img/logos/cempa-horizontal.png` | — |
 | **Fotos do Conselho Consultivo**: Daniela Melo e Silva, Guilherme Franco Netto e Sabrina Garcez estão com "Foto em breve". | `assets/img/convidados/` | Fotos dos três |
 | Pontos completos para a conversa com o Pedro | `materiais/2026-11-07-pontos-para-pedro.md` (fora do repositório) | Pedro |
 
