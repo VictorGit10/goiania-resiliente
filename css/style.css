@@ -295,6 +295,7 @@ details.expla .expla-body { padding: 0 40px 28px; display: flex; flex-direction:
 .equipe-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 0; border: var(--borda); background: var(--preto); grid-auto-rows: 1fr; }
 .pessoa { background: var(--cinza); padding: 24px; display: flex; flex-direction: column; gap: 8px; }
 .pessoa strong { font-size: 17px; font-weight: 800; text-transform: uppercase; }
+.pessoa-tag { font-size: 10px; font-weight: 800; text-transform: uppercase; letter-spacing: .08em; color: var(--azul); }
 .pessoa .cargo { font-size: 12px; font-weight: 700; text-transform: uppercase; letter-spacing: .04em; }
 .pessoa p { font-size: 13.5px; line-height: 1.45; }
 @media (max-width: 1100px) { .equipe-grid { grid-template-columns: repeat(2, 1fr); } }

@@ -17,6 +17,9 @@
    minibio     → texto completo (opcional). Se houver, aparece o botão
                  "Ler biografia completa".
    pendente    → (opcional) true enquanto o texto for provisório.
+   ocultoNoGrid → (opcional) true para perfis que aparecem só no bloco
+                  "Conselho Consultivo" do "Quem somos", sem cartão na
+                  seção Participantes.
 
    Só publique o que é público: nome, cargo, minibio e foto.
    Nada de e-mail, telefone ou outras respostas do formulário.
@@ -40,8 +43,7 @@ window.GR_CONVIDADOS = [
   {
     id: "carolina-stange-moulin",
     nome: "Carolina Stange Moulin",
-    /* A programação escreve "Carolina Azevedo Moulin": confirmar o nome com ela. */
-    naProgramacao: ["Carolina Stange Moulin", "Carolina Azevedo Moulin"],
+    naProgramacao: ["Carolina Stange Moulin"],
     cargo: "Subsecretária de Biodiversidade, Unidades de Conservação e Segurança Hídrica · SEMAD/GO",
     resumo: "Subsecretária de Biodiversidade, Unidades de Conservação e Segurança Hídrica da Secretaria de Estado de Meio Ambiente e Desenvolvimento Sustentável de Goiás (SEMAD/GO). Professora na Universidade Federal do Tocantins, Campus Arraias. Doutora em Direito pela Universidade de São Paulo (USP) e em Ciências Sociais pela Universidade de Osnabrück, Alemanha."
   },
@@ -103,5 +105,31 @@ window.GR_CONVIDADOS = [
     cargo: "Coordenação geral · Pesquisador LAPIG/UFG",
     resumo: "Geógrafo e documentarista, mestre em Ciência Ambiental pela USP. Foi secretário adjunto de Meio Ambiente de Goiás e é fellow do programa LEAD.",
     minibio: "Pedro Novaes é geógrafo e também documentarista. É mestre em Ciência Ambiental pela USP e doutorando em Ciências Ambientais pela Universidade Federal de Goiás. Foi chefe de gabinete da Agência Ambiental de Goiás e Secretário Adjunto de Meio Ambiente e Recursos Hídricos do Estado de Goiás entre 2000 e 2004. É fellow do Programa LEAD, de lideranças para meio ambiente e desenvolvimento. Trabalha como pesquisador no LAPIG, Laboratório de Sensoriamento Remoto e Geoprocessamento da UFG e no CEMPA-Cerrado. É também membro da equipe da Iniciativa Cerrados da Fiocruz. É colunista do site “A Redação” e colaborador da revista piauí. Escreveu o livro “O Jogo das Utopias Cruzadas - Participação, Natureza e Desenvolvimento”, publicado pela Editora Dialética."
+  },
+
+  /* ---------- Conselho Consultivo 2026 (só no "Quem somos") ---------- */
+  {
+    id: "daniela-melo-e-silva",
+    nome: "Daniela Melo e Silva",
+    ocultoNoGrid: true,
+    cargo: "Vice-coordenadora · CIAMB/UFG",
+    resumo: "Professora associada da UFG e vice-coordenadora do Programa de Pós-Graduação em Ciências Ambientais. Doutora em Biologia Animal pela UnB, pesquisa mutagênese ambiental e impactos de agrotóxicos na saúde humana e animal.",
+    minibio: "Possui graduação em Biomedicina pela PUC Goiás (1997), mestrado em Genética pela Universidade Federal de Goiás (2000) e doutorado em Biologia Animal pela Universidade de Brasília (2006). Atualmente é professora associada da UFG, bolsista de produtividade nível 1 C, membro do Comitê de Assessoramento da área de Ciências Ambientais do CNPq e vice-coordenadora do Programa de Pós-Graduação em Ciências Ambientais da UFG. Tem experiência na área de mutagênese ambiental, principalmente nos temas: avaliação do impacto de agrotóxicos na saúde humana e animal; ensaios de mutagenicidade e genotoxicidade; risco associado à exposição a diversos estressores ambientais; e impactos em organismos não alvo."
+  },
+  {
+    id: "guilherme-franco-netto",
+    nome: "Guilherme Franco Netto",
+    ocultoNoGrid: true,
+    cargo: "Coordenador · Programa Cerrados em Rede/Fiocruz",
+    resumo: "Médico, doutor em epidemiologia e coordenador do Programa de Saúde, Ambiente e Sustentabilidade da Fiocruz. É secretário executivo da Estratégia Fiocruz para a Agenda 2030.",
+    minibio: "Médico, doutor em epidemiologia (PhD), com pós-doutorado no Departamento de Medicina Preventiva e Social da Faculdade de Medicina da Universidade Estadual de Campinas. Coordenador do Programa de Saúde, Ambiente e Sustentabilidade da Fundação Oswaldo Cruz no âmbito da Vice-Presidência de Ambiente, Atenção e Promoção da Saúde (VPAAPS/Fiocruz) e secretário executivo da Estratégia Fiocruz para a Agenda 2030."
+  },
+  {
+    id: "sabrina-garcez",
+    nome: "Sabrina Garcez",
+    ocultoNoGrid: true,
+    cargo: "Secretária de Governo · Prefeitura de Goiânia",
+    resumo: "Advogada, especialista em Direito Constitucional e Administrativo. Foi vereadora por dois mandatos e a primeira mulher a presidir a CCJ da Câmara Municipal de Goiânia. Hoje é Secretária Municipal de Governo.",
+    minibio: "Sabrina Garcez é advogada, especialista em Direito Constitucional e Administrativo. Iniciou sua trajetória no movimento estudantil, onde ajudou a criar o Passe Livre Estudantil. Eleita vereadora em 2017, foi a primeira mulher a presidir a CCJ da Câmara Municipal de Goiânia. Em seu segundo mandato, relatou projetos importantes como o novo Plano Diretor e os Códigos de Posturas e Tributário. Atualmente, é Secretária Municipal de Governo de Goiânia, trabalhando por uma cidade mais acessível, justa e inclusiva."
   },
 ];

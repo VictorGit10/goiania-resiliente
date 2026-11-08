@@ -247,7 +247,9 @@
 
   var gridConv = document.getElementById("convidadosGrid");
   if (gridConv) {
-    convidados.forEach(function (c) { gridConv.appendChild(cartaoConvidado(c)); });
+    convidados
+      .filter(function (c) { return !c.ocultoNoGrid; })
+      .forEach(function (c) { gridConv.appendChild(cartaoConvidado(c)); });
     var aviso = el("div", "conv-aviso");
     aviso.appendChild(el("strong", null, "Mais perfis em breve"));
     aviso.appendChild(el("p", null, "Os perfis dos demais participantes serão publicados em breve. Todos os nomes estão na lista abaixo."));
@@ -310,16 +312,13 @@
   }
 
   /* Janela do perfil: abre sem sair do lugar. Sem <dialog>, o link leva ao cartão. */
+  var abrirPerfil = null;
   if (modal && typeof modal.showModal === "function") {
     var corpo = document.getElementById("perfilCorpo");
     document.getElementById("perfilFechar").addEventListener("click", function () { modal.close(); });
     modal.addEventListener("click", function (e) { if (e.target === modal) modal.close(); });
-    document.addEventListener("click", function (e) {
-      var a = e.target.closest && e.target.closest("a.conv-link");
-      if (!a) return;
-      var c = perfis[a.getAttribute("data-convidado")];
+    abrirPerfil = function (c) {
       if (!c) return;
-      e.preventDefault();
       corpo.textContent = "";
       var art = cartaoConvidado(c);
       art.removeAttribute("id");
@@ -328,8 +327,16 @@
       ver.href = "#todos-participantes";
       ver.addEventListener("click", function () { modal.close(); });
       corpo.appendChild(ver);
-      modal.showModal();
+      if (!modal.open) modal.showModal();
       corpo.scrollTop = 0;
+    };
+    document.addEventListener("click", function (e) {
+      var a = e.target.closest && e.target.closest("a.conv-link");
+      if (!a) return;
+      var c = perfis[a.getAttribute("data-convidado")];
+      if (!c) return;
+      e.preventDefault();
+      abrirPerfil(c);
     });
   }
 
@@ -617,6 +624,7 @@
     else if (/^#convidado-/.test(h)) {
       var alvo = document.getElementById(h.slice(1));
       if (alvo) alvo.scrollIntoView();
+      else if (abrirPerfil) abrirPerfil(perfis[h.slice(11)]);
     }
     else if (h === "#todos-participantes") {
       var lista = document.getElementById("todos-participantes");

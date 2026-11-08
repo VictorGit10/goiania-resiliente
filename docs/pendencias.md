@@ -1,13 +1,12 @@
 # Pendências
 
-Atualizado em 07/11/2026. O site funciona com tudo o que está abaixo em aberto: o que falta aparece como "Foto em breve", "Disponível após o evento" ou simplesmente não aparece.
+Atualizado em 08/11/2026. O site funciona com tudo o que está abaixo em aberto: o que falta aparece como "Foto em breve", "Disponível após o evento" ou simplesmente não aparece.
 
 ## Antes de publicar
 
 | O que | Onde mexer | Depende de |
 |---|---|---|
-| **Nome da Carolina**: o formulário diz "Carolina **Stange** Moulin"; a programação diz "Carolina **Azevedo** Moulin". O perfil já está ligado aos dois; a programação não foi alterada. | `index.html` (programação) | Confirmar com ela |
-| **"Dr. Pedro Baima"**: nome pedido por ele no formulário; a programação e "Quem somos" dizem "Pedro Baima". | `index.html` | Pedro Novaes decide |
+| **Respostas do Pedro de 08/11/2026** — branch `respostas-pedro-08-11`, aguardando o "ok" do Victor: Sara Moraes, Carolina Stange Moulin, Sabrina Garcez, Dr. Pedro Baima, Antônio, Conselho Consultivo/Equipe 2026, relatório final de 2024 e foto do Pedro Novaes. | `index.html`, `dados/convidados.js`, `dados/acervo.js`, `js/main.js`, `css/style.css`, `materiais/2024/` e `assets/img/convidados/` | Victor publicar |
 | **Troca de "minibio" por "biografia"** — publicada na `main` em 07/11/2026 (commit `e50733b`). | `index.html`, `js/main.js` | — |
 | **Atualização das fotos de 2024** (branch `fotos-2024`): publicada na `main` em 07/11/2026 (commit `eb3833a`). | `index.html`, `dados/acervo.js`, `assets/img/edicao-2024/` | — |
 | **Divergências do zip alinhadas ao site no ar** (rodapé, SEGOV, Abertura/Zilma, Pedro Baima, título da Governança, Sandro/Silvio): publicadas na `main` em 07/11/2026 (commit `98fbcd9`). | `index.html`, `docs/resumos-das-sessoes.md`, `dados/sessoes.js` | — |
@@ -22,13 +21,16 @@ Salvar em `assets/img/convidados/` com estes nomes (JPG, de preferência quadrad
 - `carolina-stange-moulin.jpg`
 - `patricia-freitas.jpg`
 - `paulo-davila-ferreira.jpg`
-- `zilma-peixoto.jpg`
-- `gabriel-tenaglia.jpg`
 - `manuel-ferreira.jpg`
-- `pedro-novaes.jpg`
+- `zilma-peixoto.jpg` (não está no formulário; pedir foto oficial)
+- `gabriel-tenaglia.jpg` (não está no formulário; pedir foto oficial)
+- ✓ `pedro-novaes.jpg` (foto enviada em 08/11/2026; 800×600)
 - ✓ `thomaz-ramalho.jpg` (do documento "Equipe 2024"; parece antiga, vale pedir uma atual)
+- `daniela-melo-e-silva.jpg` (se ela enviar)
+- `guilherme-franco-netto.jpg` (se ele enviar)
+- `sabrina-garcez.jpg` (se ela enviar)
 
-As fotos enviadas pelo formulário estão numa pasta do Drive do Pedro que ainda não foi compartilhada (a planilha foi).
+As fotos enviadas pelo formulário estão numa pasta do Drive do Pedro que ainda não foi compartilhada (a planilha foi). Angel Chovert, José Alexandre Felizola, Fabiana Nunes e Marcel Sant'Ana também enviaram foto e bio, mas ainda não têm perfil no site.
 
 ## Conteúdo
 
@@ -38,13 +40,11 @@ As fotos enviadas pelo formulário estão numa pasta do Drive do Pedro que ainda
 | Descrição de cada mesa (opcional) | `dados/sessoes.js`, campo `descricao` | Pedro |
 | Sites oficiais da Fiocruz Cerrados e da ESA–OAB/GO (hoje só o CIAMB tem link) | `index.html`, seção Quem somos | Confirmar endereços |
 | **Fotos da 1ª edição**: 4 das 5 fotos da seção foram trocadas por versões em alta resolução do Drive (1000 px); o álbum completo está linkado. A foto do painel final foi mantida a do relatório (525 px) por decisão do Victor. Publicadas na `main` em 07/11/2026 (commit `eb3833a`). | `assets/img/edicao-2024/`, `index.html` e `dados/acervo.js` | — |
-| **Vídeos e relatório final de 2024**: ainda sem links; as fotos já estão no álbum do Drive. O PDF da pasta `Materiais 2024` é o capítulo 6 (evento), não o relatório final completo. | `dados/acervo.js` | Relatório completo com link público |
-| **Programação 2024**: Gislaine Cristina Luiz e Klebber Formiga aparecem na programação do Drive, mas não no site. | `index.html` (seção 2024) | Pedro |
+| **Relatório final de 2024**: publicado na branch `respostas-pedro-08-11` em `materiais/2024/relatorio-final-2024.pdf` (versão final, março de 2025, 59 páginas). Os vídeos de 2024 saíram do acervo a pedido do Pedro. | `dados/acervo.js`, `index.html`, `materiais/2024/` | — |
 | **Foto do painel final**: mantida a do PDF (525 px) por decisão do Victor em 07/11/2026; alternativas em alta eram `_MG_9473` (Thomaz apresentando) e `_MG_9481` (mesa do painel). | `assets/img/edicao-2024/painel-goiania-resiliente.jpg` | — |
-| Grafias: Thomaz/Tomaz (usado: Thomaz); Sabrina Garcez/Garcêz; Antonio/Antônio Zayek | — | Só confirmar |
-| **Mediação da mesa "Como se governa uma cidade em que o clima já mudou?"**: o site está com Sabrina Garcêz (Segov/Goiânia); o original no ar está com Sara Moraes (Segov). O zip do Marck já vinha com Sabrina; é a única divergência do zip ainda pendente. | `index.html` (programação) e `dados/convidados.js` | Pedro |
-| **Mediação da mesa de monitoramento** (Dia 1, 16h15): está como "SECTI-GO", sem nome de pessoa. | `index.html` (programação) | Pedro |
-| **Sabrina Garcez no rodapé** sem entrada correspondente em "Quem somos". | `index.html` | Pedro (opcional) |
+| **Mediação da mesa de monitoramento** (Dia 1, 16h15): está como "SECTI-GO", sem nome de pessoa. O Pedro pediu para manter por enquanto. | `index.html` (programação) | Pedro (futuro) |
+| **Logo**: confirmar qual logo o Pedro quer corrigir — a do evento no topo, a assinatura da Sabrina no rodapé ou a marca Prefeitura/AMMA/SEGOV. Nenhuma foi alterada. Os arquivos oficiais estão na pasta `materiais/` do projeto (fora do repositório), em `logo-goiania-resiliente-2026.zip`. | `assets/logo/`, `assets/img/logos/` | Pedro |
+| **Fotos do Conselho Consultivo**: Daniela Melo e Silva, Guilherme Franco Netto e Sabrina Garcez estão com "Foto em breve". | `assets/img/convidados/` | Fotos dos três |
 | Pontos completos para a conversa com o Pedro | `materiais/2026-11-07-pontos-para-pedro.md` (fora do repositório) | Pedro |
 
 ## Depois do evento (25 e 26/11)
@@ -61,4 +61,4 @@ As fotos enviadas pelo formulário estão numa pasta do Drive do Pedro que ainda
 ## Para avaliar
 
 - **Versão em inglês** (pedida como "avaliar" no documento de estrutura). Com o conteúdo já separado em `dados/`, uma versão em inglês das seções fixas e dos perfis é viável; os resumos teriam de ser traduzidos um a um.
-- **Hospedagem e DNS** (hoje na Hostinger do Marck).
+- **Hospedagem e DNS**: o Pedro autorizou a troca para o GitHub Pages em 08/11/2026. O Victor executa os passos (Settings → Pages + DNS na Hostinger), combinando antes com o Marck. Para desfazer, voltar o registro A para 62.72.62.176.

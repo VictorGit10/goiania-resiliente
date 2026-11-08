@@ -51,8 +51,7 @@ window.GR_ACERVO = [
 
   /* ---------- Edição 2024 ---------- */
   { tipo: "fotos",         edicao: 2024, titulo: "Registro fotográfico", status: "Edição 2024", link: "https://drive.google.com/drive/folders/1snxriQ215CqaEChSuAAd2QYgyBJwv_UK" },
-  { tipo: "videos",        edicao: 2024, titulo: "Vídeos do evento",     status: "Edição 2024" },
-  { tipo: "relatorios",    edicao: 2024, titulo: "Relatório final",      status: "Edição 2024" },
+  { tipo: "relatorios",    edicao: 2024, titulo: "Relatório final",      status: "Edição 2024", link: "materiais/2024/relatorio-final-2024.pdf", texto: "Versão final · março de 2025 · 59 páginas" },
 
   /* ---------- Materiais publicados: acrescente abaixo ---------- */
 ];

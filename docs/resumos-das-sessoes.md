@@ -76,7 +76,7 @@ SESSÕES DO DIA, na ordem em que aconteceram. O código entre colchetes identifi
     Participantes: Gabriel Tenaglia (AMMA) · Pedro Baima (AMMA)
     Mediação: José Moraes Neto (OAB-GO)
 - 14h–15h · Quem decide e quem paga a conta do clima? Um debate sobre governança e articulação federativa [d1-governanca]
-    Participantes: Carolina Azevedo Moulin (SEMAD-GO) · Dep. Antônio Gomide (Alego) · Danielle Oliveira (SECAP/Goiânia) · Pollyana Borges (SVMA/Aparecida de Goiânia)
+    Participantes: Carolina Stange Moulin (SEMAD-GO) · Dep. Antônio Gomide (Alego) · Danielle Oliveira (SECAP/Goiânia) · Pollyana Borges (SVMA/Aparecida de Goiânia)
     Mediação: Thomaz Ramalho (IPPUC/Curitiba)
 - 15h–16h · Matchmaking: bons projetos para financiamentos reais [d1-matchmaking]
     Palestrante: Patrícia Freitas (Consultora)
@@ -138,7 +138,7 @@ SESSÕES DO DIA, na ordem em que aconteceram. O código entre colchetes identifi
     Mediação: Márcia Lobo (SECTI-GO)
 - 16h–17h · Como se governa uma cidade em que o clima já mudou? [d2-governar-cidade]
     Palestrante: Silvio Barros (Prefeito de Maringá)
-    Mediação: Sabrina Garcêz (Segov/Goiânia)
+    Mediação: Sara Moraes (Segov)
 - 17h–17h30 · Recados finais e encerramento [d2-encerramento]
     Com: Zilma Peixoto (AMMA) · Pedro Novaes (UFG e Iandé Verde)
 
@@ -189,4 +189,4 @@ REGRAS
 | COFIEX | Comissão de Financiamentos Externos |
 | GCoM | Pacto Global de Prefeitas e Prefeitos pelo Clima e Energia |
 
-**Nomes com divergência ainda não resolvida** (confira antes de publicar): Carolina **Stange** Moulin (formulário) × Carolina **Azevedo** Moulin (programação); "Dr. Pedro Baima" × "Pedro Baima"; Sabrina Garcez (2024) × Garcêz (2026).
+**Nomes confirmados pelo Pedro em 08/11/2026:** Carolina **Stange** Moulin; **Dr. Pedro Baima** no perfil e **Pedro Baima** na programação; **Sabrina Garcez** (sem circunflexo); **Thomaz** com h; **Antônio** com circunflexo.
