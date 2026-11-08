@@ -119,7 +119,6 @@ window.GR_CONVIDADOS = [
   {
     id: "guilherme-franco-netto",
     nome: "Guilherme Franco Netto",
-    ocultoNoGrid: true,
     cargo: "Coordenador · Programa Cerrados em Rede/Fiocruz",
     resumo: "Médico, doutor em epidemiologia e coordenador do Programa de Saúde, Ambiente e Sustentabilidade da Fiocruz. É secretário executivo da Estratégia Fiocruz para a Agenda 2030.",
     minibio: "Médico, doutor em epidemiologia (PhD), com pós-doutorado no Departamento de Medicina Preventiva e Social da Faculdade de Medicina da Universidade Estadual de Campinas. Coordenador do Programa de Saúde, Ambiente e Sustentabilidade da Fundação Oswaldo Cruz no âmbito da Vice-Presidência de Ambiente, Atenção e Promoção da Saúde (VPAAPS/Fiocruz) e secretário executivo da Estratégia Fiocruz para a Agenda 2030."
