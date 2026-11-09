@@ -81,4 +81,4 @@ Cole o texto revisado e aprovado no campo `resumo` da sessão, entre crases. O p
 
 ## Publicação
 
-Pronto para qualquer hospedagem estática (Hostinger, GitHub Pages etc.). A troca de hospedagem e de DNS é uma decisão à parte, combinada com o Pedro e o Marck.
+O site está no GitHub Pages e é servido em https://goianiaresiliente.com desde 09/11/2026. A hospedagem antiga do Marck fica como backup; qualquer mudança futura de hospedagem ou DNS é combinada com o Victor.

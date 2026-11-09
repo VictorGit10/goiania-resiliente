@@ -8,7 +8,7 @@ Site do simpósio Goiânia Resiliente (goianiaresiliente.com). Responsável: Vic
 - **HTML/CSS/JS puros, sem build e sem dependências novas.** O site precisa funcionar abrindo o `index.html` direto (por isso os dados são `.js`, não `.json` com `fetch`).
 - **Identidade visual do NB–Studio:** use só as variáveis de `css/style.css` (`--preto`, `--amarelo`, `--branco`, `--cinza`, `--rosa`, `--azul`, `--verde`, `--vermelho`, `--borda`, `--borda-grossa`), a fonte Host Grotesk e o padrão `sec-head` (número + título). Texto preto sobre os fundos coloridos. Não altere logos.
 - **Dados pessoais:** publique só nome, cargo/instituição, minibio e foto. Nunca e-mail, telefone, data/hora de resposta de formulário ou outras respostas internas.
-- **Não mexa** em DNS, Hostinger, visibilidade do repositório ou GitHub Pages (nem crie `CNAME`).
+- **Não mexa** em DNS, Hostinger, visibilidade do repositório ou GitHub Pages (nem crie `CNAME`). A troca do domínio já foi feita em 09/11/2026; mudanças futuras são feitas pelo Victor.
 - Trabalhe numa branch e abra PR para `main`. **Não faça merge.**
 - Não mude nomes na programação sem confirmação (há divergências listadas em `docs/pendencias.md`).
 

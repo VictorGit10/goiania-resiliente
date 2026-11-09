@@ -1,6 +1,6 @@
 # Pendências
 
-Atualizado em 08/11/2026. O site funciona com tudo o que está abaixo em aberto: o que falta aparece como "Foto em breve", "Disponível após o evento" ou simplesmente não aparece.
+Atualizado em 09/11/2026. O site funciona com tudo o que está abaixo em aberto: o que falta aparece como "Foto em breve", "Disponível após o evento" ou simplesmente não aparece.
 
 ## Antes de publicar
 
@@ -61,4 +61,4 @@ As fotos enviadas pelo formulário estão numa pasta do Drive do Pedro que ainda
 ## Para avaliar
 
 - **Versão em inglês** (pedida como "avaliar" no documento de estrutura). Com o conteúdo já separado em `dados/`, uma versão em inglês das seções fixas e dos perfis é viável; os resumos teriam de ser traduzidos um a um.
-- **Hospedagem e DNS**: o Pedro autorizou a troca para o GitHub Pages em 08/11/2026. O Victor executa os passos (Settings → Pages + DNS na Hostinger), combinando antes com o Marck. Para desfazer, voltar o registro A para 62.72.62.176.
+- **Hospedagem e DNS**: concluído em 09/11/2026 — `goianiaresiliente.com` aponta para o GitHub Pages (quatro A `@` e CNAME `www`), com HTTPS e `www` redirecionando para o domínio principal. A hospedagem antiga do Marck fica como backup. Para desfazer, voltar o A `@` para `62.72.62.176` e o CNAME `www` para `goianiaresiliente.com`.
