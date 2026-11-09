@@ -131,4 +131,38 @@ window.GR_CONVIDADOS = [
     resumo: "Advogada, especialista em Direito Constitucional e Administrativo. Foi vereadora por dois mandatos e a primeira mulher a presidir a CCJ da Câmara Municipal de Goiânia. Hoje é Secretária Municipal de Governo.",
     minibio: "Sabrina Garcez é advogada, especialista em Direito Constitucional e Administrativo. Iniciou sua trajetória no movimento estudantil, onde ajudou a criar o Passe Livre Estudantil. Eleita vereadora em 2017, foi a primeira mulher a presidir a CCJ da Câmara Municipal de Goiânia. Em seu segundo mandato, relatou projetos importantes como o novo Plano Diretor e os Códigos de Posturas e Tributário. Atualmente, é Secretária Municipal de Governo de Goiânia, trabalhando por uma cidade mais acessível, justa e inclusiva."
   },
+
+  /* ---------- Participantes que responderam ao formulário ---------- */
+  {
+    id: "angel-chovert",
+    nome: "Angel Domínguez Chovert",
+    naProgramacao: ["Angel Chovert", "Angel Domínguez Chovert"],
+    cargo: "Docente do IF/UFG · Meteorologista do CEMPA-Cerrado",
+    resumo: "Meteorologista formado em Cuba, com mestrado pela UFPel e doutorado pelo INPE. É professor do Instituto de Física da UFG e meteorologista do CEMPA-Cerrado, atuando em previsão de tempo, clima e qualidade do ar.",
+    minibio: "Possui graduação em Meteorologia pelo Instituto Superior de Tecnologias e Ciências Aplicadas, Havana, Cuba (2013), mestrado em Meteorologia pela Universidade Federal de Pelotas, Rio Grande do Sul, Brasil (2016) e doutorado em Meteorologia pelo Instituto Nacional de Pesquisas Espaciais, São Paulo, Brasil (2021). Tem experiência na área de Geociências, com ênfase em Meteorologia, atuando principalmente nos seguintes temas: modelos numéricos de previsão de tempo, clima e qualidade do ar, meteorologia física com destaque para as parametrizações de microfísica de nuvens, química da atmosfera, monitoramento das condições de tempo utilizando sensoriamento remoto, precipitação extrema em regiões urbanas, previsão operacional de tempo meteorológico e agrometeorologia. Atualmente atua como Professor de Magistério Superior no Instituto de Física da Universidade Federal de Goiás e como meteorologista do CEMPA-Cerrado, participando do desenvolvimento de um sistema de multiprodutos meteorológicos para a região do Cerrado no Centro-Oeste do Brasil."
+  },
+  {
+    id: "jose-alexandre-felizola",
+    nome: "José Alexandre Felizola Diniz Filho",
+    naProgramacao: ["José Alexandre Felizola", "Jose Alexandre Diniz Filho", "José Alexandre Felizola Diniz Filho"],
+    cargo: "Professor titular · Universidade Federal de Goiás",
+    resumo: "Biólogo, professor titular da UFG e membro da Academia Brasileira de Ciências. Coordena o INCT em Ecologia, Evolução e Conservação da Biodiversidade e o eixo de Modelagem do CETI-Saúde.",
+    minibio: "Graduado em Ciências Biológicas (bacharelado) pela Universidade Federal de Sergipe (1989), com mestrado (1992) e doutorado (1994) em Ciências Biológicas (Zoologia) pela Universidade Estadual Paulista Júlio de Mesquita Filho (UNESP). Desde 1994 é professor da Universidade Federal de Goiás (professor titular desde 1996) e entre 2014 e 2016 foi Pró-Reitor de Pós-Graduação desta universidade. Foi membro de diversos comitês da CAPES e coordenador adjunto da área de Ecologia Meio Ambiente entre 2009 e 2011. É bolsista de produtividade em pesquisa nível 1A do Conselho Nacional de Desenvolvimento Científico e Tecnológico. Em 2014 passou a ser membro da Academia Brasileira de Ciências e em 2018 recebeu a Comenda da Ordem Nacional do Mérito Científico, da Presidência da República. Coordena, desde 2017, o INCT em “Ecologia, Evolução e Conservação da Biodiversidade” (aprovado para um segundo ciclo começando em 2025). Coordenador do eixo de “Modelagem” do “Centro de Excelência em Tecnologia e Inovação em Saúde” (CETI-Saúde), da UFG, e financiado pela FAPEG. Tem experiência nas áreas de macroecologia, genética e ecologia geográfica e métodos filogenéticos comparativos, sendo atualmente editor associado da “NPJ Biodiversity”."
+  },
+  {
+    id: "fabiana-nunes",
+    nome: "Fabiana Nunes",
+    naProgramacao: ["Fabiana Nunes"],
+    cargo: "Gerente de Inovação para Economia Circular · SECTI-GO",
+    resumo: "Arquiteta e urbanista com especialização em Planejamento e Gestão Urbana e MBA em Gerenciamento de Projetos. É gerente de Inovação para Economia Circular na SECTI-GO, onde lidera o Programa Sukatech.",
+    minibio: "Fabiana Maria Nunes é arquiteta e urbanista (PUC) com especialização em Planejamento e Gestão Urbana (UFG) e MBA em Gerenciamento de Projetos (FGV). Com mais de duas décadas de trajetória profissional atuando na interface entre planejamento urbano, infraestrutura e desenvolvimento sustentável, exerce atualmente o cargo de Gerente de Inovação para Economia Circular na Secretaria de Estado de Ciência, Tecnologia e Inovação de Goiás (SECTI-GO). Nesse papel, lidera o Programa Sukatech, uma política pública estadual estruturante focada na logística reversa e reciclagem de resíduos eletroeletrônicos (REEE), unindo sustentabilidade, ecoinovação e inclusão sociodigital. Anteriormente, atuou como Gerente de Economia Verde na Secretaria de Estado de Meio Ambiente e Desenvolvimento Sustentável (SEMAD), onde presidiu o Comitê de Logística Reversa do estado. Pelo impacto prático e socioambiental de sua atuação à frente do Sukatech, foi reconhecida nacionalmente em 2026 como finalista do Prêmio Espírito Público, na categoria Meio Ambiente e Emergência Climática, e do Prêmio Top Inovação UNINTER."
+  },
+  {
+    id: "marcel-santana",
+    nome: "Marcel Sant'Ana",
+    naProgramacao: ["Marcell Sant’Anna", "Marcel Sant'Ana", "Marcel Sant’Ana", "Marcel Claudio Sant'Ana"],
+    cargo: "Especialista em Gestão de Risco de Desastres · BID",
+    resumo: "Doutor em Arquitetura e Urbanismo, com mais de 20 anos de experiência em planejamento urbano, gestão de risco de desastres e mudança do clima. Atualmente é especialista em Gestão de Risco de Desastres no BID.",
+    minibio: "Marcel Cláudio Sant'Ana é doutor em Arquitetura e Urbanismo, com mais de 20 anos de experiência em planejamento urbano, gestão de risco de desastres e mudança do clima. No Ministério das Cidades, coordenou uma série de projetos nacionais, incluindo o Projeto GIDES (Brasil-Japão), premiado com o Sasakawa Award da UNDRR (2017). Tem experiência com BID, JICA, GIZ e ICLEI. Atualmente atua como Especialista em Gestão de Risco de Desastres no Banco Interamericano de Desenvolvimento (BID)."
+  },
 ];

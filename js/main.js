@@ -247,15 +247,16 @@
 
   var gridConv = document.getElementById("convidadosGrid");
   if (gridConv) {
-    convidados
-      .filter(function (c) { return !c.ocultoNoGrid; })
-      .forEach(function (c) { gridConv.appendChild(cartaoConvidado(c)); });
+    var visiveis = convidados.filter(function (c) { return !c.ocultoNoGrid; });
+    visiveis.forEach(function (c) { gridConv.appendChild(cartaoConvidado(c)); });
     var aviso = el("div", "conv-aviso");
     aviso.appendChild(el("strong", null, "Mais perfis em breve"));
     aviso.appendChild(el("p", null, "Os perfis dos demais participantes serão publicados em breve. Todos os nomes estão na lista abaixo."));
     var ir = el("a", "btn", "Ver todos os participantes ↓");
     ir.href = "#todos-participantes";
     aviso.appendChild(ir);
+    /* Se os perfis fecham a última linha de 3, o aviso ocupa a linha inteira. */
+    if (visiveis.length % 3 === 0) aviso.classList.add("full");
     gridConv.appendChild(aviso);
   }
 

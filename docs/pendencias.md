@@ -22,6 +22,10 @@ Salvar em `assets/img/convidados/` com estes nomes (JPG, de preferência quadrad
 - ✓ `patricia-freitas.jpg` (publicada em 09/11/2026)
 - ✓ `paulo-davila-ferreira.jpg` (publicada em 09/11/2026)
 - ✓ `manuel-ferreira.jpg` (publicada em 09/11/2026)
+- ✓ `angel-chovert.jpg` (publicada em 09/11/2026)
+- ✓ `jose-alexandre-felizola.jpg` (publicada em 09/11/2026)
+- ✓ `fabiana-nunes.jpg` (publicada em 09/11/2026)
+- ✓ `marcel-santana.jpg` (publicada em 09/11/2026)
 - `zilma-peixoto.jpg` (não está no formulário; pedir foto oficial)
 - `gabriel-tenaglia.jpg` (não está no formulário; pedir foto oficial)
 - ✓ `pedro-novaes.jpg` (foto enviada em 08/11/2026; 800×600)
@@ -30,13 +34,13 @@ Salvar em `assets/img/convidados/` com estes nomes (JPG, de preferência quadrad
 - `guilherme-franco-netto.jpg` (se ele enviar)
 - `sabrina-garcez.jpg` (se ela enviar)
 
-As fotos do formulário foram baixadas. As dos 6 perfis acima foram publicadas em 09/11/2026; as de Angel Chovert, José Alexandre Felizola, Fabiana Nunes e Marcel Sant'Ana estão em `materiais/fotos-perfis/`, mas eles ainda não têm perfil no site.
+As fotos do formulário foram baixadas e todos os 11 respondentes agora têm perfil e foto no site. As fotos de Zilma, Gabriel, Guilherme, Daniela e Sabrina ainda faltam.
 
 ## Conteúdo
 
 | O que | Onde mexer | Depende de |
 |---|---|---|
-| Perfis dos demais participantes de 2026 | `dados/convidados.js` | Respostas ao formulário |
+| **Perfis de Angel Chovert, José Alexandre Felizola, Fabiana Nunes e Marcel Sant'Ana**: publicados em 09/11/2026 com as bios do formulário. | `dados/convidados.js`, `index.html`, `assets/img/convidados/` | — |
 | Descrição de cada mesa (opcional) | `dados/sessoes.js`, campo `descricao` | Pedro |
 | Sites oficiais da Fiocruz Cerrados e da ESA–OAB/GO (hoje só o CIAMB tem link) | `index.html`, seção Quem somos | Confirmar endereços |
 | **Fotos da 1ª edição**: 4 das 5 fotos da seção foram trocadas por versões em alta resolução do Drive (1000 px); o álbum completo está linkado. A foto do painel final foi mantida a do relatório (525 px) por decisão do Victor. Publicadas na `main` em 07/11/2026 (commit `eb3833a`). | `assets/img/edicao-2024/`, `index.html` e `dados/acervo.js` | — |
