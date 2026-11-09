@@ -16,12 +16,12 @@ Atualizado em 09/11/2026. O site funciona com tudo o que está abaixo em aberto:
 
 Salvar em `assets/img/convidados/` com estes nomes (JPG, de preferência quadrado ou 4:3, até ~300 KB):
 
-- `carlos-gurjao.jpg` (ele mandou 3 opções no formulário)
-- `pedro-baima.jpg`
-- `carolina-stange-moulin.jpg`
-- `patricia-freitas.jpg`
-- `paulo-davila-ferreira.jpg`
-- `manuel-ferreira.jpg`
+- ✓ `carlos-gurjao.jpg` (opção 1 do formulário; publicada em 09/11/2026)
+- ✓ `pedro-baima.jpg` (publicada em 09/11/2026)
+- ✓ `carolina-stange-moulin.jpg` (publicada em 09/11/2026)
+- ✓ `patricia-freitas.jpg` (publicada em 09/11/2026)
+- ✓ `paulo-davila-ferreira.jpg` (publicada em 09/11/2026)
+- ✓ `manuel-ferreira.jpg` (publicada em 09/11/2026)
 - `zilma-peixoto.jpg` (não está no formulário; pedir foto oficial)
 - `gabriel-tenaglia.jpg` (não está no formulário; pedir foto oficial)
 - ✓ `pedro-novaes.jpg` (foto enviada em 08/11/2026; 800×600)
@@ -30,7 +30,7 @@ Salvar em `assets/img/convidados/` com estes nomes (JPG, de preferência quadrad
 - `guilherme-franco-netto.jpg` (se ele enviar)
 - `sabrina-garcez.jpg` (se ela enviar)
 
-As fotos enviadas pelo formulário estão numa pasta do Drive do Pedro que ainda não foi compartilhada (a planilha foi). Angel Chovert, José Alexandre Felizola, Fabiana Nunes e Marcel Sant'Ana também enviaram foto e bio, mas ainda não têm perfil no site.
+As fotos do formulário foram baixadas. As dos 6 perfis acima foram publicadas em 09/11/2026; as de Angel Chovert, José Alexandre Felizola, Fabiana Nunes e Marcel Sant'Ana estão em `materiais/fotos-perfis/`, mas eles ainda não têm perfil no site.
 
 ## Conteúdo
 
