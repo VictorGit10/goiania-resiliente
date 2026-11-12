@@ -46,6 +46,7 @@ Salvar em `assets/img/convidados/` com estes nomes (JPG, de preferência quadrad
 - ✓ `marcia-lobo.jpg` (publicada em 12/11/2026)
 - ✓ `sandro-mabel.jpg` (publicada em 12/11/2026)
 - ✓ `rodrigo-lustosa.jpg` (publicada em 12/11/2026)
+- ✓ `natalia-brito.jpg` (publicada em 12/11/2026)
 - `elizabete-ferreira.jpg` (não está na pasta do Pedro; pedir)
 - `jose-moraes-neto.jpg` (foto pronta em `materiais/fotos-perfis/`; falta o currículo)
 
@@ -60,7 +61,8 @@ As fotos do formulário e da pasta do Pedro foram baixadas. Todos os perfis publ
 | **Perfis de Karla Maria Silva de Faria e Cristina Paragó Musmanno**: publicados em 11/11/2026 com as bios do formulário. | `dados/convidados.js`, `assets/img/convidados/` | — |
 | **Perfis de Adriano da Rocha Lima, Celene Cunha, João Batista de Deus, Antônio Gomide, Danielle Oliveira, Pollyana Borges, Elizabete Alves Ferreira, Márcia Lobo, Sandro Mabel e Rodrigo Lustosa**: publicados em 12/11/2026 com as bios da planilha. | `dados/convidados.js`, `assets/img/convidados/` | — |
 | **Perfis de José Moraes Neto e Robledo Farias**: ainda sem currículo na planilha. José já tem foto na pasta. | `dados/convidados.js`, `assets/img/convidados/` | Pedro |
-| **Perfis de Natalia Almeida Brito, Felipe Adrián Vázquez, Dominique Castanheira, Maxiely Scaramussa e Sara Moraes**: estão na programação, mas não têm perfil na planilha. O Pedro disse que só faltam José e Robledo; confirmar se esses cinco terão perfil. | `dados/convidados.js`, `assets/img/convidados/` | Pedro |
+| **Perfil de Natalia Almeida Brito**: publicado em 12/11/2026 com a bio do formulário. | `dados/convidados.js`, `assets/img/convidados/` | — |
+| **Perfis de Felipe Adrián Vázquez, Dominique Castanheira, Maxiely Scaramussa e Sara Moraes**: estão na programação, mas não têm perfil na planilha. O Pedro disse que só faltam José e Robledo; confirmar se esses quatro terão perfil. | `dados/convidados.js`, `assets/img/convidados/` | Pedro |
 | Sites oficiais da Fiocruz Cerrados e da ESA–OAB/GO (hoje só o CIAMB tem link) | `index.html`, seção Quem somos | Confirmar endereços |
 | **Fotos da 1ª edição**: 4 das 5 fotos da seção foram trocadas por versões em alta resolução do Drive (1000 px); o álbum completo está linkado. A foto do painel final foi mantida a do relatório (525 px) por decisão do Victor. Publicadas na `main` em 07/11/2026 (commit `eb3833a`). | `assets/img/edicao-2024/`, `index.html` e `dados/acervo.js` | — |
 | **Relatório final de 2024**: publicado na `main` em 08/11/2026, em `materiais/2024/relatorio-final-2024.pdf` (versão final, março de 2025, 59 páginas). Os vídeos de 2024 saíram do acervo a pedido do Pedro. | `dados/acervo.js`, `index.html`, `materiais/2024/` | — |
