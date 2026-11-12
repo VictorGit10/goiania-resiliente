@@ -20,6 +20,7 @@ Site do simpósio Goiânia Resiliente (goianiaresiliente.com). Responsável: Vic
 - `dados/acervo.js`: materiais; `sessao` liga o material à sessão.
 - `js/main.js`: monta perfis, detalhe das sessões, lista de participantes, acervo e filtros.
 - `docs/resumos-das-sessoes.md`: fluxo e prompts do NotebookLM; checklist de revisão.
+- `docs/gravacao-do-audio.md`: captura do áudio das sessões no YouTube; o master da equipe de audiovisual tem prioridade.
 - `docs/pendencias.md`: manter atualizado a cada mudança.
 
 ## Ao revisar resumos de sessão

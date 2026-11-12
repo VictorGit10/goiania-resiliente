@@ -165,4 +165,20 @@ window.GR_CONVIDADOS = [
     resumo: "Doutor em Arquitetura e Urbanismo, com mais de 20 anos de experiência em planejamento urbano, gestão de risco de desastres e mudança do clima. Atualmente é especialista em Gestão de Risco de Desastres no BID.",
     minibio: "Marcel Cláudio Sant'Ana é doutor em Arquitetura e Urbanismo, com mais de 20 anos de experiência em planejamento urbano, gestão de risco de desastres e mudança do clima. No Ministério das Cidades, coordenou uma série de projetos nacionais, incluindo o Projeto GIDES (Brasil-Japão), premiado com o Sasakawa Award da UNDRR (2017). Tem experiência com BID, JICA, GIZ e ICLEI. Atualmente atua como Especialista em Gestão de Risco de Desastres no Banco Interamericano de Desenvolvimento (BID)."
   },
+  {
+    id: "karla-faria",
+    nome: "Karla Maria Silva de Faria",
+    naProgramacao: ["Karla Faria", "Karla Maria Silva de Faria"],
+    cargo: "Docente do CIAMB e do PPGEO · UFG",
+    resumo: "Geógrafa, com mestrado e doutorado pela UFG. É docente do CIAMB e do PPGEO e coordena a Unidade de Pesquisa em Biodiversidade Prof. José Ângelo Rizzo. Pesquisa geoecologia e planejamento ambiental, com foco nas paisagens do Cerrado.",
+    minibio: "Graduada em Geografia, com mestrado e doutorado pela Universidade Federal de Goiás. Tem experiência na área de Geografia, com ênfase em Geoecologia e Planejamento Ambiental. Coordena o Grupo de Pesquisa Geoecologia das Paisagens do Cerrado. É docente do quadro permanente do Programa de Pós-Graduação em Ciências Ambientais (CIAMB) e do Programa de Pós-Graduação em Geografia (PPGEO), ambos da UFG. Representa a UFG em conselhos consultivos de unidades de conservação no estado de Goiás e coordena a Unidade de Pesquisa em Biodiversidade Prof. José Ângelo Rizzo, da UFG."
+  },
+  {
+    id: "cristina-musmanno",
+    nome: "Cristina Paragó Musmanno",
+    naProgramacao: ["Cristina Musmanno", "Cristina Paragó Musmanno"],
+    cargo: "Gerente de Emergências em Saúde Pública · SES-GO",
+    resumo: "Bióloga, doutora em Medicina Tropical e Saúde Pública pela UFG. É tecnologista do Ministério da Saúde, cedida à SES-GO, onde gerencia as emergências em saúde pública e a Rede VigiarSUS. Graduada pela UERJ e mestre pela UFRJ.",
+    minibio: "Bióloga, doutora em Medicina Tropical e Saúde Pública pela Universidade Federal de Goiás. Servidora pública efetiva, no cargo de Tecnologista do Ministério da Saúde, cedida desde 2023 para a Secretaria de Estado da Saúde de Goiás, onde ocupa a função de Gerente de Emergências em Saúde Pública, liderando as áreas técnicas afetas à Rede Nacional de Vigilância, Alerta e Resposta às Emergências em Saúde Pública no âmbito do Sistema Único de Saúde (Rede VigiarSUS) e à Rede Nacional de Centros de Informação e Assistência Toxicológica (Renaciat). Graduada em Ciências Biológicas pela Universidade do Estado do Rio de Janeiro e mestre em Ciências Biológicas pela Universidade Federal do Rio de Janeiro. Possui especialização em Vigilância em Saúde Ambiental pela Universidade Federal do Rio de Janeiro e especialização em Análise em Situação de Saúde pela Universidade Federal de Goiás."
+  },
 ];
