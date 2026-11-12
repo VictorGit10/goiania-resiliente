@@ -1,6 +1,6 @@
 # Pendências
 
-Atualizado em 11/11/2026. O site funciona com tudo o que está abaixo em aberto: o que falta aparece como "Foto em breve", "Disponível após o evento" ou simplesmente não aparece.
+Atualizado em 12/11/2026. O site funciona com tudo o que está abaixo em aberto: o que falta aparece como "Foto em breve", "Disponível após o evento" ou simplesmente não aparece.
 
 ## Antes de publicar
 
@@ -28,17 +28,29 @@ Salvar em `assets/img/convidados/` com estes nomes (JPG, de preferência quadrad
 - ✓ `jose-alexandre-felizola.jpg` (publicada em 09/11/2026)
 - ✓ `fabiana-nunes.jpg` (publicada em 09/11/2026)
 - ✓ `marcel-santana.jpg` (publicada em 09/11/2026)
-- `zilma-peixoto.jpg` (não está no formulário; pedir foto oficial)
-- `gabriel-tenaglia.jpg` (não está no formulário; pedir foto oficial)
+- ✓ `zilma-peixoto.jpg` (publicada em 12/11/2026)
+- ✓ `gabriel-tenaglia.jpg` (publicada em 12/11/2026)
 - ✓ `pedro-novaes.jpg` (foto enviada em 08/11/2026; 800×600)
 - ✓ `thomaz-ramalho.jpg` (do documento "Equipe 2024"; parece antiga, vale pedir uma atual)
 - ✓ `karla-faria.jpg` (publicada em 11/11/2026)
 - ✓ `cristina-musmanno.jpg` (publicada em 11/11/2026)
-- `daniela-melo-e-silva.jpg` (se ela enviar)
-- `guilherme-franco-netto.jpg` (se ele enviar)
-- `sabrina-garcez.jpg` (se ela enviar)
+- ✓ `daniela-melo-e-silva.jpg` (publicada em 12/11/2026)
+- ✓ `guilherme-franco-netto.jpg` (publicada em 12/11/2026)
+- ✓ `sabrina-garcez.jpg` (publicada em 12/11/2026)
+- ✓ `adriano-da-rocha-lima.jpg` (publicada em 12/11/2026)
+- ✓ `celene-cunha.jpg` (publicada em 12/11/2026)
+- ✓ `joao-batista-de-deus.jpg` (publicada em 12/11/2026)
+- ✓ `antonio-gomide.jpg` (publicada em 12/11/2026)
+- ✓ `danielle-oliveira.jpg` (publicada em 12/11/2026)
+- ✓ `pollyana-borges.jpg` (publicada em 12/11/2026)
+- ✓ `marcia-lobo.jpg` (publicada em 12/11/2026)
+- ✓ `sandro-mabel.jpg` (publicada em 12/11/2026)
+- ✓ `rodrigo-lustosa.jpg` (publicada em 12/11/2026)
+- ✓ `natalia-brito.jpg` (publicada em 12/11/2026)
+- `elizabete-ferreira.jpg` (não está na pasta do Pedro; pedir)
+- `jose-moraes-neto.jpg` (foto pronta em `materiais/fotos-perfis/`; falta o currículo)
 
-As fotos do formulário foram baixadas e todos os 13 respondentes agora têm perfil e foto. As fotos de Zilma, Gabriel, Guilherme, Daniela e Sabrina ainda faltam.
+As fotos do formulário e da pasta do Pedro foram baixadas. Todos os perfis publicados têm foto, exceto Elizabete Alves Ferreira. José Moraes Neto já tem foto, mas ainda não tem perfil.
 
 ## Conteúdo
 
@@ -47,13 +59,17 @@ As fotos do formulário foram baixadas e todos os 13 respondentes agora têm per
 | **Perfis de Angel Chovert, José Alexandre Felizola, Fabiana Nunes e Marcel Sant'Ana**: publicados em 09/11/2026 com as bios do formulário. | `dados/convidados.js`, `index.html`, `assets/img/convidados/` | — |
 | Descrição de cada mesa (opcional) | `dados/sessoes.js`, campo `descricao` | Pedro |
 | **Perfis de Karla Maria Silva de Faria e Cristina Paragó Musmanno**: publicados em 11/11/2026 com as bios do formulário. | `dados/convidados.js`, `assets/img/convidados/` | — |
+| **Perfis de Adriano da Rocha Lima, Celene Cunha, João Batista de Deus, Antônio Gomide, Danielle Oliveira, Pollyana Borges, Elizabete Alves Ferreira, Márcia Lobo, Sandro Mabel e Rodrigo Lustosa**: publicados em 12/11/2026 com as bios da planilha. | `dados/convidados.js`, `assets/img/convidados/` | — |
+| **Perfis de José Moraes Neto e Robledo Farias**: ainda sem currículo na planilha. José já tem foto na pasta. | `dados/convidados.js`, `assets/img/convidados/` | Pedro |
+| **Perfil de Natalia Almeida Brito**: publicado em 12/11/2026 com a bio do formulário. | `dados/convidados.js`, `assets/img/convidados/` | — |
+| **Perfis de Felipe Adrián Vázquez, Dominique Castanheira, Maxiely Scaramussa e Sara Moraes**: estão na programação, mas não têm perfil na planilha. O Pedro disse que só faltam José e Robledo; confirmar se esses quatro terão perfil. | `dados/convidados.js`, `assets/img/convidados/` | Pedro |
 | Sites oficiais da Fiocruz Cerrados e da ESA–OAB/GO (hoje só o CIAMB tem link) | `index.html`, seção Quem somos | Confirmar endereços |
 | **Fotos da 1ª edição**: 4 das 5 fotos da seção foram trocadas por versões em alta resolução do Drive (1000 px); o álbum completo está linkado. A foto do painel final foi mantida a do relatório (525 px) por decisão do Victor. Publicadas na `main` em 07/11/2026 (commit `eb3833a`). | `assets/img/edicao-2024/`, `index.html` e `dados/acervo.js` | — |
 | **Relatório final de 2024**: publicado na `main` em 08/11/2026, em `materiais/2024/relatorio-final-2024.pdf` (versão final, março de 2025, 59 páginas). Os vídeos de 2024 saíram do acervo a pedido do Pedro. | `dados/acervo.js`, `index.html`, `materiais/2024/` | — |
 | **Foto do painel final**: mantida a do PDF (525 px) por decisão do Victor em 07/11/2026; alternativas em alta eram `_MG_9473` (Thomaz apresentando) e `_MG_9481` (mesa do painel). | `assets/img/edicao-2024/painel-goiania-resiliente.jpg` | — |
 | **Mediação da mesa de monitoramento** (Dia 1, 16h15): está como "SECTI-GO", sem nome de pessoa. O Pedro pediu para manter por enquanto. | `index.html` (programação) | Pedro (futuro) |
 | **Logo do CEMPA**: corrigida em 08/11/2026 — a versão horizontal oficial entrou no rodapé, no lugar da vertical antiga. Os arquivos para o Pedro estão em `materiais/logo-cempa.zip`. | `index.html`, `assets/img/logos/cempa-horizontal.png` | — |
-| **Fotos do Conselho Consultivo**: Daniela Melo e Silva, Guilherme Franco Netto e Sabrina Garcez estão com "Foto em breve". | `assets/img/convidados/` | Fotos dos três |
+| **Fotos do Conselho Consultivo**: Daniela Melo e Silva, Guilherme Franco Netto e Sabrina Garcez publicadas em 12/11/2026. | `assets/img/convidados/` | — |
 | Pontos completos para a conversa com o Pedro | `materiais/2026-11-07-pontos-para-pedro.md` (fora do repositório) | Pedro |
 
 ## Depois do evento (25 e 26/11)
