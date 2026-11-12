@@ -11,6 +11,7 @@ Atualizado em 11/11/2026. O site funciona com tudo o que está abaixo em aberto:
 | **Atualização das fotos de 2024** (branch `fotos-2024`): publicada na `main` em 07/11/2026 (commit `eb3833a`). | `index.html`, `dados/acervo.js`, `assets/img/edicao-2024/` | — |
 | **Divergências do zip alinhadas ao site no ar** (rodapé, SEGOV, Abertura/Zilma, Pedro Baima, título da Governança, Sandro/Silvio): publicadas na `main` em 07/11/2026 (commit `98fbcd9`). | `index.html`, `docs/resumos-das-sessoes.md`, `dados/sessoes.js` | — |
 | Aprovação do visual das seções novas (Participantes em verde, 1ª edição em rosa, detalhe das sessões) | — | Pedro e Marck (NB–Studio) |
+| **Captura do áudio das sessões** — confirmar o link da live, testar a captura e pedir o master da equipe de audiovisual. | `docs/gravacao-do-audio.md` | Victor/Pedro |
 
 ## Fotos dos perfis
 
