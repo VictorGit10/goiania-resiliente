@@ -181,4 +181,84 @@ window.GR_CONVIDADOS = [
     resumo: "Bióloga, doutora em Medicina Tropical e Saúde Pública pela UFG. É tecnologista do Ministério da Saúde, cedida à SES-GO, onde gerencia as emergências em saúde pública e a Rede VigiarSUS. Graduada pela UERJ e mestre pela UFRJ.",
     minibio: "Bióloga, doutora em Medicina Tropical e Saúde Pública pela Universidade Federal de Goiás. Servidora pública efetiva, no cargo de Tecnologista do Ministério da Saúde, cedida desde 2023 para a Secretaria de Estado da Saúde de Goiás, onde ocupa a função de Gerente de Emergências em Saúde Pública, liderando as áreas técnicas afetas à Rede Nacional de Vigilância, Alerta e Resposta às Emergências em Saúde Pública no âmbito do Sistema Único de Saúde (Rede VigiarSUS) e à Rede Nacional de Centros de Informação e Assistência Toxicológica (Renaciat). Graduada em Ciências Biológicas pela Universidade do Estado do Rio de Janeiro e mestre em Ciências Biológicas pela Universidade Federal do Rio de Janeiro. Possui especialização em Vigilância em Saúde Ambiental pela Universidade Federal do Rio de Janeiro e especialização em Análise em Situação de Saúde pela Universidade Federal de Goiás."
   },
+  {
+    id: "rodrigo-lustosa",
+    nome: "Rodrigo Lustosa",
+    naProgramacao: ["Rodrigo Lustosa", "Rodrigo Lustosa Victor"],
+    cargo: "Diretor-presidente · ESA-OAB/GO",
+    resumo: "Advogado criminalista, especialista em Direito Penal e mestre em Direitos Humanos. É diretor-presidente da ESA-OAB/GO e foi presidente da Comissão de Segurança Pública da OAB-GO.",
+    minibio: "Diretor-presidente da ESA, a Escola Superior de Advocacia da OAB-GO. É advogado em Direito Criminal, especialista em Direito Penal e mestre em Direitos Humanos. Atua em Goiânia e foi presidente da Comissão de Segurança Pública da OAB-GO."
+  },
+  {
+    id: "celene-cunha",
+    nome: "Celene Cunha",
+    naProgramacao: ["Celene Cunha", "Celena Cunha", "Celene Cunha Monteiro Antunes Barreira"],
+    cargo: "Professora · IESA/UFG",
+    resumo: "Geógrafa, com mestrado pela UFG e doutorado pela USP; fez pós-doutorado na UERJ. É professora do IESA/UFG e coordena o Núcleo Goiânia do Observatório das Metrópoles. Pesquisa análise regional, desenvolvimento e planejamento urbano no Cerrado.",
+    minibio: "Graduada em Geografia pela Universidade Federal de Goiás (1978). Mestre em História das Sociedades Agrárias pela Universidade Federal de Goiás (1989). Doutora em Geografia (Geografia Humana) pela Universidade de São Paulo (1997). Pós-doutorado pela Universidade Estadual do Rio de Janeiro (2013). Atualmente é professora voluntária integrando o corpo docente do Programa de Pós-Graduação em Geografia/IESA/UFG. Na UFG exerceu as funções acadêmicas de Tutora de PET-Geografia/UFG (1997-2003), Diretora do Instituto de Estudos Socioambientais (IESA)/UFG (1998-2002 e 2014-2018) e Pró-Reitora de Graduação/UFG (2002-2006). Fez parte da equipe de Avaliação da Pós-graduação da CAPES, na área de Geografia, entre 2020-2022. Coordena o Núcleo Goiânia do Observatório das Metrópoles/INCT/CNPq. Tem experiência em pesquisas na área de Geografia, com ênfase em Análise Regional e Planejamento Urbano e Regional, atuando principalmente nos seguintes temas: análise regional, desenvolvimento regional, configuração socioespacial, cerrado, cidade e regiões metropolitanas."
+  },
+  {
+    id: "joao-batista-de-deus",
+    nome: "João Batista de Deus",
+    naProgramacao: ["João Batista de Deus"],
+    cargo: "Professor · IESA/UFG",
+    resumo: "Geógrafo, com mestrado e doutorado em Geografia Humana pela USP. É professor do IESA/UFG e pesquisa geografia urbana e regional, planejamento urbano, cidades médias e urbanização.",
+    minibio: "Possui graduação em Geografia pela Universidade Federal de Goiás (1990), mestrado em Geografia (Geografia Humana) pela Universidade de São Paulo (1996) e doutorado em Geografia (Geografia Humana) pela Universidade de São Paulo (2002). Atualmente é professor da Universidade Federal de Goiás. Tem experiência na área de Geografia, com ênfase em Geografia Urbana e Regional, atuando principalmente nos seguintes temas: planejamento urbano, geografia urbana, espaço urbano, cidade média e urbanização."
+  },
+  {
+    id: "antonio-gomide",
+    nome: "Antônio Gomide",
+    naProgramacao: ["Antônio Gomide", "Dep. Antônio Gomide", "Antonio Gomide", "Antonio Roberto Ottoni Gomide"],
+    cargo: "Deputado estadual · Alego",
+    resumo: "Deputado estadual por Goiás, em seu terceiro mandato. Foi vereador por quatro vezes e prefeito de Anápolis entre 2009 e 2014; preside a Comissão de Meio Ambiente da Alego.",
+    minibio: "Deputado estadual por Goiás, reeleito para seu terceiro mandato neste ano. Foi, por quatro vezes, vereador de Anápolis, e prefeito da cidade entre 2009 e 2014. Preside hoje a Comissão de Meio Ambiente da Assembleia Legislativa de Goiás."
+  },
+  {
+    id: "danielle-oliveira",
+    nome: "Danielle Oliveira",
+    naProgramacao: ["Danielle Oliveira", "Danielle Gomes de Oliveira"],
+    cargo: "Secretária de Articulação Institucional e Captação · Prefeitura de Goiânia",
+    resumo: "Engenheira de Computação pela UFG, com MBA em Inteligência e Negócios. Servidora pública de carreira, é secretária municipal de Articulação Institucional e Captação de Goiânia.",
+    minibio: "Danielle Gomes de Oliveira é graduada em Engenharia de Computação pela Universidade Federal de Goiás e possui MBA Executivo em Inteligência e Negócios, além de formação internacional em consultoria empresarial e desenvolvimento humano. Servidora pública de carreira, iniciou sua trajetória em 1999 no Governo do Estado de Goiás. Ao longo de mais de duas décadas de atuação no setor público, consolidou experiência nas áreas de planejamento, governança, tecnologia e gestão estratégica, com forte atuação na estruturação, coordenação, execução e monitoramento de projetos governamentais prioritários. Danielle é servidora efetiva da Saneamento de Goiás S.A. e foi Secretária Adjunta, Subsecretária de Governança e Superintendente de Prioridades Governamentais da Secretaria-Geral de Governo de Goiás. Atuou ainda nas Secretarias de Estado de Economia, Políticas para Mulheres e Promoção da Igualdade Racial, Ciência e Tecnologia, Cidadania e na Universidade Estadual de Goiás."
+  },
+  {
+    id: "pollyana-borges",
+    nome: "Pollyana Borges",
+    naProgramacao: ["Pollyana Borges"],
+    cargo: "Secretária de Meio Ambiente · Aparecida de Goiânia",
+    resumo: "Advogada, é secretária municipal do Verde e do Meio Ambiente de Aparecida de Goiânia desde 2025. Foi secretária de Governo do município.",
+    minibio: "Pollyana Borges é advogada e titular da Secretaria do Verde e do Meio Ambiente de Aparecida de Goiânia desde 2025. Foi também secretária de Governo do município."
+  },
+  {
+    id: "elizabete-ferreira",
+    nome: "Elizabete Alves Ferreira",
+    naProgramacao: ["Elisabete Ferreira", "Elizabete Ferreira", "Elizabete Alves Ferreira"],
+    cargo: "Chefe do 10º Distrito de Meteorologia · INMET/GO-TO",
+    resumo: "Meteorologista, com mestrado em Meteorologia Agrícola pela UFV. É chefe do 10º Distrito de Meteorologia (DISME) do INMET, responsável por Goiás e Tocantins.",
+    minibio: "Possui graduação em Meteorologia pela Universidade Federal do Pará (1997) e mestrado em Meteorologia Agrícola pela Universidade Federal de Viçosa (2000). Atualmente ocupa o cargo de Chefe do 10º DISME GO/TO/INMET. Tem experiência nas áreas de Meteorologia e Agrometeorologia, atuando principalmente nos seguintes temas: estresse hídrico, soja e agronegócio."
+  },
+  {
+    id: "marcia-lobo",
+    nome: "Márcia Lobo",
+    naProgramacao: ["Márcia Lobo"],
+    cargo: "Gerente de CT&I para Sustentabilidade · SECTI-GO",
+    resumo: "Física, com especializações em gestão. É gerente de CT&I para Sustentabilidade na SECTI-GO, onde coordena iniciativas como o Goiás Verde e o Programa Oasis.",
+    minibio: "Márcia Lobo é gerente de CT&I para Sustentabilidade na Secretaria de Estado de Ciência, Tecnologia e Inovação de Goiás. Atua na articulação de parcerias entre governo, universidades e institutos de pesquisa para acelerar soluções ambientais baseadas em evidências. Lidera iniciativas como o Goiás Verde e o Programa Oasis (infraestrutura verde nas Escolas do Futuro), além da Plataforma Integrada de Dados de GEE e estoques de carbono em agroecossistemas. Com formação em Física e especializações em gestão, coordena contratações de P&D e inovação, estrutura governança e indicadores, e impulsiona projetos de monitoramento (torres de fluxo, radares meteorológicos) voltados a resultados para a sociedade."
+  },
+  {
+    id: "sandro-mabel",
+    nome: "Sandro Mabel",
+    naProgramacao: ["Sandro Mabel"],
+    cargo: "Prefeito de Goiânia",
+    resumo: "Prefeito de Goiânia desde 2025. Foi deputado federal por quatro mandatos e deputado estadual por Goiás; presidiu a FIEG.",
+    minibio: "Sandro Mabel é prefeito de Goiânia desde 2025. Foi deputado federal durante quatro mandatos e serviu também como deputado estadual por Goiás, durante uma legislatura. É formado em Administração de Empresas e foi também presidente da FIEG, a Federação das Indústrias do Estado de Goiás."
+  },
+  {
+    id: "adriano-da-rocha-lima",
+    nome: "Adriano da Rocha Lima",
+    naProgramacao: ["Adriano da Rocha Lima", "ADRIANO DA ROCHA LIMA"],
+    cargo: "Ex-secretário-geral de Governo de Goiás",
+    resumo: "Engenheiro eletricista e de telecomunicações pela PUC-RJ, com mestrado em Filosofia pela UFRJ. Foi secretário de Desenvolvimento e Inovação e secretário-geral de Governo de Goiás; atuou em multinacionais como Claro e Promon.",
+    minibio: "Adriano da Rocha Lima é engenheiro eletricista e de telecomunicações pela PUC-RJ, mestre em Filosofia pela UFRJ, com especializações em Administração Executiva de Negócios e Planejamento Estratégico de Redes. Com sólida trajetória na iniciativa privada, atuou em multinacionais como Nortel, Promon e Claro Brasil, onde foi diretor de Engenharia por dez anos, além de fundar e presidir a WebRadar, empresa de tecnologia especializada em Big Data e Internet das Coisas. Na gestão pública, foi secretário de Desenvolvimento e Inovação de Goiás (2019–2020) e secretário-geral de Governo (2020–2026), com atuação estratégica em projetos de inovação, inteligência artificial, mobilidade urbana, energia e desenvolvimento econômico. Participou da criação do Centro de Excelência em Inteligência Artificial (CEIA-UFG), da implantação de políticas estaduais de inovação e da modernização do transporte coletivo da Região Metropolitana de Goiânia. Também exerceu funções em importantes conselhos e órgãos de governança, além de atuar como coordenador-executivo da campanha presidencial de Ronaldo Caiado em 2026. É coautor do livro Inovação e Traição, publicado em 2017 pela Editora Vozes, em parceria com o filósofo Clóvis de Barros Filho."
+  },
 ];
