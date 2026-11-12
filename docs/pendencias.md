@@ -10,6 +10,7 @@ Atualizado em 11/11/2026. O site funciona com tudo o que está abaixo em aberto:
 | **Troca de "minibio" por "biografia"** — publicada na `main` em 07/11/2026 (commit `e50733b`). | `index.html`, `js/main.js` | — |
 | **Atualização das fotos de 2024** (branch `fotos-2024`): publicada na `main` em 07/11/2026 (commit `eb3833a`). | `index.html`, `dados/acervo.js`, `assets/img/edicao-2024/` | — |
 | **Divergências do zip alinhadas ao site no ar** (rodapé, SEGOV, Abertura/Zilma, Pedro Baima, título da Governança, Sandro/Silvio): publicadas na `main` em 07/11/2026 (commit `98fbcd9`). | `index.html`, `docs/resumos-das-sessoes.md`, `dados/sessoes.js` | — |
+| **Programação do Dia 2 ajustada em 12/11/2026**: o prefeito de Maringá cancelou; o painel foi dividido em "2 países, 2 climas, 2 cidades" (14h–15h30) e "Gestão territorial na Amazônia" (16h–17h). A sessão "Como se governa..." saiu; o código `d2-juarez-paragominas` foi mantido e a nova mesa usa `d2-paragominas`. | `index.html`, `dados/sessoes.js`, `docs/resumos-das-sessoes.md` | — |
 | Aprovação do visual das seções novas (Participantes em verde, 1ª edição em rosa, detalhe das sessões) | — | Pedro e Marck (NB–Studio) |
 | **Captura do áudio das sessões** — confirmar o link da live e testar a captura. | `docs/gravacao-do-audio.md` | Victor/Pedro |
 

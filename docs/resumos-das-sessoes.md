@@ -132,12 +132,12 @@ SESSÕES DO DIA, na ordem em que aconteceram. O código entre colchetes identifi
     Conferencista: Adriano da Rocha Lima (ex-secretário de Governo do Estado de Goiás)
     Debatedores: Gabriel Tenaglia (AMMA) · Fabiana Nunes (SECTI-GO)
     Mediação: Pedro Baima (AMMA)
-- 14h–15h30 · 2 países, 3 climas, 3 cidades: Juárez (México), Paragominas (PA) e Curitiba (PR) [d2-juarez-paragominas]
+- 14h–15h30 · 2 países, 2 climas, 2 cidades: Juárez (México) e Curitiba (PR) [d2-juarez-paragominas]
     Palestrante: Felipe Adrián Vázquez (Universidade de Juárez, México)
-    Debatedores: Dominique Castanheira (Prefeitura de Paragominas) · Maxiely Scaramussa (Sindicato Rural de Paragominas) · Thomaz Ramalho (IPPUC/Curitiba)
+    Debatedor: Thomaz Ramalho (IPPUC/Curitiba)
     Mediação: Márcia Lobo (SECTI-GO)
-- 16h–17h · Como se governa uma cidade em que o clima já mudou? [d2-governar-cidade]
-    Palestrante: Silvio Barros (Prefeito de Maringá)
+- 16h–17h · Gestão territorial na Amazônia: o caso de Paragominas (PA) [d2-paragominas]
+    Participantes: Dominique Castanheira (Prefeitura de Paragominas) · Maxiely Scaramussa (Sindicato Rural de Paragominas)
     Mediação: Sara Moraes (Segov)
 - 17h–17h30 · Recados finais e encerramento [d2-encerramento]
     Com: Zilma Peixoto (AMMA) · Pedro Novaes (UFG e Iandé Verde)

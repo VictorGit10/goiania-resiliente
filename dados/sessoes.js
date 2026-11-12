@@ -45,8 +45,8 @@ window.GR_SESSOES = {
   /* ---------------- 2ª edição · Dia 2 · 26 nov 2026 ---------------- */
   "d2-saude-emergencias":      { descricao: "", resumo: `` }, /* Eixo Adaptação — Poluição, calor e território */
   "d2-transicao-energetica":   { descricao: "", resumo: `` }, /* Eixo Mitigação — Energia e Resíduos */
-  "d2-juarez-paragominas":     { descricao: "", resumo: `` }, /* 2 países, 3 climas, 3 cidades */
-  "d2-governar-cidade":        { descricao: "", resumo: `` }, /* Como se governa uma cidade em que o clima já mudou? */
+  "d2-juarez-paragominas":     { descricao: "", resumo: `` }, /* 2 países, 2 climas, 2 cidades: Juárez (México) e Curitiba (PR) — código mantido */
+  "d2-paragominas":            { descricao: "", resumo: `` }, /* Gestão territorial na Amazônia: o caso de Paragominas (PA) */
   "d2-encerramento":           { descricao: "", resumo: `` }, /* Recados finais e encerramento */
 
   /* ---------------- 1ª edição · 2024 ---------------- */
