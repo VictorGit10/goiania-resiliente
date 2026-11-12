@@ -1,6 +1,6 @@
 # Pendências
 
-Atualizado em 09/11/2026. O site funciona com tudo o que está abaixo em aberto: o que falta aparece como "Foto em breve", "Disponível após o evento" ou simplesmente não aparece.
+Atualizado em 11/11/2026. O site funciona com tudo o que está abaixo em aberto: o que falta aparece como "Foto em breve", "Disponível após o evento" ou simplesmente não aparece.
 
 ## Antes de publicar
 
@@ -34,7 +34,7 @@ Salvar em `assets/img/convidados/` com estes nomes (JPG, de preferência quadrad
 - `guilherme-franco-netto.jpg` (se ele enviar)
 - `sabrina-garcez.jpg` (se ela enviar)
 
-As fotos do formulário foram baixadas e todos os 11 respondentes agora têm perfil e foto no site. As fotos de Zilma, Gabriel, Guilherme, Daniela e Sabrina ainda faltam.
+As fotos do formulário foram baixadas e os 11 respondentes que estavam no site até 09/11/2026 têm perfil e foto. Karla Faria e Cristina Musmanno responderam depois e ainda não têm perfil (ver a tabela de Conteúdo). As fotos de Zilma, Gabriel, Guilherme, Daniela e Sabrina ainda faltam.
 
 ## Conteúdo
 
@@ -42,6 +42,7 @@ As fotos do formulário foram baixadas e todos os 11 respondentes agora têm per
 |---|---|---|
 | **Perfis de Angel Chovert, José Alexandre Felizola, Fabiana Nunes e Marcel Sant'Ana**: publicados em 09/11/2026 com as bios do formulário. | `dados/convidados.js`, `index.html`, `assets/img/convidados/` | — |
 | Descrição de cada mesa (opcional) | `dados/sessoes.js`, campo `descricao` | Pedro |
+| **Perfis de Karla Faria e Cristina Musmanno**: responderam ao formulário, mas ainda não têm perfil no site. Confirmar como o nome deve aparecer no cartão (formulário e programação divergem). | `dados/convidados.js`, `assets/img/convidados/` | Victor/Pedro |
 | Sites oficiais da Fiocruz Cerrados e da ESA–OAB/GO (hoje só o CIAMB tem link) | `index.html`, seção Quem somos | Confirmar endereços |
 | **Fotos da 1ª edição**: 4 das 5 fotos da seção foram trocadas por versões em alta resolução do Drive (1000 px); o álbum completo está linkado. A foto do painel final foi mantida a do relatório (525 px) por decisão do Victor. Publicadas na `main` em 07/11/2026 (commit `eb3833a`). | `assets/img/edicao-2024/`, `index.html` e `dados/acervo.js` | — |
 | **Relatório final de 2024**: publicado na `main` em 08/11/2026, em `materiais/2024/relatorio-final-2024.pdf` (versão final, março de 2025, 59 páginas). Os vídeos de 2024 saíram do acervo a pedido do Pedro. | `dados/acervo.js`, `index.html`, `materiais/2024/` | — |
@@ -55,6 +56,7 @@ As fotos do formulário foram baixadas e todos os 11 respondentes agora têm per
 
 | O que | Onde mexer |
 |---|---|
+| Áudio das sessões (se não houver master da equipe de audiovisual) | captura da live + `docs/gravacao-do-audio.md` |
 | Slides de cada sessão | `materiais/2026/` + `dados/acervo.js` (`tipo: "apresentacoes"`, `sessao: "…"`) |
 | Vídeos | YouTube + `dados/acervo.js` (`tipo: "videos"`) |
 | Transcrições | `materiais/2026/` ou Google Doc + `dados/acervo.js` (`tipo: "transcricoes"`) |

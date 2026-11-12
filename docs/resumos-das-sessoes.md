@@ -12,7 +12,7 @@ Este é o fluxo para publicar, logo depois de cada dia do simpósio, o resumo de
 
 ## 2. Durante o evento
 
-- **Uma gravação de áudio por sessão.** Nome do arquivo com o código da sessão, ex.: `d1-cidades-cerrado.m4a`. Os códigos estão em `dados/sessoes.js` e no prompt abaixo.
+- **Uma gravação de áudio por sessão.** Nome do arquivo com o código da sessão, ex.: `d1-cidades-cerrado.m4a`. Os códigos estão em `dados/sessoes.js` e no prompt abaixo. Se as sessões forem transmitidas no YouTube, o método de captura e os limites estão em [`gravacao-do-audio.md`](gravacao-do-audio.md).
 - **Anotações da equipe** (um documento por dia): nomes de quem fez perguntas, siglas, números citados, encaminhamentos.
 - Os vídeos completos, se houver filmagem, vão para o YouTube; o link entra em `dados/acervo.js`.
 
