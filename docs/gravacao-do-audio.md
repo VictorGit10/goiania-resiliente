@@ -6,9 +6,9 @@ Ele complementa [`resumos-das-sessoes.md`](resumos-das-sessoes.md), que descreve
 
 ## Decisão
 
-A fonte principal deve ser a gravação da equipe de audiovisual do evento. A captura da transmissão do YouTube é uma **segunda fonte** e um **adiantamento**: serve para começar o trabalho no mesmo dia e para garantir uma cópia se o material oficial demorar ou não existir.
+Para esta edição, a fonte do áudio das sessões será a **captura da transmissão do YouTube**. A gravação da equipe de audiovisual, se existir, pode ser usada para conferir trechos duvidosos, mas o fluxo não depende dela.
 
-Se o master chegar, ele tem prioridade: é menos comprimido, não depende da internet e normalmente tem o áudio da sala melhor do que o mix da live.
+A captura custa pouco, não depende de estar na sala e permite começar o trabalho no mesmo dia. As limitações do áudio da live estão na seção "Limites e riscos".
 
 ## O que confirmar antes
 
@@ -16,7 +16,7 @@ Se o master chegar, ele tem prioridade: é menos comprimido, não depende da int
 - Aviso à plateia na abertura.
 - Slides em PDF até o dia anterior.
 - Link do vídeo da transmissão (o link do player, não o do canal).
-- Se a equipe de audiovisual grava localmente, pedir uma cópia do master de cada sessão.
+- Se a equipe de audiovisual gravar localmente, vale pedir uma cópia do master como conferência (opcional).
 
 ## Captura da live (só áudio)
 
@@ -75,11 +75,9 @@ ffmpeg -ss 09:30:00 -t 01:10:00 -i dia1.mp4 \
 
 ## Vale a pena?
 
-**Sim, como seguro e adiantamento; não como fonte única.**
+**Sim, para esta edição.** A captura da live é a fonte planejada: custa pouco, não depende de estar na sala e permite começar o trabalho no mesmo dia.
 
-A captura custa pouco, não depende de estar na sala e garante uma cópia utilizável no mesmo dia. Mas ela não substitui o master da equipe de audiovisual e não elimina a revisão humana.
-
-Se o master oficial chegar em até alguns dias, a captura da live terá sido um seguro barato. Se o master não existir ou demorar, ela é o que viabiliza o compromisso do site de publicar os resumos logo depois do evento.
+As limitações continuam valendo — o áudio é o mix da transmissão, não o master da mesa de som, e as perguntas da plateia podem não entrar. A revisão humana continua sendo o gargalo: capturar é a parte fácil; conferir nomes, números e contexto e obter a aprovação do Pedro é o que toma tempo.
 
 ## Checklist
 

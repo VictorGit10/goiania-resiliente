@@ -11,7 +11,7 @@ Atualizado em 11/11/2026. O site funciona com tudo o que está abaixo em aberto:
 | **Atualização das fotos de 2024** (branch `fotos-2024`): publicada na `main` em 07/11/2026 (commit `eb3833a`). | `index.html`, `dados/acervo.js`, `assets/img/edicao-2024/` | — |
 | **Divergências do zip alinhadas ao site no ar** (rodapé, SEGOV, Abertura/Zilma, Pedro Baima, título da Governança, Sandro/Silvio): publicadas na `main` em 07/11/2026 (commit `98fbcd9`). | `index.html`, `docs/resumos-das-sessoes.md`, `dados/sessoes.js` | — |
 | Aprovação do visual das seções novas (Participantes em verde, 1ª edição em rosa, detalhe das sessões) | — | Pedro e Marck (NB–Studio) |
-| **Captura do áudio das sessões** — confirmar o link da live, testar a captura e pedir o master da equipe de audiovisual. | `docs/gravacao-do-audio.md` | Victor/Pedro |
+| **Captura do áudio das sessões** — confirmar o link da live e testar a captura. | `docs/gravacao-do-audio.md` | Victor/Pedro |
 
 ## Fotos dos perfis
 
@@ -31,11 +31,13 @@ Salvar em `assets/img/convidados/` com estes nomes (JPG, de preferência quadrad
 - `gabriel-tenaglia.jpg` (não está no formulário; pedir foto oficial)
 - ✓ `pedro-novaes.jpg` (foto enviada em 08/11/2026; 800×600)
 - ✓ `thomaz-ramalho.jpg` (do documento "Equipe 2024"; parece antiga, vale pedir uma atual)
+- ✓ `karla-faria.jpg` (publicada em 11/11/2026)
+- ✓ `cristina-musmanno.jpg` (publicada em 11/11/2026)
 - `daniela-melo-e-silva.jpg` (se ela enviar)
 - `guilherme-franco-netto.jpg` (se ele enviar)
 - `sabrina-garcez.jpg` (se ela enviar)
 
-As fotos do formulário foram baixadas e os 11 respondentes que estavam no site até 09/11/2026 têm perfil e foto. Karla Faria e Cristina Musmanno responderam depois e ainda não têm perfil (ver a tabela de Conteúdo). As fotos de Zilma, Gabriel, Guilherme, Daniela e Sabrina ainda faltam.
+As fotos do formulário foram baixadas e todos os 13 respondentes agora têm perfil e foto. As fotos de Zilma, Gabriel, Guilherme, Daniela e Sabrina ainda faltam.
 
 ## Conteúdo
 
@@ -43,7 +45,7 @@ As fotos do formulário foram baixadas e os 11 respondentes que estavam no site 
 |---|---|---|
 | **Perfis de Angel Chovert, José Alexandre Felizola, Fabiana Nunes e Marcel Sant'Ana**: publicados em 09/11/2026 com as bios do formulário. | `dados/convidados.js`, `index.html`, `assets/img/convidados/` | — |
 | Descrição de cada mesa (opcional) | `dados/sessoes.js`, campo `descricao` | Pedro |
-| **Perfis de Karla Faria e Cristina Musmanno**: responderam ao formulário, mas ainda não têm perfil no site. Confirmar como o nome deve aparecer no cartão (formulário e programação divergem). | `dados/convidados.js`, `assets/img/convidados/` | Victor/Pedro |
+| **Perfis de Karla Maria Silva de Faria e Cristina Paragó Musmanno**: publicados em 11/11/2026 com as bios do formulário. | `dados/convidados.js`, `assets/img/convidados/` | — |
 | Sites oficiais da Fiocruz Cerrados e da ESA–OAB/GO (hoje só o CIAMB tem link) | `index.html`, seção Quem somos | Confirmar endereços |
 | **Fotos da 1ª edição**: 4 das 5 fotos da seção foram trocadas por versões em alta resolução do Drive (1000 px); o álbum completo está linkado. A foto do painel final foi mantida a do relatório (525 px) por decisão do Victor. Publicadas na `main` em 07/11/2026 (commit `eb3833a`). | `assets/img/edicao-2024/`, `index.html` e `dados/acervo.js` | — |
 | **Relatório final de 2024**: publicado na `main` em 08/11/2026, em `materiais/2024/relatorio-final-2024.pdf` (versão final, março de 2025, 59 páginas). Os vídeos de 2024 saíram do acervo a pedido do Pedro. | `dados/acervo.js`, `index.html`, `materiais/2024/` | — |
@@ -57,7 +59,7 @@ As fotos do formulário foram baixadas e os 11 respondentes que estavam no site 
 
 | O que | Onde mexer |
 |---|---|
-| Áudio das sessões (se não houver master da equipe de audiovisual) | captura da live + `docs/gravacao-do-audio.md` |
+| Áudio das sessões (decisão desta edição: captura da live) | `docs/gravacao-do-audio.md` |
 | Slides de cada sessão | `materiais/2026/` + `dados/acervo.js` (`tipo: "apresentacoes"`, `sessao: "…"`) |
 | Vídeos | YouTube + `dados/acervo.js` (`tipo: "videos"`) |
 | Transcrições | `materiais/2026/` ou Google Doc + `dados/acervo.js` (`tipo: "transcricoes"`) |
