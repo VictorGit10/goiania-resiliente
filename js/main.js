@@ -249,15 +249,9 @@
   if (gridConv) {
     var visiveis = convidados.filter(function (c) { return !c.ocultoNoGrid; });
     visiveis.forEach(function (c) { gridConv.appendChild(cartaoConvidado(c)); });
-    var aviso = el("div", "conv-aviso");
-    aviso.appendChild(el("strong", null, "Mais perfis em breve"));
-    aviso.appendChild(el("p", null, "Os perfis dos demais participantes serão publicados em breve. Todos os nomes estão na lista abaixo."));
-    var ir = el("a", "btn", "Ver todos os participantes ↓");
-    ir.href = "#todos-participantes";
-    aviso.appendChild(ir);
-    /* Se os perfis fecham a última linha de 3, o aviso ocupa a linha inteira. */
-    if (visiveis.length % 3 === 0) aviso.classList.add("full");
-    gridConv.appendChild(aviso);
+    /* Preenche a última célula vazia com o fundo da seção, sem criar um cartão. */
+    if (visiveis.length % 3 !== 0) gridConv.classList.add("filler-3");
+    if (visiveis.length % 2 !== 0) gridConv.classList.add("filler-2");
   }
 
   /* Lista com todos os participantes da 2ª edição, em ordem alfabética */
