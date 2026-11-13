@@ -269,4 +269,43 @@ window.GR_CONVIDADOS = [
     resumo: "Advogada pela UFG, é gerente de Mudanças Climáticas e Serviços Ecossistêmicos da SEMAD-GO. Atua na implementação do Programa Goiás Resiliente, do PSA, do PPCDQIF e da abordagem jurisdicional para REDD+.",
     minibio: "Advogada, graduada em Direito pela Universidade Federal de Goiás. É gerente de Mudanças Climáticas e Serviços Ecossistêmicos na Secretaria de Estado de Meio Ambiente e Desenvolvimento Sustentável de Goiás. Nesse papel, atua na tomada de decisão da gestão pública baseada em evidências e na implementação do Programa Estadual Goiás Resiliente, Adaptacidades, Programa de Pagamento por Serviços Ambientais (PSA), Plano de Prevenção e Controle do Desmatamento, Incêndios e Queimadas Florestais (PPCDQIF) e Abordagem Jurisdicional para REDD+, com vistas a contribuir para o desenvolvimento sustentável, adaptação baseada em ecossistemas, mitigação das emissões de GEE e conservação do Cerrado."
   },
+  {
+    id: "felipe-vazquez",
+    nome: "Felipe Adrián Vázquez",
+    naProgramacao: ["Felipe Adrián Vázquez", "Felipe Adrián Vázquez Gálvez", "Felipe Adrian Vazquez", "Felipe Vázquez"],
+    cargo: "Professor · Universidad Autónoma de Ciudad Juárez",
+    resumo: "Químico e doutor em Ciência e Tecnologia da Água, com mais de 30 anos de experiência em pesquisa, gestão ambiental e políticas públicas. É professor e pesquisador da Universidad Autónoma de Ciudad Juárez e coordena o Centro de Ciências Atmosféricas e Tecnologias Verdes (CECATEV).",
+    minibio: "Químico e doutor em Ciência e Tecnologia da Água, com mais de 30 anos de experiência em pesquisa, gestão ambiental e políticas públicas. É professor e pesquisador da Universidad Autónoma de Ciudad Juárez (México), onde coordena o Centro de Ciências Atmosféricas e Tecnologias Verdes (CECATEV). Foi coordenador-geral do Serviço Meteorológico Nacional do México, subsecretário de Gestão para a Proteção Ambiental e diretor executivo da Comissão para a Cooperação Ambiental da América do Norte. Atuou também no planejamento urbano de Ciudad Juárez como representante do setor acadêmico no Instituto Municipal de Pesquisa e Planejamento (IMIP). Sua atuação integra ciência climática, gestão urbana, cooperação internacional e políticas de adaptação às mudanças climáticas, com especial atenção aos desafios ambientais das cidades fronteiriças."
+  },
+  {
+    id: "dominique-castanheira",
+    nome: "Dominique Castanheira",
+    naProgramacao: ["Dominique Castanheira"],
+    cargo: "Secretária do Verde e Meio Ambiente · Paragominas (PA)",
+    resumo: "Advogada ambiental, empresária e Secretária do Verde e Meio Ambiente de Paragominas (PA)."
+  },
+  {
+    id: "maxiely-scaramussa",
+    nome: "Maxiely Scaramussa",
+    naProgramacao: ["Maxiely Scaramussa", "Maxiely Scaramussa Bergamin", "MAXIELY SCARAMUSSA BERGAMIN"],
+    cargo: "Presidente do Sindicato dos Produtores Rurais · Paragominas (PA)",
+    resumo: "Advogada, presidente do Sindicato dos Produtores Rurais de Paragominas (PA).",
+    minibio: "Maxiely Scaramussa Bergamin é advogada, sócia fundadora e diretora do escritório Scaramussa Bergamin Advocacia. Graduada em Direito pela Universidade da Amazônia (Unama), com especialização em Direito Ambiental pela Pontifícia Universidade Católica de São Paulo (PUC/SP). É presidente do Sindicato dos Produtores Rurais de Paragominas (PA), com mandatos em 2021/2023 e 2024/2026. É autora do livro “Paragominas – A experiência para se tornar um Município Verde na Amazônia”, lançado em 2015. Atua como empreendedora social, criadora do Projeto Rural Delas e do Projeto Turismo Sustentável do Rio Capim, e é diretora da Federação da Agricultura e Pecuária do Pará (FAEPA), quadriênio 2023-2027."
+  },
+  {
+    id: "sara-moraes",
+    nome: "Sara Moraes",
+    naProgramacao: ["Sara Moraes", "Sara Ferreira Moraes"],
+    cargo: "Diretora Administrativa · SEGOV/Goiânia",
+    resumo: "Engenheira Ambiental e de Segurança do Trabalho, com atuação em gestão pública e políticas ambientais. É diretora administrativa da Secretaria Municipal de Governo de Goiânia (SEGOV).",
+    minibio: "Sara Ferreira Moraes é engenheira ambiental e de segurança do trabalho, membro do Conselho Municipal do Meio Ambiente e do Fórum Goianiense de Mudanças Climáticas. Atualmente, exerce o cargo de Diretora Administrativa da Secretaria Municipal de Governo da Prefeitura de Goiânia (SEGOV), reunindo experiência em gestão pública, planejamento e participação em discussões voltadas à sustentabilidade, às políticas ambientais e ao enfrentamento das mudanças climáticas."
+  },
+  {
+    id: "marcelo-luz",
+    nome: "Marcelo Luz dos Santos",
+    naProgramacao: ["Marcelo Luz dos Santos", "Marcelo Luz"],
+    cargo: "Coordenador Operacional · Defesa Civil de Goiânia",
+    resumo: "Coordenador Operacional da Defesa Civil de Goiânia, especialista em Gestão de Riscos.",
+    minibio: "Marcelo Luz dos Santos é coordenador operacional da Defesa Civil de Goiânia e especialista em Gestão de Riscos."
+  },
 ];
