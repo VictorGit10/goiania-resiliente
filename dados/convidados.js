@@ -280,9 +280,10 @@ window.GR_CONVIDADOS = [
   {
     id: "dominique-castanheira",
     nome: "Dominique Castanheira",
-    naProgramacao: ["Dominique Castanheira"],
-    cargo: "Secretária do Verde e Meio Ambiente · Paragominas (PA)",
-    resumo: "Advogada ambiental, empresária e Secretária do Verde e Meio Ambiente de Paragominas (PA)."
+    naProgramacao: ["Dominique Castanheira", "Dominique de Nazaré dos Santos Silva Castanheira"],
+    cargo: "Secretária Municipal do Verde e Meio Ambiente · Paragominas (PA)",
+    resumo: "Advogada especialista em Direito Ambiental, sócia-fundadora da Castanheira Advocacia Agroambiental e Secretária Municipal do Verde e Meio Ambiente de Paragominas (PA).",
+    minibio: "Dominique de Nazaré dos Santos Silva Castanheira é advogada, especialista em Direito Ambiental, Direitos e Garantias Constitucionais e Processo Constitucional, Direito do Consumidor, com MBA em Direito do Trabalho pela Fundação Getulio Vargas (FGV). Sócia-fundadora do escritório Castanheira Advocacia Agroambiental, possui experiência em assessoria jurídica e consultoria, com atuação na Associação da Cadeia Produtiva Florestal da Amazônia (UNIFLORESTA) e na PRODEPA. Foi Conselheira Seccional da OAB/PA (2022–2024) e Auditora da 1ª Comissão Disciplinar do Tribunal de Justiça Desportiva do Pará (2022–2024). Atualmente, exerce o cargo de Secretária Municipal do Verde e do Meio Ambiente de Paragominas (PA), atuando na gestão ambiental e na implementação de políticas públicas voltadas à conservação ambiental e ao desenvolvimento sustentável da Amazônia."
   },
   {
     id: "maxiely-scaramussa",
