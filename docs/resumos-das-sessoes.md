@@ -71,7 +71,7 @@ SESSÕES DO DIA, na ordem em que aconteceram. O código entre colchetes identifi
 - 9h30–10h40 · As Cidades do Cerrado: ciência para entender o que muda debaixo dos nossos pés e sobre nossas cabeças [d1-cidades-cerrado]
     Conferencista: Carlos Gurjão (CEMPA/UFG)
     Debatedores: Celene Cunha (IESA/UFG) · João Batista de Deus (IESA/UFG)
-    Mediação: Pedro Novaes (UFG e Iandé Verde)
+    Mediação: Ary Soares dos Santos (Paranaíba Vivo)
 - 11h–12h15 · Goiânia: onde estamos? Projetos estruturantes para adaptação [d1-goiania-onde-estamos]
     Participantes: Gabriel Tenaglia (AMMA) · Pedro Baima (AMMA)
     Mediação: José Moraes Neto (OAB-GO)

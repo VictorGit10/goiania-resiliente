@@ -309,4 +309,12 @@ window.GR_CONVIDADOS = [
     resumo: "Coordenador Operacional da Defesa Civil de Goiânia, especialista em Gestão de Riscos.",
     minibio: "Marcelo Luz dos Santos é coordenador operacional da Defesa Civil de Goiânia e especialista em Gestão de Riscos."
   },
+  {
+    id: "ary-soares-dos-santos",
+    nome: "Ary Soares dos Santos",
+    naProgramacao: ["Ary Soares dos Santos"],
+    cargo: "Geógrafo · Coordenador do Projeto Paranaíba Vivo – Aquarius Paranaíba",
+    resumo: "Geógrafo pela UFG e mestre em Geografia, foi analista ambiental do IBAMA por 35 anos. Chefiou o Parque Nacional das Emas, foi superintendente do IBAMA em Goiás e diretor do Jardim Botânico de Goiânia. Hoje coordena o projeto Paranaíba Vivo – Aquarius Paranaíba.",
+    minibio: "Graduado em Geografia pela Universidade Federal de Goiás (1991) e mestre em Geografia pela mesma universidade (2002). Foi analista ambiental do Instituto Brasileiro do Meio Ambiente e dos Recursos Naturais Renováveis (IBAMA) entre 1983 e 2018, ano em que se aposentou. É especialista em Avaliação de Impactos Ambientais pela COPPE/UFRJ (1994) e em Manejo de Áreas Naturais Conservadas pela DUMAC/México (1997). Foi chefe do Parque Nacional das Emas (1995–2000), superintendente do IBAMA em Goiás (2004–2011) e diretor do Jardim Botânico de Goiânia (2013–2014). Coordenou o 8º (2002) e o 15º (2009) Simpósio Ambientalista Brasileiro no Cerrado, o Projeto de Monitoramento de Peixes do Reservatório de Serra da Mesa (SISBIO 56698, 2015–2018) e o projeto Piracanjuba Livre – Paranaíba Vivo (SISBIO 77155, 2020–2022). Coordena o projeto Paranaíba Vivo – Aquarius Paranaíba."
+  },
 ];

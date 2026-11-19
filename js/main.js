@@ -249,9 +249,13 @@
   if (gridConv) {
     var visiveis = convidados.filter(function (c) { return !c.ocultoNoGrid; });
     visiveis.forEach(function (c) { gridConv.appendChild(cartaoConvidado(c)); });
-    /* Preenche a última célula vazia com o fundo da seção, sem criar um cartão. */
-    if (visiveis.length % 3 !== 0) gridConv.classList.add("filler-3");
-    if (visiveis.length % 2 !== 0) gridConv.classList.add("filler-2");
+    /* Preenche as células vazias no fim da grade com o fundo da seção,
+       sem criar cartões. As colunas mudam com a largura, então cada
+       preenchimento vale só para um dos layouts (veja o CSS). */
+    var faltam3 = (3 - visiveis.length % 3) % 3;
+    var faltam2 = (2 - visiveis.length % 2) % 2;
+    for (var f3 = 0; f3 < faltam3; f3++) gridConv.appendChild(el("div", "conv-filler conv-filler-3"));
+    for (var f2 = 0; f2 < faltam2; f2++) gridConv.appendChild(el("div", "conv-filler conv-filler-2"));
   }
 
   /* Lista com todos os participantes da 2ª edição, em ordem alfabética */

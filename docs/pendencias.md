@@ -67,6 +67,8 @@ As fotos do formulário e da pasta do Pedro foram baixadas. Todos os perfis publ
 | **Perfis de Adriano da Rocha Lima, Celene Cunha, João Batista de Deus, Antônio Gomide, Danielle Oliveira, Pollyana Borges, Elizabete Alves Ferreira, Márcia Lobo, Sandro Mabel e Rodrigo Lustosa**: publicados em 12/11/2026 com as bios da planilha. | `dados/convidados.js`, `assets/img/convidados/` | — |
 | **Perfil de José Moraes Neto**: foto pronta em `materiais/fotos-perfis/`, falta o currículo. | `dados/convidados.js`, `assets/img/convidados/` | Pedro |
 | **Robledo Farias**: substituído por Marcelo Luz dos Santos no painel de monitoramento; não precisa mais de perfil. | `index.html`, `docs/resumos-das-sessoes.md` | — |
+| **Ary Soares dos Santos**: entra como mediador do painel "As Cidades do Cerrado" (Dia 1, 9h30–10h40), no lugar de Pedro Novaes, com a foto e a bio enviadas pelo Pedro em 19/11/2026. | `dados/convidados.js`, `index.html`, `docs/resumos-das-sessoes.md`, `assets/img/convidados/` | — |
+| **Fim da bio de Ary Soares dos Santos**: a mensagem do Pedro termina em "Membro do Comitê da Cadeia Produtiva da P…". Falta o restante da frase. | `dados/convidados.js` | Pedro |
 | **Perfil de Natalia Almeida Brito**: publicado em 12/11/2026 com a bio do formulário. | `dados/convidados.js`, `assets/img/convidados/` | — |
 | **Perfis de Felipe Adrián Vázquez, Dominique Castanheira, Maxiely Scaramussa, Sara Moraes e Marcelo Luz dos Santos**: publicados em 13/11/2026 com as bios da planilha e as informações do Pedro. A Dominique ganhou foto e minibio novas em 16/11/2026. | `dados/convidados.js`, `assets/img/convidados/` | — |
 | Sites oficiais da Fiocruz Cerrados e da ESA–OAB/GO (hoje só o CIAMB tem link) | `index.html`, seção Quem somos | Confirmar endereços |
