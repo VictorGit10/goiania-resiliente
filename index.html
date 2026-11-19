@@ -279,7 +279,10 @@ footer .inner {
         <p class="kicker">2ª edição · Simpósio e debate público</p>
         <h1>Da atmosfera à vulnerabilidade social.</h1>
         <p>Congregando cientistas, gestores públicos, prefeitos e sociedade civil para formular estratégias de adaptação e mitigação climática nas cidades do Cerrado.</p>
-        <a class="btn" href="#programacao">Ver programação completa ↓</a>
+        <div class="hero-acoes">
+          <a class="btn" href="#programacao">Ver programação completa ↓</a>
+          <a class="hero-live" href="#transmissao"><span class="hero-live-dot" aria-hidden="true"></span> Transmissão ao vivo</a>
+        </div>
       </div>
     </div>
     <div class="info-strip">
@@ -297,6 +300,61 @@ footer .inner {
       <img src="assets/img/hero-calor-pexels.jpg" alt="A cidade que já sente o novo clima — calor extremo e horizonte urbano" loading="eager">
       <figcaption>A cidade que já sente o novo clima · Foto: <a href="https://www.pexels.com" target="_blank" rel="noopener">Pexels</a></figcaption>
     </figure>
+  </section>
+
+  <!-- ================= TRANSMISSÃO ================= -->
+  <!-- Estado (antes, durante e depois) calculado em js/main.js a partir das datas abaixo. -->
+  <section class="transmissao" id="transmissao"
+           data-dia1-inicio="2026-11-25T12:00:00Z" data-dia1-fim="2026-11-25T21:00:00Z"
+           data-dia2-inicio="2026-11-26T12:00:00Z" data-dia2-fim="2026-11-26T20:30:00Z">
+    <div class="trans-head">
+      <div class="trans-intro">
+        <span class="trans-kicker"><span class="trans-dot" aria-hidden="true"></span> Transmissão</span>
+        <h2>Não vai ao auditório? Assista ao vivo.</h2>
+      </div>
+      <div class="trans-side">
+        <p>Os dois dias do simpósio são transmitidos pelo canal <strong>Iandé Verde</strong>, no YouTube. A transmissão é gratuita e aberta a todos.</p>
+        <p class="trans-status" id="transStatus" role="status">Transmissão nos dias 25 e 26 de novembro, a partir das 9h (horário de Brasília).</p>
+      </div>
+    </div>
+
+    <div class="trans-grid">
+      <a class="trans-card" href="https://www.youtube.com/live/uhss2DYRGe4" target="_blank" rel="noopener noreferrer">
+        <div class="trans-thumb">
+          <img src="https://i.ytimg.com/vi/uhss2DYRGe4/maxresdefault.jpg"
+               alt="Transmissão do Dia 1 do Goiânia Resiliente no YouTube — 25 de novembro de 2026"
+               loading="lazy"
+               onerror="this.onerror=null;this.src='https://i.ytimg.com/vi/uhss2DYRGe4/hqdefault.jpg'">
+          <span class="trans-badge">Dia 1</span>
+          <span class="trans-live">Ao vivo</span>
+          <span class="trans-play" aria-hidden="true"></span>
+        </div>
+        <div class="trans-body">
+          <span class="trans-data">25 nov 2026 · quarta-feira</span>
+          <strong>Das 9h às 18h</strong>
+          <span class="trans-cta">Assistir no YouTube ↗</span>
+        </div>
+      </a>
+
+      <a class="trans-card" href="https://www.youtube.com/live/CCgR-ebdeq4" target="_blank" rel="noopener noreferrer">
+        <div class="trans-thumb">
+          <img src="https://i.ytimg.com/vi/CCgR-ebdeq4/maxresdefault.jpg"
+               alt="Transmissão do Dia 2 do Goiânia Resiliente no YouTube — 26 de novembro de 2026"
+               loading="lazy"
+               onerror="this.onerror=null;this.src='https://i.ytimg.com/vi/CCgR-ebdeq4/hqdefault.jpg'">
+          <span class="trans-badge">Dia 2</span>
+          <span class="trans-live">Ao vivo</span>
+          <span class="trans-play" aria-hidden="true"></span>
+        </div>
+        <div class="trans-body">
+          <span class="trans-data">26 nov 2026 · quinta-feira</span>
+          <strong>Das 9h às 17h30</strong>
+          <span class="trans-cta">Assistir no YouTube ↗</span>
+        </div>
+      </a>
+    </div>
+
+    <p class="trans-nota">A gravação fica disponível nos mesmos links depois do evento. A programação completa de cada dia está em <a href="#programacao">Programação</a>.</p>
   </section>
 
   <!-- ================= 01 · O DESAFIO ================= -->
