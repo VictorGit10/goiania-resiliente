@@ -663,6 +663,62 @@
   window.addEventListener("load", reancorar);
   if (document.fonts && document.fonts.ready) document.fonts.ready.then(reancorar);
 
+  /* ------------------------------------------------------------------
+     Transmissão: estado antes, durante e depois do evento
+     ------------------------------------------------------------------ */
+  var secTrans = document.getElementById("transmissao");
+  if (secTrans) {
+    var statusTrans = document.getElementById("transStatus");
+    var cardsTrans = secTrans.querySelectorAll(".trans-card");
+    var umDia = 24 * 60 * 60 * 1000;
+    function diaEmBrasilia(ts) {
+      var d = new Date(ts - 3 * 60 * 60 * 1000);
+      return Date.UTC(d.getUTCFullYear(), d.getUTCMonth(), d.getUTCDate());
+    }
+    function limpaAoVivo() {
+      secTrans.classList.remove("no-ar");
+      if (statusTrans) statusTrans.classList.remove("no-ar");
+      cardsTrans.forEach(function (c) { c.classList.remove("no-ar"); });
+    }
+    function marcaAoVivo(indice, texto) {
+      limpaAoVivo();
+      secTrans.classList.add("no-ar");
+      if (statusTrans) {
+        statusTrans.textContent = texto;
+        statusTrans.classList.add("no-ar");
+      }
+      if (cardsTrans[indice]) cardsTrans[indice].classList.add("no-ar");
+    }
+    var agora = Date.now();
+    var d1i = Date.parse(secTrans.getAttribute("data-dia1-inicio"));
+    var d1f = Date.parse(secTrans.getAttribute("data-dia1-fim"));
+    var d2i = Date.parse(secTrans.getAttribute("data-dia2-inicio"));
+    var d2f = Date.parse(secTrans.getAttribute("data-dia2-fim"));
+    if (agora >= d1i && agora < d1f) {
+      marcaAoVivo(0, "Ao vivo agora — Dia 1");
+    } else if (agora >= d2i && agora < d2f) {
+      marcaAoVivo(1, "Ao vivo agora — Dia 2");
+    } else if (agora >= d1f && agora < d2i) {
+      limpaAoVivo();
+      var diasParaD2 = Math.round((diaEmBrasilia(d2i) - diaEmBrasilia(agora)) / umDia);
+      if (statusTrans) {
+        statusTrans.textContent = "O Dia 1 terminou. O Dia 2 começa " +
+          (diasParaD2 <= 0 ? "hoje" : "amanhã") + ", às 9h.";
+      }
+    } else if (agora < d1i) {
+      limpaAoVivo();
+      var dias = Math.round((diaEmBrasilia(d1i) - diaEmBrasilia(agora)) / umDia);
+      if (statusTrans) {
+        if (dias <= 0) statusTrans.textContent = "Começa hoje, às 9h (horário de Brasília).";
+        else if (dias === 1) statusTrans.textContent = "Começa amanhã, 25 de novembro, às 9h.";
+        else statusTrans.textContent = "Faltam " + dias + " dias: começa em 25 de novembro, às 9h.";
+      }
+    } else {
+      limpaAoVivo();
+      if (statusTrans) statusTrans.textContent = "Assista à gravação — os dois dias estão disponíveis.";
+    }
+  }
+
   /* Ano no rodapé */
   document.getElementById("ano").textContent = new Date().getFullYear();
 })();
