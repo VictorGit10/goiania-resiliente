@@ -956,13 +956,11 @@ a.conv-link.pessoa-perfil {
 
 /* ============ TRANSMISSÃO ============ */
 .hero-acoes { display: flex; flex-direction: column; gap: 12px; align-items: flex-start; }
-.hero-botoes { display: flex; flex-wrap: wrap; gap: 12px; align-items: flex-start; }
+.hero-botoes { display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 12px; align-items: stretch; width: 100%; }
+.hero-botoes .btn { width: 100%; display: flex; align-items: center; justify-content: center; text-align: center; padding: 18px 20px; }
+@media (min-width: 761px) { .hero-botoes .btn { font-size: 13px; padding: 16px 12px; text-wrap: balance; } }
 .btn-sec { background: var(--branco); color: var(--preto); }
 .btn-sec:hover { background: var(--preto); color: var(--amarelo); }
-@media (max-width: 760px) {
-  .hero-botoes { flex-direction: column; align-items: stretch; width: 100%; }
-  .hero-botoes .btn { width: 100%; text-align: left; padding: 16px 20px; font-size: 14px; }
-}
 .hero-live {
   display: inline-flex; align-items: center; gap: 8px;
   font-size: 13px; font-weight: 800; text-transform: uppercase; letter-spacing: .03em;
