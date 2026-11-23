@@ -71,7 +71,7 @@ SESSÕES DO DIA, na ordem em que aconteceram. O código entre colchetes identifi
 - 9h30–10h40 · As Cidades do Cerrado: ciência para entender o que muda debaixo dos nossos pés e sobre nossas cabeças [d1-cidades-cerrado]
     Conferencista: Carlos Gurjão (CEMPA/UFG)
     Debatedores: Celene Cunha (IESA/UFG) · João Batista de Deus (IESA/UFG)
-    Mediação: Ary Soares dos Santos (Paranaíba Vivo)
+    Mediação: Ary Soares dos Santos (IDESA)
 - 11h–12h15 · Goiânia: onde estamos? Projetos estruturantes para adaptação [d1-goiania-onde-estamos]
     Participantes: Gabriel Tenaglia (AMMA) · Pedro Baima (AMMA)
     Mediação: José Moraes Neto (OAB-GO)
@@ -85,7 +85,7 @@ SESSÕES DO DIA, na ordem em que aconteceram. O código entre colchetes identifi
 - 16h15–17h15 · Monitoramento, previsão meteorológica e adaptação: conhecer e monitorar para sobreviver [d1-monitoramento]
     Palestrante: Angel Chovert (CEMPA/UFG)
     Debatedores: Elisabete Ferreira (INMET) · Marcelo Luz dos Santos (Defesa Civil/Goiânia)
-    Mediação: SECTI-GO
+    Mediação: Gislaine Cristina Luiz (IESA/UFG)
 - 17h15–18h · Goiânia: clima, vulnerabilidade e gestão municipal [d1-gestao-municipal]
     Palestrante: Sandro Mabel (Prefeito de Goiânia)
     Mediação: Pedro Novaes
