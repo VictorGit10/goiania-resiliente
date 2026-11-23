@@ -325,4 +325,11 @@ window.GR_CONVIDADOS = [
     resumo: "Geógrafa pela UFG, com mestrado em Geografia (UFG) e doutorado em Geotecnia (UnB). É professora adjunta do IESA/UFG, especialista em Climatologia Geográfica, e coordena o Laboratório de Análise da Interação da Atmosfera e da Paisagem (LAP).",
     minibio: "Possui graduação em Geografia pela Universidade Federal de Goiás (1995), mestrado em Geografia pela Universidade Federal de Goiás (1998) e doutorado em Geotecnia pela Universidade de Brasília (2012). Atualmente é professora adjunta 4 da Universidade Federal de Goiás. Tem experiência na área de Geociências, com ênfase em Climatologia Geográfica, atuando principalmente nos seguintes temas: precipitação, clima, Goiânia, pluviometria e análise da variabilidade climática. É coordenadora do Laboratório de Análise da Interação da Atmosfera e da Paisagem (LAP). Foi coordenadora do Programa de Pós-Graduação em Geografia (Mestrado e Doutorado Acadêmico) vinculado ao Instituto de Estudos Socioambientais entre 2018 e 2021 e vice-coordenadora entre 2016 e 2018."
   },
+  {
+    id: "janaina-holanda",
+    nome: "Janaína Holanda",
+    naProgramacao: ["Janaína Holanda"],
+    cargo: "Arquiteta e urbanista · Secretaria Nacional de Desenvolvimento Urbano e Metropolitano · Ministério das Cidades",
+    resumo: "Arquiteta e urbanista pela PUC Goiás, mestre em Desenvolvimento e Planejamento Territorial e com ampla experiência em planejamento urbano na escala municipal. Hoje atua na adaptação das cidades à mudança do clima, na Secretaria Nacional de Desenvolvimento Urbano e Metropolitano, do Ministério das Cidades."
+  },
 ];

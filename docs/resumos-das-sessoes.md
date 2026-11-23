@@ -73,7 +73,7 @@ SESSÕES DO DIA, na ordem em que aconteceram. O código entre colchetes identifi
     Debatedores: Celene Cunha (IESA/UFG) · João Batista de Deus (IESA/UFG)
     Mediação: Ary Soares dos Santos (IDESA)
 - 11h–12h15 · Goiânia: onde estamos? Projetos estruturantes para adaptação [d1-goiania-onde-estamos]
-    Participantes: Gabriel Tenaglia (AMMA) · Pedro Baima (AMMA)
+    Participantes: Gabriel Tenaglia (AMMA) · Pedro Baima (AMMA) · Janaína Holanda (MCID)
     Mediação: José Moraes Neto (OAB-GO)
 - 14h–15h · Quem decide e quem paga a conta do clima? Um debate sobre governança e articulação federativa [d1-governanca]
     Participantes: Carolina Stange Moulin (SEMAD-GO) · Dep. Antônio Gomide (Alego) · Danielle Oliveira (SECAP/Goiânia) · Pollyana Borges (SVMA/Aparecida de Goiânia)
