@@ -53,7 +53,11 @@ Salvar em `assets/img/convidados/` com estes nomes (JPG, de preferência quadrad
 - ✓ `maxiely-scaramussa.jpg` (publicada em 13/11/2026)
 - ✓ `sara-moraes.jpg` (publicada em 13/11/2026)
 - ✓ `marcelo-luz.jpg` (publicada em 13/11/2026)
-- `jose-moraes-neto.jpg` (foto pronta em `materiais/fotos-perfis/`; falta o currículo)
+- ✓ `ary-soares-dos-santos.jpg` (publicada em 19/11/2026)
+- ✓ `gislaine-cristina-luiz.jpg` (publicada em 23/11/2026; 620×620, a única disponível)
+- ✓ `janaína-holanda.jpg` (publicada em 23/11/2026)
+- ✓ `fernando-prado-e-silva.jpg` (publicada em 23/11/2026)
+- `jose-moraes-neto.jpg` (não usada: o José cancelou a participação)
 
 As fotos do formulário e da pasta do Pedro foram baixadas. Todos os perfis publicados têm foto.
 
