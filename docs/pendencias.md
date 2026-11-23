@@ -55,7 +55,7 @@ Salvar em `assets/img/convidados/` com estes nomes (JPG, de preferência quadrad
 - ✓ `marcelo-luz.jpg` (publicada em 13/11/2026)
 - `jose-moraes-neto.jpg` (foto pronta em `materiais/fotos-perfis/`; falta o currículo)
 
-As fotos do formulário e da pasta do Pedro foram baixadas. Todos os perfis publicados têm foto. José Moraes Neto já tem foto, mas ainda não tem perfil.
+As fotos do formulário e da pasta do Pedro foram baixadas. Todos os perfis publicados têm foto.
 
 ## Conteúdo
 
@@ -65,7 +65,8 @@ As fotos do formulário e da pasta do Pedro foram baixadas. Todos os perfis publ
 | Descrição de cada mesa (opcional) | `dados/sessoes.js`, campo `descricao` | Pedro |
 | **Perfis de Karla Maria Silva de Faria e Cristina Paragó Musmanno**: publicados em 11/11/2026 com as bios do formulário. | `dados/convidados.js`, `assets/img/convidados/` | — |
 | **Perfis de Adriano da Rocha Lima, Celene Cunha, João Batista de Deus, Antônio Gomide, Danielle Oliveira, Pollyana Borges, Elizabete Alves Ferreira, Márcia Lobo, Sandro Mabel e Rodrigo Lustosa**: publicados em 12/11/2026 com as bios da planilha. | `dados/convidados.js`, `assets/img/convidados/` | — |
-| **Perfil de José Moraes Neto**: foto pronta em `materiais/fotos-perfis/`, falta o currículo. | `dados/convidados.js`, `assets/img/convidados/` | Pedro |
+| **José Moraes Neto**: cancelou a participação e foi substituído por Fernando Augusto Paiva do Prado e Silva na mediação do painel "Goiânia: onde estamos?" (23/11/2026). A foto que estava em `materiais/fotos-perfis/` não é mais usada. | `index.html`, `docs/resumos-das-sessoes.md` | — |
+| **Fernando Augusto Paiva do Prado e Silva**: assume a mediação do painel "Goiânia: onde estamos?" (Dia 1, 11h–12h15), com a bio e a foto enviadas pelo Pedro em 23/11/2026. | `dados/convidados.js`, `index.html`, `docs/resumos-das-sessoes.md`, `assets/img/convidados/` | — |
 | **Robledo Farias**: substituído por Marcelo Luz dos Santos no painel de monitoramento; não precisa mais de perfil. | `index.html`, `docs/resumos-das-sessoes.md` | — |
 | **Ary Soares dos Santos**: entra como mediador do painel "As Cidades do Cerrado" (Dia 1, 9h30–10h40), no lugar de Pedro Novaes, com a foto e a bio enviadas pelo Pedro em 19/11/2026. | `dados/convidados.js`, `index.html`, `docs/resumos-das-sessoes.md`, `assets/img/convidados/` | — |
 | **Fim da bio de Ary Soares dos Santos**: o trecho que faltava chegou em 19/11/2026 e está publicado (COMPESCA/FIESP, FEPESGO, ANAMMA Goiás, S.O.S. Rio Piracanjuba, APROGEO, Conselho Estadual de Meio Ambiente, CBH-CVSM e IDESA). | `dados/convidados.js` | — |
