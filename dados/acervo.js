@@ -46,7 +46,7 @@ window.GR_ACERVO = [
   { tipo: "videos",        edicao: 2026, titulo: "Vídeos dos painéis" },
   { tipo: "transcricoes",  edicao: 2026, titulo: "Transcrições das atividades" },
   { tipo: "apresentacoes", edicao: 2026, titulo: "Slides das palestras" },
-  { tipo: "relatorios",    edicao: 2026, titulo: "Relatório preliminar" },
+  { tipo: "relatorios",    edicao: 2026, titulo: "Relatório para discussão", status: "Edição 2026", link: "materiais/2026/relatorio-para-discussao-2026.pdf", texto: "Da atmosfera à vulnerabilidade social: clima, Cerrado e Goiânia · novembro de 2026 · 40 páginas" },
   { tipo: "artigos",       edicao: 2026, titulo: "Documentos de referência" },
 
   /* ---------- Edição 2024 ---------- */
