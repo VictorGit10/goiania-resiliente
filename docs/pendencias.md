@@ -91,7 +91,7 @@ As fotos do formulário e da pasta do Pedro foram baixadas. Todos os perfis publ
 | Transcrições | `materiais/2026/` ou Google Doc + `dados/acervo.js` (`tipo: "transcricoes"`) |
 | Resumos | `dados/sessoes.js` (ver `docs/resumos-das-sessoes.md`) |
 | Fotos do simpósio | álbum público + `dados/acervo.js` (`tipo: "fotos"`) |
-| Relatório preliminar | `dados/acervo.js` (`tipo: "relatorios"`) |
+| Relatório para discussão (publicado em 23/11/2026; versão final a trocar depois) | `materiais/2026/relatorio-para-discussao-2026.pdf` + `dados/acervo.js` (`tipo: "relatorios"`) |
 
 ## Para avaliar
 
