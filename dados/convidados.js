@@ -332,4 +332,11 @@ window.GR_CONVIDADOS = [
     cargo: "Arquiteta e urbanista · Secretaria Nacional de Desenvolvimento Urbano e Metropolitano · Ministério das Cidades",
     resumo: "Arquiteta e urbanista pela PUC Goiás, mestre em Desenvolvimento e Planejamento Territorial e com ampla experiência em planejamento urbano na escala municipal. Hoje atua na adaptação das cidades à mudança do clima, na Secretaria Nacional de Desenvolvimento Urbano e Metropolitano, do Ministério das Cidades."
   },
+  {
+    id: "fernando-prado-e-silva",
+    nome: "Fernando Augusto Paiva do Prado e Silva",
+    naProgramacao: ["Fernando Augusto Paiva do Prado e Silva"],
+    cargo: "Advogado · Direito Ambiental e Agronegócio",
+    resumo: "Advogado com atuação consolidada desde 2008. Pós-graduado em Direito do Trabalho e Processo do Trabalho, bem como em Direito Agrário e Agronegócio, dedica-se há mais de 10 anos à prática em Direito Ambiental. Sua trajetória combina sólida base técnica e visão estratégica voltada à segurança jurídica no setor produtivo e empresarial."
+  },
 ];
