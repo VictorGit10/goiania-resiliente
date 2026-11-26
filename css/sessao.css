@@ -109,6 +109,31 @@
   outline-offset: 2px;
 }
 
+.sessao-subnav {
+  position: sticky;
+  top: 65px;
+  z-index: 30;
+  display: flex;
+  overflow-x: auto;
+  white-space: nowrap;
+  background: var(--branco);
+  border-bottom: var(--borda);
+  -webkit-overflow-scrolling: touch;
+}
+.sessao-subnav a {
+  flex: 0 0 auto;
+  padding: 11px 16px;
+  border-right: 1px solid var(--preto);
+  font-size: 11px;
+  font-weight: 800;
+  text-transform: uppercase;
+  letter-spacing: .04em;
+  text-decoration: none;
+}
+.sessao-subnav a:hover { background: var(--amarelo); }
+.sessao-subnav a:focus-visible { outline: 3px solid var(--azul); outline-offset: -3px; }
+#resumo, #participantes, #slides, #transcricao { scroll-margin-top: 120px; }
+
 .sessao-bloco {
   border-bottom: 1px solid var(--preto);
   background: var(--branco);
@@ -224,9 +249,6 @@
 .transcricao-cabeca h2 { margin-bottom: 6px; }
 
 .transcricao-barra {
-  position: sticky;
-  top: 65px;
-  z-index: 20;
   display: flex;
   justify-content: space-between;
   align-items: flex-end;
@@ -450,12 +472,13 @@
   .pagina-sessao header,
   .sessao-topo-nav,
   .sessao-hero-acoes,
+  .sessao-subnav,
   .transcricao-barra,
   .locutores-filtro,
   .sessao-nav-sessoes,
   .sessao-footer,
   .ver-contexto,
-  #secaoParticipantes,
+  #participantes,
   #slides { display: none !important; }
   .sessao-main { max-width: none; }
   .sessao-hero { background: var(--branco); border-bottom: 2px solid var(--preto); }

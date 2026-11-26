@@ -35,6 +35,7 @@
   var estado = { busca: "", locutor: null };
   var ultimoFoco = null;
   var timerBusca = null;
+  var semMovimento = window.matchMedia && window.matchMedia("(prefers-reduced-motion: reduce)").matches;
 
   /* ------------------------------------------------------------------
      Utilidades (mesmas regras de js/main.js)
@@ -173,7 +174,7 @@
     var sessao = (window.GR_SESSOES || {})[codigo];
     var texto = sessao && String(sessao.resumo || "").trim();
     if (!texto) {
-      document.getElementById("secaoResumo").hidden = true;
+      document.getElementById("resumo").hidden = true;
       return;
     }
     var box = document.getElementById("resumoTexto");
@@ -186,7 +187,7 @@
     box.textContent = "";
     var lista = dados.locutores || [];
     if (!lista.length) {
-      document.getElementById("secaoParticipantes").hidden = true;
+      document.getElementById("participantes").hidden = true;
       return;
     }
     lista.forEach(function (l) {
@@ -394,7 +395,7 @@
     var fala = document.getElementById(id);
     if (!fala) return;
     if (history.pushState) history.pushState(null, "", "#t=" + String(t).replace(/:/g, "-"));
-    fala.scrollIntoView({ behavior: "smooth", block: "center" });
+    fala.scrollIntoView({ behavior: semMovimento ? "auto" : "smooth", block: "center" });
     fala.classList.add("destaque");
     setTimeout(function () { fala.classList.remove("destaque"); }, 2600);
   }
@@ -408,7 +409,7 @@
     if (!m) return;
     var fala = document.getElementById("t-" + m[1] + "-" + m[2] + "-" + m[3]);
     if (!fala) return;
-    fala.scrollIntoView({ behavior: "smooth", block: "center" });
+    fala.scrollIntoView({ behavior: semMovimento ? "auto" : "smooth", block: "center" });
     fala.classList.add("destaque");
     setTimeout(function () { fala.classList.remove("destaque"); }, 2600);
   }
@@ -532,6 +533,17 @@
     renderFiltro(cores);
     renderNav();
     prepararModal();
+
+    document.querySelectorAll("a[data-voltar]").forEach(function (a) {
+      a.href = "index.html#sessao-" + codigo;
+    });
+    var copiar = document.getElementById("copiarLink");
+    if (copiar) copiar.addEventListener("click", function () {
+      var url = location.href.split("#")[0];
+      function ok() { copiar.textContent = "Link copiado ✓"; setTimeout(function () { copiar.textContent = "Copiar link"; }, 2200); }
+      if (navigator.clipboard && navigator.clipboard.writeText) navigator.clipboard.writeText(url).then(ok, ok);
+      else ok();
+    });
 
     var busca = document.getElementById("busca");
     if (busca) {

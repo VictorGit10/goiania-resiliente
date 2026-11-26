@@ -99,6 +99,25 @@
     });
     return box;
   }
+  function primeiroParagrafo(texto) {
+    var blocos = String(texto || "").replace(/\r/g, "").trim().split(/\n\s*\n/);
+    for (var i = 0; i < blocos.length; i++) {
+      var b = blocos[i].trim();
+      if (b && !/^##\s+/.test(b)) return b.replace(/\*\*/g, "");
+    }
+    return "";
+  }
+  function teaserResumo(texto) {
+    var p = primeiroParagrafo(texto);
+    if (p.length <= 220) return p;
+    var corte = p.slice(0, 220);
+    var fim = corte.lastIndexOf(". ");
+    if (fim < 120) fim = Math.max(corte.lastIndexOf("; "), corte.lastIndexOf(", "));
+    if (fim > 120) corte = corte.slice(0, fim + 1);
+    var limpo = corte.trim();
+    if (/[.!?]$/.test(limpo)) return limpo;
+    return limpo + "…";
+  }
 
   /* ------------------------------------------------------------------
      Sessões: o índice de todas as atividades com código (id="sessao-…")
@@ -378,8 +397,9 @@
   /* Cada resumo publicado em dados/sessoes.js vira um cartão "Resumo" */
   ordemSessoes.forEach(function (s) {
     if (String(s.textos.resumo || "").trim()) {
+      var linkResumo = /^d1-/.test(s.id) ? "sessao.html?sessao=" + s.id + "#resumo" : "#sessao-" + s.id;
       acervo.push({ tipo: "resumos", edicao: Number(s.edicao), sessao: s.id,
-                    titulo: "Resumo da sessão", link: "#sessao-" + s.id });
+                    titulo: "Resumo da sessão", link: linkResumo });
     }
   });
 
@@ -464,6 +484,11 @@
   ordemSessoes.forEach(function (s) {
     if (!s.details) return;
     var detalhe = s.details.querySelector(".detalhe");
+    if (detalhe && /^d1-/.test(s.id)) {
+      var abrirSessao = el("a", "sessao-abrir", "Abrir a sessão →");
+      abrirSessao.href = "sessao.html?sessao=" + s.id;
+      detalhe.insertBefore(abrirSessao, detalhe.firstChild);
+    }
     var textos = s.textos;
     var mats = materiaisDaSessao[s.id] || [];
     var temResumo = !!String(textos.resumo || "").trim();
@@ -471,6 +496,17 @@
     /* Descrição da mesa, antes dos nomes */
     if (String(textos.descricao || "").trim()) {
       detalhe.insertBefore(el("p", "sessao-descricao", textos.descricao.trim()), detalhe.firstChild);
+    }
+
+    /* Resumo: teaser curto + link para a página completa */
+    if (temResumo) {
+      var br = bloco("Resumo");
+      var teaser = teaserResumo(textos.resumo);
+      if (teaser) br.conteudo.appendChild(el("p", "sessao-teaser", teaser));
+      var verResumo = el("a", "sessao-ver-resumo", "Ler o resumo completo →");
+      verResumo.href = "sessao.html?sessao=" + s.id + "#resumo";
+      br.conteudo.appendChild(verResumo);
+      detalhe.appendChild(br.box);
     }
 
     /* Perfis de quem está na sessão */
@@ -513,36 +549,6 @@
       }
       detalhe.appendChild(bm.box);
     }
-
-    /* Resumo da sessão (dados/sessoes.js) */
-    if (temResumo) {
-      var br = bloco("Resumo");
-      var d = el("details", "ler-mais sessao-resumo");
-      d.appendChild(el("summary", null, "Ler o resumo da sessão"));
-      d.appendChild(textoRico(textos.resumo));
-      d.appendChild(el("p", "sessao-resumo-nota", "Resumo elaborado a partir da gravação da sessão e revisado pela organização."));
-      br.conteudo.appendChild(d);
-      detalhe.appendChild(br.box);
-    }
-
-    /* Endereço da sessão, para compartilhar */
-    var rodape = el("div", "sessao-rodape");
-    var copiar = el("a", "sessao-copiar", "Copiar link desta sessão");
-    copiar.href = "#sessao-" + s.id;
-    copiar.addEventListener("click", function (e) {
-      e.preventDefault();
-      e.stopPropagation();
-      var url = location.href.split("#")[0] + "#sessao-" + s.id;
-      if (history.replaceState) history.replaceState(null, "", "#sessao-" + s.id);
-      function ok() { copiar.textContent = "Link copiado ✓"; setTimeout(function () { copiar.textContent = "Copiar link desta sessão"; }, 2200); }
-      if (navigator.clipboard && navigator.clipboard.writeText) navigator.clipboard.writeText(url).then(ok, ok);
-      else ok();
-    });
-    var tudo = el("a", "sessao-tudo", "Tudo sobre esta sessão →");
-    tudo.href = "sessao.html?sessao=" + s.id;
-    rodape.appendChild(tudo);
-    rodape.appendChild(copiar);
-    detalhe.appendChild(rodape);
 
     /* Selos na linha da sessão: o que já está publicado */
     var tipos = [];

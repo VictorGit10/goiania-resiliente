@@ -17,7 +17,7 @@
       <span>Goiânia Resiliente<br>2ª edição</span>
     </a>
     <nav class="sessao-topo-nav" aria-label="Navegação da sessão">
-      <a href="index.html#programacao">← Programação</a>
+      <a href="index.html#programacao" data-voltar>← Programação</a>
       <a href="index.html#acervo">Acervo</a>
     </nav>
   </div>
@@ -34,7 +34,7 @@
 
   <div id="sessaoConteudo">
     <nav class="sessao-migalha" aria-label="Você está em">
-      <a href="index.html#programacao">Programação</a>
+      <a href="index.html#programacao" data-voltar>Programação</a>
       <span>/</span>
       <span>Dia 1</span>
       <span>/</span>
@@ -50,19 +50,28 @@
           <a class="sessao-btn" href="#transcricao">Ler transcrição</a>
           <a class="sessao-btn sessao-btn-sec" id="linkSlides" href="#slides">Slides (PDF)</a>
           <a class="sessao-btn sessao-btn-sec" id="linkCompleta" href="materiais/2026/dia1-transcricao-completa.md" download>Transcrição completa (.md)</a>
+          <button type="button" class="sessao-btn sessao-btn-sec" id="copiarLink">Copiar link</button>
         </div>
       </div>
     </section>
 
-    <section class="sessao-bloco" id="secaoResumo">
+    <nav class="sessao-subnav" id="sessaoSubnav" aria-label="Nesta sessão">
+      <a href="#resumo">Resumo</a>
+      <a href="#participantes">Participantes</a>
+      <a href="#slides">Slides</a>
+      <a href="#transcricao">Transcrição</a>
+    </nav>
+
+    <section class="sessao-bloco" id="resumo">
       <div class="sessao-bloco-inner">
         <span class="label">Resumo</span>
         <h2>O que aconteceu nesta sessão</h2>
         <div id="resumoTexto"></div>
+        <p class="sessao-resumo-nota">Resumo elaborado a partir da gravação da sessão e revisado pela organização.</p>
       </div>
     </section>
 
-    <section class="sessao-bloco" id="secaoParticipantes">
+    <section class="sessao-bloco" id="participantes">
       <div class="sessao-bloco-inner">
         <span class="label">Quem falou</span>
         <h2>Participantes</h2>
