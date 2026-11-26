@@ -397,7 +397,7 @@
   /* Cada resumo publicado em dados/sessoes.js vira um cartão "Resumo" */
   ordemSessoes.forEach(function (s) {
     if (String(s.textos.resumo || "").trim()) {
-      var linkResumo = /^d1-/.test(s.id) ? "sessao.html?sessao=" + s.id + "#resumo" : "#sessao-" + s.id;
+      var linkResumo = /^d[12]-/.test(s.id) ? "sessao.html?sessao=" + s.id + "#resumo" : "#sessao-" + s.id;
       acervo.push({ tipo: "resumos", edicao: Number(s.edicao), sessao: s.id,
                     titulo: "Resumo da sessão", link: linkResumo });
     }
@@ -520,7 +520,7 @@
   ordemSessoes.forEach(function (s) {
     if (!s.details) return;
     var detalhe = s.details.querySelector(".detalhe");
-    if (detalhe && /^d1-/.test(s.id)) {
+    if (detalhe && /^d[12]-/.test(s.id)) {
       var abrirSessao = el("a", "sessao-abrir", "Abrir a sessão →");
       abrirSessao.href = "sessao.html?sessao=" + s.id;
       detalhe.insertBefore(abrirSessao, detalhe.firstChild);
@@ -539,7 +539,7 @@
       var br = bloco("Resumo");
       var teaser = teaserResumo(textos.resumo);
       if (teaser) br.conteudo.appendChild(el("p", "sessao-teaser", teaser));
-      if (/^d1-/.test(s.id)) {
+      if (/^d[12]-/.test(s.id)) {
         var verResumo = el("a", "sessao-ver-resumo", "Ler o resumo completo →");
         verResumo.href = "sessao.html?sessao=" + s.id + "#resumo";
         br.conteudo.appendChild(verResumo);
