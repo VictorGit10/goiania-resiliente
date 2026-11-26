@@ -1,6 +1,8 @@
 # Pendências
 
-Atualizado em 13/11/2026. O site funciona com tudo o que está abaixo em aberto: o que falta aparece como "Foto em breve", "Disponível após o evento" ou simplesmente não aparece.
+> **Nota (26/11/2026):** o Dia 1 está no ar — resumos, slides, página da sessão e transcrições. O handoff completo está em `gravacoes/2026-11-25/DOCUMENTACAO-DIA1.md`. A lista abaixo é histórica; o próximo bloco é o **Dia 2** (captura, cortes, transcrição, resumos e slides).
+
+Atualizado em 13/11/2026; nota de 26/11/2026 no topo. O site funciona com tudo o que está abaixo em aberto: o que falta aparece como "Foto em breve", "Disponível após o evento" ou simplesmente não aparece.
 
 ## Antes de publicar
 
