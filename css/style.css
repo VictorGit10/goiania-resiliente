@@ -872,11 +872,17 @@ a.conv-link.perfil-mini:hover { background: var(--amarelo); }
 .sessao-resumo-nota { font-size: 12px; font-weight: 600; text-transform: uppercase; letter-spacing: .03em; margin-top: 12px; border-top: 1px solid var(--preto); padding-top: 8px; }
 .sessao-rodape { border-top: 1px solid var(--preto); padding-top: 10px; display: flex; justify-content: flex-end; }
 .sessao-copiar { font-size: 12px; font-weight: 800; text-transform: uppercase; letter-spacing: .04em; text-underline-offset: 3px; }
+.sessao-tudo {
+  font-size: 12px; font-weight: 800; text-transform: uppercase; letter-spacing: .04em;
+  background: var(--amarelo); border: var(--borda); padding: 6px 10px;
+  text-decoration: none; margin-right: 14px;
+}
+.sessao-tudo:hover { background: var(--preto); color: var(--amarelo); }
 .sessao-selo {
   margin-left: auto; flex-shrink: 0; font-size: 11px; font-weight: 800; letter-spacing: .05em;
   background: var(--verde); border: var(--borda); padding: 4px 8px; line-height: 1.2;
 }
-.sessao-material:focus-visible, .sessao-copiar:focus-visible, a.conv-link.perfil-mini:focus-visible { outline: 3px solid var(--azul); outline-offset: 2px; }
+.sessao-tudo:focus-visible, .sessao-material:focus-visible, .sessao-copiar:focus-visible, a.conv-link.perfil-mini:focus-visible { outline: 3px solid var(--azul); outline-offset: 2px; }
 @media (max-width: 760px) {
   .sessao-selo { display: none; }
   .sessao-rodape { justify-content: flex-start; }

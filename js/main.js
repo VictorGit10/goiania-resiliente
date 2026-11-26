@@ -358,7 +358,10 @@
     if (item.tipo === "resumos") return "Ler resumo →";
     if (idYoutube(url)) return "Assistir no YouTube ↗";
     if (ehPdf(url)) return "Abrir PDF ↗";
-    if (item.tipo === "transcricoes") return "Ler transcrição ↗";
+    if (item.tipo === "transcricoes") {
+      if (/\.md($|[?#])/i.test(url)) return "Baixar transcrição (.md) ↓";
+      return "Ler transcrição →";
+    }
     if (item.tipo === "fotos") return "Ver fotos ↗";
     return "Abrir ↗";
   }
@@ -437,6 +440,7 @@
       if (url) {
         var a = el("a", "item-link", rotuloLink(item, url));
         a.href = url;
+        if (/\.md($|[?#])/i.test(url)) a.download = "";
         abrirEmNovaAba(a, url);
         art.appendChild(a);
       } else {
@@ -534,6 +538,9 @@
       if (navigator.clipboard && navigator.clipboard.writeText) navigator.clipboard.writeText(url).then(ok, ok);
       else ok();
     });
+    var tudo = el("a", "sessao-tudo", "Tudo sobre esta sessão →");
+    tudo.href = "sessao.html?sessao=" + s.id;
+    rodape.appendChild(tudo);
     rodape.appendChild(copiar);
     detalhe.appendChild(rodape);
 
