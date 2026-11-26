@@ -1,5 +1,3 @@
-@import url('https://fonts.googleapis.com/css2?family=Host+Grotesk:ital,wght@0,300..800;1,300..800&display=swap');
-
 @font-face { font-family: "Host Grotesk"; src: url("../assets/fonts/HostGrotesk-Regular.ttf") format("truetype"); font-weight: 400; font-style: normal; font-display: swap; }
 @font-face { font-family: "Host Grotesk"; src: url("../assets/fonts/HostGrotesk-Medium.ttf") format("truetype"); font-weight: 500; font-style: normal; font-display: swap; }
 @font-face { font-family: "Host Grotesk"; src: url("../assets/fonts/HostGrotesk-SemiBold.ttf") format("truetype"); font-weight: 600; font-style: normal; font-display: swap; }
@@ -311,7 +309,18 @@ details.expla .expla-body { padding: 0 40px 28px; display: flex; flex-direction:
 }
 .chip:hover { background: var(--branco); }
 .chip[aria-pressed="true"] { background: var(--preto); color: var(--amarelo); }
+.filtros .chip { background: var(--branco); }
+.filtros .chip:hover { background: var(--amarelo); }
+.filtros .chip[aria-pressed="true"],
+.filtros .chip[aria-pressed="true"]:hover { background: var(--preto); color: var(--amarelo); }
+.filtros-sessao { flex-wrap: nowrap; overflow-x: auto; background: var(--branco); -webkit-overflow-scrolling: touch; }
+.filtros-sessao .chip { flex: 0 0 auto; white-space: nowrap; }
 .acervo-grid { display: grid; grid-template-columns: repeat(3, 1fr); border-bottom: var(--borda-grossa); }
+.acervo-grupo {
+  grid-column: 1 / -1; margin: 0; padding: 16px 24px 10px;
+  background: var(--amarelo); border-top: var(--borda); border-bottom: var(--borda);
+  font-size: 13px; font-weight: 800; text-transform: uppercase; letter-spacing: .05em;
+}
 .item {
   padding: 28px 24px; display: flex; flex-direction: column; gap: 10px; min-height: 170px;
   border-bottom: var(--borda); border-right: var(--borda);
@@ -872,11 +881,25 @@ a.conv-link.perfil-mini:hover { background: var(--amarelo); }
 .sessao-resumo-nota { font-size: 12px; font-weight: 600; text-transform: uppercase; letter-spacing: .03em; margin-top: 12px; border-top: 1px solid var(--preto); padding-top: 8px; }
 .sessao-rodape { border-top: 1px solid var(--preto); padding-top: 10px; display: flex; justify-content: flex-end; }
 .sessao-copiar { font-size: 12px; font-weight: 800; text-transform: uppercase; letter-spacing: .04em; text-underline-offset: 3px; }
+.sessao-abrir {
+  display: inline-flex; align-items: center; gap: 6px;
+  margin-bottom: 14px; padding: 7px 11px;
+  background: var(--amarelo); border: var(--borda);
+  font-size: 12px; font-weight: 800; text-transform: uppercase; letter-spacing: .04em;
+  text-decoration: none;
+}
+.sessao-abrir:hover { background: var(--preto); color: var(--amarelo); }
+.sessao-teaser { font-size: 15px; line-height: 1.55; max-width: 75ch; }
+.sessao-ver-resumo {
+  display: inline-block; margin-top: 8px;
+  font-size: 12px; font-weight: 800; text-transform: uppercase; letter-spacing: .04em;
+  text-underline-offset: 3px;
+}
 .sessao-selo {
   margin-left: auto; flex-shrink: 0; font-size: 11px; font-weight: 800; letter-spacing: .05em;
   background: var(--verde); border: var(--borda); padding: 4px 8px; line-height: 1.2;
 }
-.sessao-material:focus-visible, .sessao-copiar:focus-visible, a.conv-link.perfil-mini:focus-visible { outline: 3px solid var(--azul); outline-offset: 2px; }
+.sessao-abrir:focus-visible, .sessao-ver-resumo:focus-visible, .sessao-material:focus-visible, .sessao-copiar:focus-visible, a.conv-link.perfil-mini:focus-visible { outline: 3px solid var(--azul); outline-offset: 2px; }
 @media (max-width: 760px) {
   .sessao-selo { display: none; }
   .sessao-rodape { justify-content: flex-start; }

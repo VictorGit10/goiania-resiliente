@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Sessão — Goiânia Resiliente</title>
+  <meta name="description" content="Resumo, slides e transcrição da sessão do simpósio Goiânia Resiliente, com os nomes dos falantes e links para os perfis.">
+  <link rel="icon" href="assets/icons/favicon.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/sessao.css">
+</head>
+<body class="pagina-sessao">
+
+<header>
+  <div class="topbar">
+    <a class="brand" href="index.html">
+      <span>Goiânia Resiliente<br>2ª edição</span>
+    </a>
+    <nav class="sessao-topo-nav" aria-label="Navegação da sessão">
+      <a href="index.html#programacao" data-voltar>← Programação</a>
+      <a href="index.html#acervo">Acervo</a>
+    </nav>
+  </div>
+</header>
+
+<main class="sessao-main">
+
+  <div id="sessaoErro" class="sessao-erro" hidden>
+    <span class="label">Sessão não encontrada</span>
+    <h1>Essa sessão não existe ou o endereço está incompleto.</h1>
+    <p>Volte à programação e escolha uma das sessões do Dia 1.</p>
+    <a class="sessao-btn" href="index.html#programacao">Voltar à programação</a>
+  </div>
+
+  <div id="sessaoConteudo">
+    <div class="sessao-migalha-faixa">
+      <nav class="sessao-migalha" aria-label="Você está em">
+        <a href="index.html#programacao" data-voltar>Programação</a>
+        <span>/</span>
+        <span>Dia 1</span>
+        <span>/</span>
+        <span id="sessaoHora">Sessão</span>
+      </nav>
+    </div>
+
+    <section class="sessao-hero">
+      <div class="sessao-hero-inner">
+        <span class="label" id="sessaoDiaHora"></span>
+        <h1 id="sessaoTitulo">Carregando…</h1>
+        <div class="sessao-meta" id="sessaoMeta"></div>
+        <div class="sessao-hero-acoes">
+          <a class="sessao-btn" href="#transcricao">Ler transcrição</a>
+          <a class="sessao-btn sessao-btn-sec" id="linkSlides" href="#slides">Slides (PDF)</a>
+          <a class="sessao-btn sessao-btn-sec" id="linkCompleta" href="materiais/2026/dia1-transcricao-completa.md" download>Transcrição completa (.md)</a>
+          <button type="button" class="sessao-btn sessao-btn-sec" id="copiarLink">Copiar link</button>
+        </div>
+      </div>
+    </section>
+
+    <nav class="sessao-subnav" id="sessaoSubnav" aria-label="Nesta sessão">
+      <a href="#resumo">Resumo</a>
+      <a href="#participantes">Participantes</a>
+      <a href="#slides">Slides</a>
+      <a href="#transcricao">Transcrição</a>
+    </nav>
+
+    <section class="sessao-bloco" id="resumo">
+      <div class="sessao-bloco-inner">
+        <span class="label">Resumo</span>
+        <h2>O que aconteceu nesta sessão</h2>
+        <div id="resumoTexto"></div>
+        <p class="sessao-resumo-nota">Resumo elaborado a partir da gravação da sessão e revisado pela organização.</p>
+      </div>
+    </section>
+
+    <section class="sessao-bloco" id="participantes">
+      <div class="sessao-bloco-inner">
+        <span class="label">Quem falou</span>
+        <h2>Participantes</h2>
+        <div id="participantesLista" class="sessao-participantes"></div>
+      </div>
+    </section>
+
+    <section class="sessao-bloco" id="slides">
+      <div class="sessao-bloco-inner">
+        <span class="label">Slides</span>
+        <h2>Apresentações</h2>
+        <div id="slidesLista" class="sessao-slides"></div>
+      </div>
+    </section>
+
+    <section class="sessao-bloco sessao-transcricao" id="transcricao">
+      <div class="sessao-bloco-inner">
+        <div class="transcricao-cabeca">
+          <div>
+            <span class="label">Transcrição</span>
+            <h2>Fala por fala</h2>
+          </div>
+          <span class="label" id="transcricaoContador"></span>
+        </div>
+
+        <div class="transcricao-barra">
+          <label class="busca" for="busca">
+            <span class="label">Buscar na transcrição</span>
+            <input id="busca" type="search" placeholder="Palavra, tema ou locutor…" autocomplete="off">
+          </label>
+          <div class="transcricao-acoes">
+            <button type="button" class="btn-mini" id="limpar">Limpar</button>
+            <button type="button" class="btn-mini" id="baixar">Baixar .md</button>
+            <button type="button" class="btn-mini" id="imprimir">Imprimir / PDF</button>
+          </div>
+        </div>
+
+        <div id="filtroLocutores" class="locutores-filtro" aria-label="Filtrar por locutor"></div>
+        <div id="transcricaoLista" class="transcricao-lista"></div>
+        <p id="transcricaoVazia" class="transcricao-vazia" hidden>Nenhuma fala encontrada com esse filtro.</p>
+      </div>
+    </section>
+
+    <nav class="sessao-nav-sessoes" id="navSessoes" aria-label="Outras sessões"></nav>
+  </div>
+
+</main>
+
+<footer class="sessao-footer">
+  <span>Goiânia Resiliente · 2ª edição · 25–26 nov 2026</span>
+  <a href="index.html#programacao">Voltar à programação →</a>
+</footer>
+
+<dialog class="perfil-modal" id="perfilModal" aria-label="Perfil do participante">
+  <div class="modal-barra">
+    <span class="label">Perfil do participante</span>
+    <button type="button" class="modal-fechar" id="perfilFechar">Fechar ✕</button>
+  </div>
+  <div class="modal-corpo" id="perfilCorpo"></div>
+</dialog>
+
+<script src="dados/convidados.js" defer></script>
+<script src="dados/sessoes.js" defer></script>
+<script src="dados/acervo.js" defer></script>
+<script src="js/sessao.js" defer></script>
+</body>
+</html>
