@@ -80,11 +80,11 @@ SESSÕES DO DIA, na ordem em que aconteceram. O código entre colchetes identifi
     Mediação: Thomaz Ramalho (IPPUC/Curitiba)
 - 15h–16h · Matchmaking: bons projetos para financiamentos reais [d1-matchmaking]
     Palestrante: Patrícia Freitas (Consultora)
-    Debatedor: Marcell Sant’Anna (BID)
+    Debatedor: Marcel Sant’Ana (BID)
     Mediação: Manuel Ferreira (CEMPA/UFG)
 - 16h15–17h15 · Monitoramento, previsão meteorológica e adaptação: conhecer e monitorar para sobreviver [d1-monitoramento]
     Palestrante: Angel Chovert (CEMPA/UFG)
-    Debatedores: Elisabete Ferreira (INMET) · Marcelo Luz dos Santos (Defesa Civil/Goiânia)
+    Debatedores: Elizabete Ferreira (INMET) · Marcelo Luz dos Santos (Defesa Civil/Goiânia)
     Mediação: Gislaine Cristina Luiz (IESA/UFG)
 - 17h15–18h · Goiânia: clima, vulnerabilidade e gestão municipal [d1-gestao-municipal]
     Palestrante: Sandro Mabel (Prefeito de Goiânia)
