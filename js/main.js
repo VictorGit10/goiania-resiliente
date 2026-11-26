@@ -426,15 +426,51 @@
     })
     .map(function (o) { return o.i; });
 
+  var CURTOS = {
+    "d1-abertura": "Abertura",
+    "d1-cidades-cerrado": "Cidades",
+    "d1-goiania-onde-estamos": "Goiânia",
+    "d1-governanca": "Governança",
+    "d1-monitoramento": "Monitoramento",
+    "d1-matchmaking": "Matchmaking",
+    "d1-gestao-municipal": "Gestão",
+    "d2-saude-emergencias": "Saúde",
+    "d2-transicao-energetica": "Energia",
+    "d2-juarez-paragominas": "Juárez e Curitiba",
+    "d2-paragominas": "Paragominas",
+    "d2-encerramento": "Encerramento",
+    "2024-abertura": "Abertura 2024",
+    "2024-cerrado": "Cerrado 2024",
+    "2024-niteroi": "Niterói 2024",
+    "2024-estrategias": "Estratégias 2024",
+    "2024-debate": "Debate 2024"
+  };
+  function rotuloCurtoSessao(s) {
+    if (CURTOS[s.id]) return CURTOS[s.id];
+    return s.titulo.split(":")[0].split(" — ")[0].slice(0, 26);
+  }
+
   var gridAcervo = document.getElementById("acervoGrid");
   if (gridAcervo) {
+    var ultimoGrupo = null;
     itensAcervo.forEach(function (item) {
       var url = linkSeguro(item.link);
       var s = item.sessao && sessoes[item.sessao];
+      var grupo = s ? s.id : "edicao-" + item.edicao;
+      if (grupo !== ultimoGrupo) {
+        var tituloGrupo = s
+          ? (s.edicao === "2024" ? "1ª edição · 2024" : s.dia) + " · " + rotuloCurtoSessao(s)
+          : "Edição " + item.edicao;
+        var h = el("h3", "acervo-grupo", tituloGrupo);
+        h.setAttribute("data-grupo", grupo);
+        gridAcervo.appendChild(h);
+        ultimoGrupo = grupo;
+      }
       var art = el("article", "item" + (url ? " publicado" : ""));
       art.setAttribute("data-tipo", item.tipo);
       art.setAttribute("data-edicao", String(item.edicao || ""));
       art.setAttribute("data-sessao", s ? s.id : "");
+      art.setAttribute("data-grupo", grupo);
       var yt = url && idYoutube(url);
       if (yt) {
         var th = el("a", "item-thumb");
@@ -562,61 +598,129 @@
   });
 
   /* ------------------------------------------------------------------
-     Filtros do acervo: tipo, edição e atividade
+     Filtros do acervo: edição, sessão e tipo
      ------------------------------------------------------------------ */
   var vazio = document.getElementById("acervoVazio");
-  var filtro = { tipo: "todos", edicao: "todas", sessao: "" };
+  var filtro = { tipo: "todos", edicao: "2026", sessao: "" };
+  var chipsTipo = document.querySelectorAll(".chip[data-filtro]");
+  var chipsEdicao = document.querySelectorAll(".chip[data-edicao]");
+  var boxSessao = document.getElementById("filtrosSessao");
+
+  function marcar(grupo, chip) {
+    grupo.forEach(function (c) { c.setAttribute("aria-pressed", c === chip ? "true" : "false"); });
+  }
+
+  function atualizarChipsTipo() {
+    var cont = {};
+    itensAcervo.forEach(function (item) {
+      if (!linkSeguro(item.link)) return;
+      if (filtro.edicao === "todas" || String(item.edicao) === filtro.edicao) {
+        cont[item.tipo] = (cont[item.tipo] || 0) + 1;
+      }
+    });
+    chipsTipo.forEach(function (chip) {
+      var t = chip.getAttribute("data-filtro");
+      if (t === "todos") return;
+      chip.style.display = (cont[t] || 0) > 0 ? "" : "none";
+    });
+    if (filtro.tipo !== "todos" && !(cont[filtro.tipo] > 0)) {
+      filtro.tipo = "todos";
+      marcar(chipsTipo, chipsTipo[0]);
+    }
+  }
+
+  function construirChipsSessao() {
+    if (!boxSessao) return;
+    boxSessao.querySelectorAll(".chip-sessao").forEach(function (c) { c.remove(); });
+    var cont = {};
+    itensAcervo.forEach(function (item) {
+      if ((filtro.tipo === "todos" || item.tipo === filtro.tipo) &&
+          (filtro.edicao === "todas" || String(item.edicao) === filtro.edicao) &&
+          item.sessao) {
+        cont[item.sessao] = (cont[item.sessao] || 0) + 1;
+      }
+    });
+    var todas = el("button", "chip chip-sessao", "Todas");
+    todas.type = "button";
+    todas.setAttribute("data-sessao", "");
+    todas.setAttribute("aria-pressed", filtro.sessao ? "false" : "true");
+    todas.addEventListener("click", function () {
+      filtro.sessao = "";
+      aplicarFiltros();
+    });
+    boxSessao.appendChild(todas);
+
+    ordemSessoes.forEach(function (s) {
+      if (filtro.edicao !== "todas" && s.edicao !== filtro.edicao) return;
+      var n = cont[s.id] || 0;
+      if (!n) return;
+      var rotulo = (filtro.edicao === "todas" && s.edicao === "2024" ? "2024 · " : "") + rotuloCurtoSessao(s);
+      var chip = el("button", "chip chip-sessao", rotulo + " (" + n + ")");
+      chip.type = "button";
+      chip.setAttribute("data-sessao", s.id);
+      chip.setAttribute("title", s.titulo);
+      chip.setAttribute("aria-label", s.titulo + " — " + n + " materiais");
+      chip.setAttribute("aria-pressed", filtro.sessao === s.id ? "true" : "false");
+      chip.addEventListener("click", function () {
+        filtro.sessao = filtro.sessao === s.id ? "" : s.id;
+        aplicarFiltros();
+      });
+      boxSessao.appendChild(chip);
+    });
+    if (filtro.sessao && !cont[filtro.sessao]) filtro.sessao = "";
+  }
+
   function aplicarFiltros() {
     var visiveis = 0;
+    var gruposVisiveis = {};
     document.querySelectorAll("#acervoGrid .item").forEach(function (item) {
       var ok = (filtro.tipo === "todos" || item.getAttribute("data-tipo") === filtro.tipo) &&
                (filtro.edicao === "todas" || item.getAttribute("data-edicao") === filtro.edicao) &&
                (!filtro.sessao || item.getAttribute("data-sessao") === filtro.sessao);
       item.style.display = ok ? "" : "none";
-      if (ok) visiveis++;
+      if (ok) {
+        visiveis++;
+        var g = item.getAttribute("data-grupo");
+        gruposVisiveis[g] = (gruposVisiveis[g] || 0) + 1;
+      }
+    });
+    document.querySelectorAll("#acervoGrid .acervo-grupo").forEach(function (h) {
+      var g = h.getAttribute("data-grupo");
+      h.style.display = (!filtro.sessao && gruposVisiveis[g]) ? "" : "none";
     });
     if (vazio) vazio.hidden = visiveis > 0;
-  }
-  function marcar(grupo, chip) {
-    grupo.forEach(function (c) { c.setAttribute("aria-pressed", c === chip ? "true" : "false"); });
-  }
-  var chipsTipo = document.querySelectorAll(".chip[data-filtro]");
-  var chipsEdicao = document.querySelectorAll(".chip[data-edicao]");
-  var seletor = document.getElementById("filtroAtividade");
-  chipsTipo.forEach(function (chip) {
-    chip.addEventListener("click", function () {
-      marcar(chipsTipo, chip); filtro.tipo = chip.getAttribute("data-filtro"); aplicarFiltros();
+    document.querySelectorAll(".chip-sessao").forEach(function (c) {
+      c.setAttribute("aria-pressed", c.getAttribute("data-sessao") === (filtro.sessao || "") ? "true" : "false");
     });
-  });
+  }
+
   function escolherEdicao(valor) {
     chipsEdicao.forEach(function (c) { if (c.getAttribute("data-edicao") === valor) marcar(chipsEdicao, c); });
     filtro.edicao = valor;
-    if (seletor && filtro.sessao && sessoes[filtro.sessao] && valor !== "todas" && sessoes[filtro.sessao].edicao !== valor) {
-      seletor.value = ""; filtro.sessao = "";
-    }
+    filtro.sessao = "";
+    atualizarChipsTipo();
+    construirChipsSessao();
     aplicarFiltros();
   }
+
+  chipsTipo.forEach(function (chip) {
+    chip.addEventListener("click", function () {
+      marcar(chipsTipo, chip);
+      filtro.tipo = chip.getAttribute("data-filtro");
+      construirChipsSessao();
+      aplicarFiltros();
+    });
+  });
   chipsEdicao.forEach(function (chip) {
     chip.addEventListener("click", function () { escolherEdicao(chip.getAttribute("data-edicao")); });
   });
   document.querySelectorAll("[data-ir-edicao]").forEach(function (a) {
     a.addEventListener("click", function () { escolherEdicao(a.getAttribute("data-ir-edicao")); });
   });
-  if (seletor) {
-    var grupos = {};
-    ordemSessoes.forEach(function (s) {
-      var nome = s.edicao === "2024" ? "1ª edição · 2024" : "2ª edição · " + s.dia;
-      if (!grupos[nome]) { grupos[nome] = el("optgroup"); grupos[nome].label = nome; seletor.appendChild(grupos[nome]); }
-      var o = el("option", null, s.hora + " — " + s.titulo);
-      o.value = s.id;
-      grupos[nome].appendChild(o);
-    });
-    seletor.addEventListener("change", function () {
-      filtro.sessao = seletor.value;
-      if (filtro.sessao) escolherEdicao(sessoes[filtro.sessao].edicao);
-      else aplicarFiltros();
-    });
-  }
+
+  atualizarChipsTipo();
+  construirChipsSessao();
+  aplicarFiltros();
 
   /* ------------------------------------------------------------------
      Endereços diretos: #sessao-… abre a sessão; #convidado-… mostra o perfil

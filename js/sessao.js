@@ -414,6 +414,16 @@
     setTimeout(function () { fala.classList.remove("destaque"); }, 2600);
   }
 
+  function irParaSecao() {
+    var h = String(location.hash || "");
+    if (!/^#(resumo|participantes|slides|transcricao)$/.test(h)) return;
+    var alvo = document.getElementById(h.slice(1));
+    if (!alvo) return;
+    setTimeout(function () {
+      alvo.scrollIntoView({ behavior: semMovimento ? "auto" : "smooth", block: "start" });
+    }, 80);
+  }
+
   function baixar() {
     if (!dados) return;
     var linhas = [
@@ -520,6 +530,11 @@
     }
   }
 
+  function ajustarHeader() {
+    var header = document.querySelector("header");
+    if (header) document.documentElement.style.setProperty("--header-h", header.offsetHeight + "px");
+  }
+
   /* ------------------------------------------------------------------
      Início
      ------------------------------------------------------------------ */
@@ -533,6 +548,14 @@
     renderFiltro(cores);
     renderNav();
     prepararModal();
+    ajustarHeader();
+    window.addEventListener("resize", ajustarHeader);
+    window.addEventListener("load", ajustarHeader);
+    if (window.ResizeObserver) {
+      var headerEl = document.querySelector("header");
+      if (headerEl) new ResizeObserver(ajustarHeader).observe(headerEl);
+    }
+    if (document.fonts && document.fonts.ready) document.fonts.ready.then(ajustarHeader);
 
     document.querySelectorAll("a[data-voltar]").forEach(function (a) {
       a.href = "index.html#sessao-" + codigo;

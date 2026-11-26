@@ -5,6 +5,13 @@
 
 [hidden] { display: none !important; }
 
+.pagina-sessao header {
+  max-width: none;
+  margin: 0;
+  border-left: none;
+  border-right: none;
+}
+
 .pagina-sessao main.sessao-main {
   max-width: none;
   margin: 0;
@@ -111,7 +118,7 @@
 
 .sessao-subnav {
   position: sticky;
-  top: 65px;
+  top: calc(var(--header-h, 59px) - 1px);
   z-index: 30;
   display: flex;
   overflow-x: auto;
@@ -132,7 +139,7 @@
 }
 .sessao-subnav a:hover { background: var(--amarelo); }
 .sessao-subnav a:focus-visible { outline: 3px solid var(--azul); outline-offset: -3px; }
-#resumo, #participantes, #slides, #transcricao { scroll-margin-top: 120px; }
+#resumo, #participantes, #slides, #transcricao { scroll-margin-top: calc(var(--header-h, 59px) + 56px); }
 
 .sessao-bloco {
   border-bottom: 1px solid var(--preto);
@@ -455,6 +462,8 @@
   .sessao-hero-inner { padding: 26px 16px 22px; }
   .sessao-bloco-inner { padding: 24px 16px; }
   .sessao-migalha { padding: 12px 16px; }
+  .sessao-subnav { position: static; }
+  #resumo, #participantes, #slides, #transcricao { scroll-margin-top: calc(var(--header-h, 59px) + 12px); }
   .sessao-slides { grid-template-columns: 1fr; }
   .transcricao-barra { position: static; align-items: stretch; }
   .transcricao-acoes { width: 100%; }

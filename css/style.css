@@ -311,7 +311,16 @@ details.expla .expla-body { padding: 0 40px 28px; display: flex; flex-direction:
 }
 .chip:hover { background: var(--branco); }
 .chip[aria-pressed="true"] { background: var(--preto); color: var(--amarelo); }
+.filtros .chip { background: var(--branco); }
+.filtros .chip:hover { background: var(--amarelo); }
+.filtros-sessao { flex-wrap: nowrap; overflow-x: auto; background: var(--branco); -webkit-overflow-scrolling: touch; }
+.filtros-sessao .chip { flex: 0 0 auto; white-space: nowrap; }
 .acervo-grid { display: grid; grid-template-columns: repeat(3, 1fr); border-bottom: var(--borda-grossa); }
+.acervo-grupo {
+  grid-column: 1 / -1; margin: 0; padding: 16px 24px 10px;
+  background: var(--amarelo); border-top: var(--borda); border-bottom: var(--borda);
+  font-size: 13px; font-weight: 800; text-transform: uppercase; letter-spacing: .05em;
+}
 .item {
   padding: 28px 24px; display: flex; flex-direction: column; gap: 10px; min-height: 170px;
   border-bottom: var(--borda); border-right: var(--borda);
