@@ -40,6 +40,10 @@
   .sessao-topo-nav a:last-child { display: none; }
 }
 
+.sessao-migalha-faixa {
+  background: var(--branco);
+  border-bottom: 1px solid var(--preto);
+}
 .sessao-migalha {
   max-width: 1100px;
   margin: 0 auto;
@@ -51,7 +55,6 @@
   font-weight: 700;
   text-transform: uppercase;
   letter-spacing: .04em;
-  border-bottom: 1px solid var(--preto);
 }
 .sessao-migalha a { text-underline-offset: 3px; }
 
@@ -493,7 +496,7 @@
   .sessao-hero { background: var(--branco); border-bottom: 2px solid var(--preto); }
   .sessao-hero-inner { padding: 0 0 12px; max-width: none; }
   .sessao-hero h1 { font-size: 20pt; }
-  .sessao-migalha { padding: 0 0 8px; border-bottom: 1px solid var(--preto); }
+  .sessao-migalha { padding: 0 0 8px; }
   .sessao-bloco { border-bottom: none; }
   .sessao-bloco-inner { padding: 8px 0; max-width: none; }
   .sessao-bloco h2 { font-size: 14pt; }
