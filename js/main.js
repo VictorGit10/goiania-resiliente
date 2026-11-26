@@ -539,9 +539,16 @@
       var br = bloco("Resumo");
       var teaser = teaserResumo(textos.resumo);
       if (teaser) br.conteudo.appendChild(el("p", "sessao-teaser", teaser));
-      var verResumo = el("a", "sessao-ver-resumo", "Ler o resumo completo →");
-      verResumo.href = "sessao.html?sessao=" + s.id + "#resumo";
-      br.conteudo.appendChild(verResumo);
+      if (/^d1-/.test(s.id)) {
+        var verResumo = el("a", "sessao-ver-resumo", "Ler o resumo completo →");
+        verResumo.href = "sessao.html?sessao=" + s.id + "#resumo";
+        br.conteudo.appendChild(verResumo);
+      } else {
+        var d = el("details", "ler-mais sessao-resumo");
+        d.appendChild(el("summary", null, "Ler o resumo da sessão"));
+        d.appendChild(textoRico(textos.resumo));
+        br.conteudo.appendChild(d);
+      }
       detalhe.appendChild(br.box);
     }
 

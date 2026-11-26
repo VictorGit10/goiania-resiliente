@@ -6,6 +6,7 @@
 (function () {
   "use strict";
 
+  /* Ordem real do dia: o monitoramento aconteceu antes do matchmaking. */
   var ORDEM = [
     "d1-abertura",
     "d1-cidades-cerrado",
@@ -170,11 +171,17 @@
     if (completo) completo.href = "materiais/2026/dia1-transcricao-completa.md";
   }
 
+  function ocultarLinkSubnav(id) {
+    var a = document.querySelector('.sessao-subnav a[href="#' + id + '"]');
+    if (a) a.hidden = true;
+  }
+
   function renderResumo() {
     var sessao = (window.GR_SESSOES || {})[codigo];
     var texto = sessao && String(sessao.resumo || "").trim();
     if (!texto) {
       document.getElementById("resumo").hidden = true;
+      ocultarLinkSubnav("resumo");
       return;
     }
     var box = document.getElementById("resumoTexto");
@@ -188,6 +195,7 @@
     var lista = dados.locutores || [];
     if (!lista.length) {
       document.getElementById("participantes").hidden = true;
+      ocultarLinkSubnav("participantes");
       return;
     }
     lista.forEach(function (l) {
@@ -224,6 +232,7 @@
     if (!lista.length) {
       if (secao) secao.hidden = true;
       if (link) link.hidden = true;
+      ocultarLinkSubnav("slides");
       return;
     }
     var box = document.getElementById("slidesLista");
@@ -309,7 +318,7 @@
       ver.addEventListener("click", function () { verNoContexto(seg.t); });
       fala.appendChild(ver);
 
-      falas.push({ seg: seg, el: fala, texto: texto, botao: ver });
+      falas.push({ seg: seg, el: fala, texto: texto, botao: ver, busca: normaliza(seg.x) + " " + normaliza(seg.s) });
       frag.appendChild(fala);
     });
 
@@ -322,7 +331,7 @@
     var visiveis = 0;
 
     falas.forEach(function (item) {
-      var procura = normaliza(item.seg.x) + " " + normaliza(item.seg.s);
+      var procura = item.busca;
       var bateTexto = !termo || procura.indexOf(termo) >= 0;
       var bateLocutor = !loc || item.seg.s === loc;
       var visivel = bateTexto && bateLocutor;
@@ -586,6 +595,8 @@
     if (imprimir) imprimir.addEventListener("click", function () { window.print(); });
 
     aplicarFiltro();
+    window.addEventListener("hashchange", irParaSecao);
+    setTimeout(irParaSecao, 160);
     window.addEventListener("hashchange", irParaHash);
     setTimeout(irParaHash, 120);
   }
