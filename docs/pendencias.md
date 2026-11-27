@@ -1,6 +1,6 @@
 # Pendências
 
-> **Nota (26/11/2026):** o Dia 1 está no ar — resumos, slides, página da sessão e transcrições. O handoff completo está em `gravacoes/2026-11-25/DOCUMENTACAO-DIA1.md`. A lista abaixo é histórica; o próximo bloco é o **Dia 2** (captura, cortes, transcrição, resumos e slides).
+> **Nota (27/11/2026):** o Dia 1 e o Dia 2 estão no ar — resumos, slides, páginas de sessão e transcrições. Handoffs em `gravacoes/2026-11-25/DOCUMENTACAO-DIA1.md` e `gravacoes/2026-11-26/DOCUMENTACAO-DIA2.md`. Faltam os slides de Adriano da Rocha Lima e de Paragominas.
 
 Atualizado em 13/11/2026; nota de 26/11/2026 no topo. O site funciona com tudo o que está abaixo em aberto: o que falta aparece como "Foto em breve", "Disponível após o evento" ou simplesmente não aparece.
 

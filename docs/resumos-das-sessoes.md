@@ -1,6 +1,6 @@
 # Resumos das sessões — passo a passo
 
-> **Nota (26/11/2026):** este roteiro descreve o fluxo original do NotebookLM. O fluxo real do Dia 1/2026 (WhisperX + Gemini, cortes por sessão, revisões e publicação) está em `gravacoes/2026-11-25/DOCUMENTACAO-DIA1.md`. Os prompts abaixo continuam úteis como referência de formato.
+> **Nota (27/11/2026):** este roteiro descreve o fluxo original do NotebookLM. O fluxo real do Dia 1/2026 (WhisperX + Gemini, cortes por sessão, revisões e publicação) está em `gravacoes/2026-11-25/DOCUMENTACAO-DIA1.md`; o do Dia 2 está em `gravacoes/2026-11-26/DOCUMENTACAO-DIA2.md`. Os prompts abaixo continuam úteis como referência de formato.
 
 Este é o fluxo para publicar, logo depois de cada dia do simpósio, o resumo de cada sessão no site. É o mesmo método usado no workshop Time2Graze (gravação → NotebookLM → revisão pelo Claude), adaptado para um evento público.
 
