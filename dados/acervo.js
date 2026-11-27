@@ -119,6 +119,14 @@ window.GR_ACERVO = [
     link: "materiais/2026/dia1-transcricao-completa.md",
     texto: "Íntegra do dia · download .md" },
 
+  /* ---------- Transmissões completas (2026) ---------- */
+  { tipo: "videos", edicao: 2026, titulo: "Transmissão completa do Dia 1",
+    link: "https://www.youtube.com/watch?v=uhss2DYRGe4",
+    texto: "Gravação completa · 7h27 · 25 de novembro" },
+  { tipo: "videos", edicao: 2026, titulo: "Transmissão completa do Dia 2",
+    link: "https://www.youtube.com/watch?v=CCgR-ebdeq4",
+    texto: "Gravação completa · 26 de novembro" },
+
   /* ---------- Dia 2 · slides das palestras (26 nov 2026) ---------- */
   { tipo: "apresentacoes", edicao: 2026, sessao: "d2-saude-emergencias",
     titulo: "Slides de Cristina Musmanno",

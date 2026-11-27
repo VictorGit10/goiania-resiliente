@@ -236,7 +236,7 @@ footer .inner {
     </a>
     <button class="toggle" id="menuToggle" aria-expanded="false" aria-controls="menu">Menu</button>
     <nav class="menu" id="menu" aria-label="Navegação principal">
-      <a href="#inscricao" class="nav-inscricao">Inscrição (Grátis)</a>
+      <a href="#acervo" class="nav-inscricao">Acervo de materiais</a>
       <a href="#desafio">01. O Desafio</a>
       <a href="#faces">02. Adaptação e Mitigação</a>
       <a href="#goiania">03. E Goiânia?</a>
@@ -244,26 +244,23 @@ footer .inner {
       <a href="#convidados">05. Participantes</a>
       <a href="#quem-somos">06. Quem Somos</a>
       <a href="#edicao-2024">07. Edição 2024</a>
-      <a href="#acervo">08. Acervo</a>
     </nav>
   </div>
 </header>
 
 <main>
 
-  <!-- ================= INSCRIÇÃO ================= -->
-  <section class="inscricao" id="inscricao">
+  <!-- ================= PÓS-EVENTO ================= -->
+  <section class="inscricao pos-evento" id="inscricao">
     <div class="inscricao-grid">
       <div class="inscricao-info">
-        <span class="badge-gratuito">Inscrição 100% Gratuita · Vagas presenciais limitadas</span>
-        <h2>Garanta sua vaga na 2ª edição</h2>
-        <p>Participe do simpósio <strong>Goiânia Resiliente: da atmosfera à vulnerabilidade social</strong> nos dias <strong>25 e 26 de novembro</strong> no Auditório da ESA–OAB/GO. O evento é totalmente gratuito e aberto a cientistas, gestores públicos e toda a sociedade civil.</p>
+        <span class="badge-gratuito">Evento realizado · 25 e 26 de novembro de 2026</span>
+        <h2>O simpósio terminou. Os materiais estão no ar.</h2>
+        <p>Assista às gravações, leia os resumos e as transcrições e baixe os slides das sessões do Dia 1 e do Dia 2.</p>
       </div>
       <div class="inscricao-cta">
-        <a class="btn-inscricao" href="https://forms.gle/T5ER9YtRAucus4YP8" target="_blank" rel="noopener noreferrer">
-          Inscreva-se gratuitamente ↗
-        </a>
-        <p class="inscricao-obs">Credenciamento oficial · Emissão de certificado</p>
+        <a class="btn-inscricao" href="#acervo">Ver o acervo completo ↓</a>
+        <p class="inscricao-obs">Resumos · Transcrições · Slides · Gravações</p>
       </div>
     </div>
   </section>
@@ -281,10 +278,10 @@ footer .inner {
         <p>Congregando cientistas, gestores públicos, prefeitos e sociedade civil para formular estratégias de adaptação e mitigação climática nas cidades do Cerrado.</p>
         <div class="hero-acoes">
           <div class="hero-botoes">
-            <a class="btn" href="#programacao">Ver programação completa ↓</a>
-            <a class="btn btn-sec" href="materiais/2026/relatorio-para-discussao-2026.pdf" target="_blank" rel="noopener noreferrer">Baixe o relatório para discussão ↓</a>
+            <a class="btn" href="#acervo">Ver o acervo completo ↓</a>
+            <a class="btn btn-sec" href="#programacao">Ver a programação ↓</a>
           </div>
-          <a class="hero-live" href="#transmissao"><span class="hero-live-dot" aria-hidden="true"></span> Transmissão ao vivo</a>
+          <p class="hero-relatorio"><a href="materiais/2026/relatorio-para-discussao-2026.pdf" target="_blank" rel="noopener noreferrer">Baixar o relatório para discussão (PDF) ↓</a></p>
         </div>
       </div>
     </div>
@@ -305,60 +302,9 @@ footer .inner {
     </figure>
   </section>
 
-  <!-- ================= TRANSMISSÃO ================= -->
-  <!-- Estado (antes, durante e depois) calculado em js/main.js a partir das datas abaixo. -->
-  <section class="transmissao" id="transmissao"
-           data-dia1-inicio="2026-11-25T12:00:00Z" data-dia1-fim="2026-11-25T21:00:00Z"
-           data-dia2-inicio="2026-11-26T12:00:00Z" data-dia2-fim="2026-11-26T20:30:00Z">
-    <div class="trans-head">
-      <div class="trans-intro">
-        <span class="trans-kicker"><span class="trans-dot" aria-hidden="true"></span> Transmissão</span>
-        <h2>Não vai ao auditório? Assista ao vivo.</h2>
-      </div>
-      <div class="trans-side">
-        <p>Os dois dias do simpósio são transmitidos pelo canal <strong>Iandé Verde</strong>, no YouTube. A transmissão é gratuita e aberta a todos.</p>
-        <p class="trans-status" id="transStatus" role="status">Transmissão nos dias 25 e 26 de novembro, a partir das 9h (horário de Brasília).</p>
-      </div>
-    </div>
+  <!-- A seção de transmissão ao vivo saiu depois do evento. As gravações
+       completas dos dois dias estão no Acervo, em "Vídeos". -->
 
-    <div class="trans-grid">
-      <a class="trans-card" href="https://www.youtube.com/live/uhss2DYRGe4" target="_blank" rel="noopener noreferrer">
-        <div class="trans-thumb">
-          <img src="https://i.ytimg.com/vi/uhss2DYRGe4/maxresdefault.jpg"
-               alt="Transmissão do Dia 1 do Goiânia Resiliente no YouTube — 25 de novembro de 2026"
-               loading="lazy"
-               onerror="this.onerror=null;this.src='https://i.ytimg.com/vi/uhss2DYRGe4/hqdefault.jpg'">
-          <span class="trans-badge">Dia 1</span>
-          <span class="trans-live">Ao vivo</span>
-          <span class="trans-play" aria-hidden="true"></span>
-        </div>
-        <div class="trans-body">
-          <span class="trans-data">25 nov 2026 · quarta-feira</span>
-          <strong>Das 9h às 18h</strong>
-          <span class="trans-cta">Assistir no YouTube ↗</span>
-        </div>
-      </a>
-
-      <a class="trans-card" href="https://www.youtube.com/live/CCgR-ebdeq4" target="_blank" rel="noopener noreferrer">
-        <div class="trans-thumb">
-          <img src="https://i.ytimg.com/vi/CCgR-ebdeq4/maxresdefault.jpg"
-               alt="Transmissão do Dia 2 do Goiânia Resiliente no YouTube — 26 de novembro de 2026"
-               loading="lazy"
-               onerror="this.onerror=null;this.src='https://i.ytimg.com/vi/CCgR-ebdeq4/hqdefault.jpg'">
-          <span class="trans-badge">Dia 2</span>
-          <span class="trans-live">Ao vivo</span>
-          <span class="trans-play" aria-hidden="true"></span>
-        </div>
-        <div class="trans-body">
-          <span class="trans-data">26 nov 2026 · quinta-feira</span>
-          <strong>Das 9h às 17h30</strong>
-          <span class="trans-cta">Assistir no YouTube ↗</span>
-        </div>
-      </a>
-    </div>
-
-    <p class="trans-nota">A gravação fica disponível nos mesmos links depois do evento. A programação completa de cada dia está em <a href="#programacao">Programação</a>.</p>
-  </section>
 
   <!-- ================= 01 · O DESAFIO ================= -->
   <section class="desafio" id="desafio">
@@ -945,6 +891,14 @@ footer .inner {
         <span class="label">Materiais e registros</span>
         <h2>Acervo.</h2>
       </div>
+    </div>
+    <div class="acervo-topo">
+      <p class="acervo-intro">Resumos, transcrições, slides e gravações do simpósio, organizados por edição e sessão.</p>
+      <div class="acervo-busca">
+        <input id="acervoBusca" type="search" placeholder="Buscar por título, tema ou sessão" aria-label="Buscar no acervo" autocomplete="off">
+        <button type="button" id="acervoLimpar" hidden>Limpar filtros</button>
+      </div>
+      <p class="acervo-contagem" id="acervoContagem" aria-live="polite"></p>
     </div>
     <div class="filtros filtros-edicao" role="group" aria-label="Filtrar por edição">
       <span class="filtro-rotulo">Edição</span>
