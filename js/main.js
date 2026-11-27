@@ -471,6 +471,14 @@
       art.setAttribute("data-edicao", String(item.edicao || ""));
       art.setAttribute("data-sessao", s ? s.id : "");
       art.setAttribute("data-grupo", grupo);
+      art.setAttribute("data-busca", normaliza([
+        item.titulo,
+        item.texto || "",
+        TIPOS[item.tipo] || item.tipo,
+        s ? s.titulo : "",
+        s ? s.dia : "",
+        item.status || ""
+      ].join(" ")));
       var yt = url && idYoutube(url);
       if (yt) {
         var th = el("a", "item-thumb");
@@ -608,7 +616,7 @@
      Filtros do acervo: edição, sessão e tipo
      ------------------------------------------------------------------ */
   var vazio = document.getElementById("acervoVazio");
-  var filtro = { tipo: "todos", edicao: "2026", sessao: "" };
+  var filtro = { tipo: "todos", edicao: "2026", sessao: "", busca: "" };
   var chipsTipo = document.querySelectorAll(".chip[data-filtro]");
   var chipsEdicao = document.querySelectorAll(".chip[data-edicao]");
   var boxSessao = document.getElementById("filtrosSessao");
@@ -677,13 +685,29 @@
     if (filtro.sessao && !cont[filtro.sessao]) filtro.sessao = "";
   }
 
+  var contagemAcervo = document.getElementById("acervoContagem");
+  var limparAcervo = document.getElementById("acervoLimpar");
+
+  function atualizarContagem(n) {
+    if (contagemAcervo) {
+      var ativo = !!(filtro.busca || filtro.sessao || filtro.tipo !== "todos" || filtro.edicao !== "2026");
+      contagemAcervo.textContent = n + (n === 1 ? " material" : " materiais") + (ativo ? " encontrados" : "");
+    }
+    if (limparAcervo) {
+      limparAcervo.hidden = !(filtro.busca || filtro.tipo !== "todos" ||
+        filtro.edicao !== "2026" || filtro.sessao);
+    }
+  }
+
   function aplicarFiltros() {
+    var termo = normaliza(filtro.busca);
     var visiveis = 0;
     var gruposVisiveis = {};
     document.querySelectorAll("#acervoGrid .item").forEach(function (item) {
       var ok = (filtro.tipo === "todos" || item.getAttribute("data-tipo") === filtro.tipo) &&
                (filtro.edicao === "todas" || item.getAttribute("data-edicao") === filtro.edicao) &&
-               (!filtro.sessao || item.getAttribute("data-sessao") === filtro.sessao);
+               (!filtro.sessao || item.getAttribute("data-sessao") === filtro.sessao) &&
+               (!termo || (item.getAttribute("data-busca") || "").indexOf(termo) !== -1);
       item.style.display = ok ? "" : "none";
       if (ok) {
         visiveis++;
@@ -699,6 +723,7 @@
     document.querySelectorAll(".chip-sessao").forEach(function (c) {
       c.setAttribute("aria-pressed", c.getAttribute("data-sessao") === (filtro.sessao || "") ? "true" : "false");
     });
+    atualizarContagem(visiveis);
   }
 
   function escolherEdicao(valor) {
@@ -724,6 +749,29 @@
   document.querySelectorAll("[data-ir-edicao]").forEach(function (a) {
     a.addEventListener("click", function () { escolherEdicao(a.getAttribute("data-ir-edicao")); });
   });
+
+  function limparFiltros() {
+    filtro.busca = "";
+    filtro.tipo = "todos";
+    filtro.sessao = "";
+    var campo = document.getElementById("acervoBusca");
+    if (campo) campo.value = "";
+    if (chipsTipo.length) marcar(chipsTipo, chipsTipo[0]);
+    escolherEdicao("2026");
+  }
+
+  var campoBusca = document.getElementById("acervoBusca");
+  var timerAcervo = null;
+  if (campoBusca) {
+    campoBusca.addEventListener("input", function () {
+      clearTimeout(timerAcervo);
+      timerAcervo = setTimeout(function () {
+        filtro.busca = campoBusca.value;
+        aplicarFiltros();
+      }, 120);
+    });
+  }
+  if (limparAcervo) limparAcervo.addEventListener("click", limparFiltros);
 
   atualizarChipsTipo();
   construirChipsSessao();
@@ -790,62 +838,6 @@
   }
   window.addEventListener("load", reancorar);
   if (document.fonts && document.fonts.ready) document.fonts.ready.then(reancorar);
-
-  /* ------------------------------------------------------------------
-     Transmissão: estado antes, durante e depois do evento
-     ------------------------------------------------------------------ */
-  var secTrans = document.getElementById("transmissao");
-  if (secTrans) {
-    var statusTrans = document.getElementById("transStatus");
-    var cardsTrans = secTrans.querySelectorAll(".trans-card");
-    var umDia = 24 * 60 * 60 * 1000;
-    function diaEmBrasilia(ts) {
-      var d = new Date(ts - 3 * 60 * 60 * 1000);
-      return Date.UTC(d.getUTCFullYear(), d.getUTCMonth(), d.getUTCDate());
-    }
-    function limpaAoVivo() {
-      secTrans.classList.remove("no-ar");
-      if (statusTrans) statusTrans.classList.remove("no-ar");
-      cardsTrans.forEach(function (c) { c.classList.remove("no-ar"); });
-    }
-    function marcaAoVivo(indice, texto) {
-      limpaAoVivo();
-      secTrans.classList.add("no-ar");
-      if (statusTrans) {
-        statusTrans.textContent = texto;
-        statusTrans.classList.add("no-ar");
-      }
-      if (cardsTrans[indice]) cardsTrans[indice].classList.add("no-ar");
-    }
-    var agora = Date.now();
-    var d1i = Date.parse(secTrans.getAttribute("data-dia1-inicio"));
-    var d1f = Date.parse(secTrans.getAttribute("data-dia1-fim"));
-    var d2i = Date.parse(secTrans.getAttribute("data-dia2-inicio"));
-    var d2f = Date.parse(secTrans.getAttribute("data-dia2-fim"));
-    if (agora >= d1i && agora < d1f) {
-      marcaAoVivo(0, "Ao vivo agora — Dia 1");
-    } else if (agora >= d2i && agora < d2f) {
-      marcaAoVivo(1, "Ao vivo agora — Dia 2");
-    } else if (agora >= d1f && agora < d2i) {
-      limpaAoVivo();
-      var diasParaD2 = Math.round((diaEmBrasilia(d2i) - diaEmBrasilia(agora)) / umDia);
-      if (statusTrans) {
-        statusTrans.textContent = "O Dia 1 terminou. O Dia 2 começa " +
-          (diasParaD2 <= 0 ? "hoje" : "amanhã") + ", às 9h.";
-      }
-    } else if (agora < d1i) {
-      limpaAoVivo();
-      var dias = Math.round((diaEmBrasilia(d1i) - diaEmBrasilia(agora)) / umDia);
-      if (statusTrans) {
-        if (dias <= 0) statusTrans.textContent = "Começa hoje, às 9h (horário de Brasília).";
-        else if (dias === 1) statusTrans.textContent = "Começa amanhã, 25 de novembro, às 9h.";
-        else statusTrans.textContent = "Faltam " + dias + " dias: começa em 25 de novembro, às 9h.";
-      }
-    } else {
-      limpaAoVivo();
-      if (statusTrans) statusTrans.textContent = "Assista à gravação — os dois dias estão disponíveis.";
-    }
-  }
 
   /* Ano no rodapé */
   document.getElementById("ano").textContent = new Date().getFullYear();
