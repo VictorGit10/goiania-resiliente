@@ -6,16 +6,26 @@
 (function () {
   "use strict";
 
-  /* Ordem real do dia: o monitoramento aconteceu antes do matchmaking. */
-  var ORDEM = [
-    "d1-abertura",
-    "d1-cidades-cerrado",
-    "d1-goiania-onde-estamos",
-    "d1-governanca",
-    "d1-monitoramento",
-    "d1-matchmaking",
-    "d1-gestao-municipal"
-  ];
+  /* Ordem real de cada dia: no Dia 1, o monitoramento aconteceu antes do
+     matchmaking; no Dia 2, a ordem segue a programação impressa. */
+  var ORDEM = {
+    d1: [
+      "d1-abertura",
+      "d1-cidades-cerrado",
+      "d1-goiania-onde-estamos",
+      "d1-governanca",
+      "d1-monitoramento",
+      "d1-matchmaking",
+      "d1-gestao-municipal"
+    ],
+    d2: [
+      "d2-saude-emergencias",
+      "d2-transicao-energetica",
+      "d2-juarez-paragominas",
+      "d2-paragominas",
+      "d2-encerramento"
+    ]
+  };
 
   /* Paleta do site. O texto é escolhido por contraste. */
   var CORES = [
@@ -167,8 +177,13 @@
       var d = duracao(dados.segmentos[0].t, dados.segmentos[dados.segmentos.length - 1].t);
       if (d) meta.appendChild(el("span", null, d));
     }
+    var dia = document.getElementById("sessaoDia");
+    if (dia) dia.textContent = codigo.slice(0, 2) === "d2" ? "Dia 2" : "Dia 1";
     var completo = document.getElementById("linkCompleta");
-    if (completo) completo.href = "materiais/2026/dia1-transcricao-completa.md";
+    if (completo) {
+      completo.href = "materiais/2026/" +
+        (codigo.slice(0, 2) === "d2" ? "dia2" : "dia1") + "-transcricao-completa.md";
+    }
   }
 
   function ocultarLinkSubnav(id) {
@@ -522,17 +537,18 @@
     var nav = document.getElementById("navSessoes");
     if (!nav) return;
     nav.textContent = "";
-    var i = ORDEM.indexOf(codigo);
+    var ordem = ORDEM[codigo.slice(0, 2)] || [];
+    var i = ordem.indexOf(codigo);
     if (i > 0) {
       var prev = el("a", null, "← Sessão anterior");
-      prev.href = "sessao.html?sessao=" + ORDEM[i - 1];
+      prev.href = "sessao.html?sessao=" + ordem[i - 1];
       nav.appendChild(prev);
     } else {
       nav.appendChild(el("span", null, "Primeira sessão do dia"));
     }
-    if (i >= 0 && i < ORDEM.length - 1) {
+    if (i >= 0 && i < ordem.length - 1) {
       var next = el("a", null, "Próxima sessão →");
-      next.href = "sessao.html?sessao=" + ORDEM[i + 1];
+      next.href = "sessao.html?sessao=" + ordem[i + 1];
       nav.appendChild(next);
     } else {
       nav.appendChild(el("span", null, "Última sessão do dia"));
@@ -606,9 +622,9 @@
     codigo = params.get("sessao") || "";
     if (!codigo) {
       var hash = String(location.hash || "").replace(/^#/, "");
-      if (/^d1-[a-z0-9-]+$/.test(hash)) codigo = hash;
+      if (/^d[12]-[a-z0-9-]+$/.test(hash)) codigo = hash;
     }
-    if (!/^d1-[a-z0-9-]+$/.test(codigo)) { erro(); return; }
+    if (!/^d[12]-[a-z0-9-]+$/.test(codigo)) { erro(); return; }
 
     var s = document.createElement("script");
     s.src = "dados/transcricoes/" + codigo + ".js";
