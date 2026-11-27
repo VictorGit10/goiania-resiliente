@@ -234,13 +234,14 @@ footer .inner {
     <a class="brand" href="#inicio">
       <span>Goiânia Resiliente<br>2ª edição</span>
     </a>
+    <a class="topbar-acervo" href="#acervo">Acervo</a>
     <button class="toggle" id="menuToggle" aria-expanded="false" aria-controls="menu">Menu</button>
     <nav class="menu" id="menu" aria-label="Navegação principal">
       <a href="#acervo" class="nav-inscricao">Acervo de materiais</a>
       <a href="#desafio">01. O Desafio</a>
       <a href="#faces">02. Adaptação e Mitigação</a>
       <a href="#goiania">03. E Goiânia?</a>
-      <a href="#programacao">04. Programação · 25–26 nov</a>
+      <a href="#programacao">04. Programação</a>
       <a href="#convidados">05. Participantes</a>
       <a href="#quem-somos">06. Quem Somos</a>
       <a href="#edicao-2024">07. Edição 2024</a>
@@ -271,7 +272,7 @@ footer .inner {
             <a class="btn" href="#acervo">Ver o acervo completo ↓</a>
             <a class="btn btn-sec" href="#programacao">Ver a programação ↓</a>
           </div>
-          <p class="hero-relatorio"><a href="materiais/2026/relatorio-para-discussao-2026.pdf" target="_blank" rel="noopener noreferrer">Baixar o relatório para discussão (PDF) ↓</a></p>
+          <p class="hero-relatorio"><a href="materiais/2026/relatorio-para-discussao-2026.pdf" target="_blank" rel="noopener noreferrer">Abrir relatório para discussão (PDF) ↗</a></p>
         </div>
       </div>
     </div>
@@ -886,29 +887,37 @@ footer .inner {
       <p class="acervo-intro">Resumos, transcrições, slides e gravações do simpósio, organizados por edição e sessão.</p>
       <div class="acervo-busca">
         <input id="acervoBusca" type="search" placeholder="Buscar por título, tema ou sessão" aria-label="Buscar no acervo" autocomplete="off">
-        <button type="button" id="acervoLimpar" hidden>Limpar filtros</button>
       </div>
-      <p class="acervo-contagem" id="acervoContagem" aria-live="polite"></p>
     </div>
     <div class="filtros filtros-edicao" role="group" aria-label="Filtrar por edição">
       <span class="filtro-rotulo">Edição</span>
-      <button class="chip" data-edicao="todas" aria-pressed="false">Todas</button>
-      <button class="chip" data-edicao="2026" aria-pressed="true">2026</button>
-      <button class="chip" data-edicao="2024" aria-pressed="false">2024</button>
+      <div class="filtro-chips">
+        <button class="chip" data-edicao="todas" aria-pressed="false">Todas</button>
+        <button class="chip" data-edicao="2026" aria-pressed="true">2026</button>
+        <button class="chip" data-edicao="2024" aria-pressed="false">2024</button>
+      </div>
     </div>
-    <div class="filtros filtros-sessao" id="filtrosSessao" role="group" aria-label="Filtrar por sessão">
+    <div class="filtros filtros-sessao" role="group" aria-label="Filtrar por sessão">
       <span class="filtro-rotulo">Sessão</span>
+      <select id="filtroSessaoSelect" class="filtro-select-mobile" aria-label="Filtrar por sessão"></select>
+      <div class="filtro-chips" id="filtrosSessao"></div>
     </div>
     <div class="filtros filtros-tipo" role="group" aria-label="Filtrar por tipo de material">
       <span class="filtro-rotulo">Tipo</span>
-      <button class="chip" data-filtro="todos" aria-pressed="true">Todos</button>
-      <button class="chip" data-filtro="resumos" aria-pressed="false">Resumos</button>
-      <button class="chip" data-filtro="fotos" aria-pressed="false">Fotos</button>
-      <button class="chip" data-filtro="videos" aria-pressed="false">Vídeos</button>
-      <button class="chip" data-filtro="transcricoes" aria-pressed="false">Transcrições</button>
-      <button class="chip" data-filtro="apresentacoes" aria-pressed="false">Apresentações</button>
-      <button class="chip" data-filtro="relatorios" aria-pressed="false">Relatórios</button>
-      <button class="chip" data-filtro="artigos" aria-pressed="false">Artigos</button>
+      <div class="filtro-chips">
+        <button class="chip" data-filtro="todos" aria-pressed="true">Todos</button>
+        <button class="chip" data-filtro="resumos" aria-pressed="false">Resumos</button>
+        <button class="chip" data-filtro="fotos" aria-pressed="false">Fotos</button>
+        <button class="chip" data-filtro="videos" aria-pressed="false">Vídeos</button>
+        <button class="chip" data-filtro="transcricoes" aria-pressed="false">Transcrições</button>
+        <button class="chip" data-filtro="apresentacoes" aria-pressed="false">Apresentações</button>
+        <button class="chip" data-filtro="relatorios" aria-pressed="false">Relatórios</button>
+        <button class="chip" data-filtro="artigos" aria-pressed="false">Artigos</button>
+      </div>
+    </div>
+    <div class="acervo-resultados">
+      <p class="acervo-contagem" id="acervoContagem" aria-live="polite"></p>
+      <button type="button" id="acervoLimpar" hidden>Limpar filtros</button>
     </div>
     <div class="acervo-grid" id="acervoGrid">
       <noscript><p class="acervo-vazio">Ative o JavaScript do navegador para ver o acervo.</p></noscript>
