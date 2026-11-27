@@ -391,6 +391,7 @@
   var acervo = (Array.isArray(window.GR_ACERVO) ? window.GR_ACERVO : []).filter(function (i) {
     if (!i || !i.tipo || !i.titulo) return false;
     if (i.link && !linkSeguro(i.link)) { if (window.console) console.warn("Acervo: link ignorado", i.link); return false; }
+    if (String(i.edicao) === "2026" && !linkSeguro(i.link)) return false;
     if (i.sessao && !sessoes[i.sessao] && window.console) console.warn("Acervo: sessão desconhecida", i.sessao);
     return true;
   });
@@ -452,19 +453,24 @@
 
   var gridAcervo = document.getElementById("acervoGrid");
   if (gridAcervo) {
-    var ultimoGrupo = null;
+    var grupoAtual = null;
+    var linhaAtual = null;
     itensAcervo.forEach(function (item) {
       var url = linkSeguro(item.link);
       var s = item.sessao && sessoes[item.sessao];
       var grupo = s ? s.id : "edicao-" + item.edicao;
-      if (grupo !== ultimoGrupo) {
+      if (grupo !== grupoAtual) {
         var tituloGrupo = s
           ? (s.edicao === "2024" ? "1ª edição · 2024" : s.dia) + " · " + rotuloCurtoSessao(s)
           : "Edição " + item.edicao;
-        var h = el("h3", "acervo-grupo", tituloGrupo);
-        h.setAttribute("data-grupo", grupo);
-        gridAcervo.appendChild(h);
-        ultimoGrupo = grupo;
+        var blocoGrupo = el("section", "acervo-bloco");
+        blocoGrupo.setAttribute("data-grupo", grupo);
+        blocoGrupo.appendChild(el("h3", "acervo-grupo", tituloGrupo));
+        linhaAtual = el("div", "acervo-linha");
+        linhaAtual.setAttribute("data-grupo", grupo);
+        blocoGrupo.appendChild(linhaAtual);
+        gridAcervo.appendChild(blocoGrupo);
+        grupoAtual = grupo;
       }
       var art = el("article", "item" + (url ? " publicado" : ""));
       art.setAttribute("data-tipo", item.tipo);
@@ -508,9 +514,9 @@
         abrirEmNovaAba(a, url);
         art.appendChild(a);
       } else {
-        art.appendChild(el("span", "status", item.status || (String(item.edicao) === "2026" ? "Disponível após o evento" : "Em breve")));
+        art.appendChild(el("span", "status", item.status || (String(item.edicao) === "2026" ? "Ainda não publicado" : "Em breve")));
       }
-      gridAcervo.appendChild(art);
+      linhaAtual.appendChild(art);
     });
   }
 
@@ -665,6 +671,15 @@
     });
     boxSessao.appendChild(todas);
 
+    var selectSessao = document.getElementById("filtroSessaoSelect");
+    if (selectSessao) {
+      selectSessao.textContent = "";
+      var optTodas = document.createElement("option");
+      optTodas.value = "";
+      optTodas.textContent = "Todas as sessões";
+      selectSessao.appendChild(optTodas);
+    }
+
     ordemSessoes.forEach(function (s) {
       if (filtro.edicao !== "todas" && s.edicao !== filtro.edicao) return;
       var n = cont[s.id] || 0;
@@ -681,8 +696,15 @@
         aplicarFiltros();
       });
       boxSessao.appendChild(chip);
+      if (selectSessao) {
+        var opt = document.createElement("option");
+        opt.value = s.id;
+        opt.textContent = rotulo + " (" + n + ")";
+        selectSessao.appendChild(opt);
+      }
     });
     if (filtro.sessao && !cont[filtro.sessao]) filtro.sessao = "";
+    if (selectSessao) selectSessao.value = filtro.sessao;
   }
 
   var contagemAcervo = document.getElementById("acervoContagem");
@@ -691,7 +713,8 @@
   function atualizarContagem(n) {
     if (contagemAcervo) {
       var ativo = !!(filtro.busca || filtro.sessao || filtro.tipo !== "todos" || filtro.edicao !== "2026");
-      contagemAcervo.textContent = n + (n === 1 ? " material" : " materiais") + (ativo ? " encontrados" : "");
+      contagemAcervo.textContent = n + (n === 1 ? " material" : " materiais") +
+        (ativo ? " encontrados" : " publicados · edição " + (filtro.edicao === "todas" ? "todas" : filtro.edicao));
     }
     if (limparAcervo) {
       limparAcervo.hidden = !(filtro.busca || filtro.tipo !== "todos" ||
@@ -702,7 +725,7 @@
   function aplicarFiltros() {
     var termo = normaliza(filtro.busca);
     var visiveis = 0;
-    var gruposVisiveis = {};
+    var publicados = 0;
     document.querySelectorAll("#acervoGrid .item").forEach(function (item) {
       var ok = (filtro.tipo === "todos" || item.getAttribute("data-tipo") === filtro.tipo) &&
                (filtro.edicao === "todas" || item.getAttribute("data-edicao") === filtro.edicao) &&
@@ -711,19 +734,39 @@
       item.style.display = ok ? "" : "none";
       if (ok) {
         visiveis++;
-        var g = item.getAttribute("data-grupo");
-        gruposVisiveis[g] = (gruposVisiveis[g] || 0) + 1;
+        if (item.classList.contains("publicado")) publicados++;
       }
     });
-    document.querySelectorAll("#acervoGrid .acervo-grupo").forEach(function (h) {
-      var g = h.getAttribute("data-grupo");
-      h.style.display = (!filtro.sessao && gruposVisiveis[g]) ? "" : "none";
+    document.querySelectorAll("#acervoGrid .acervo-bloco").forEach(function (bloco) {
+      var linha = bloco.querySelector(".acervo-linha");
+      var visiveisNoBloco = [];
+      if (linha) {
+        linha.querySelectorAll(".item").forEach(function (item) {
+          item.classList.remove("sem-borda-dir", "com-borda-topo", "ultimo-visivel");
+          if (item.style.display !== "none") visiveisNoBloco.push(item);
+        });
+      }
+      bloco.hidden = visiveisNoBloco.length === 0;
+      if (linha) {
+        var colunas = visiveisNoBloco.length === 1 ? 1 :
+          (visiveisNoBloco.length === 2 || visiveisNoBloco.length === 4) ? 2 : 3;
+        linha.setAttribute("data-colunas", String(colunas));
+        visiveisNoBloco.forEach(function (item, i) {
+          if ((i + 1) % colunas === 0) item.classList.add("sem-borda-dir");
+          if (i >= colunas) item.classList.add("com-borda-topo");
+        });
+        if (visiveisNoBloco.length) {
+          visiveisNoBloco[visiveisNoBloco.length - 1].classList.add("ultimo-visivel");
+        }
+      }
     });
     if (vazio) vazio.hidden = visiveis > 0;
     document.querySelectorAll(".chip-sessao").forEach(function (c) {
       c.setAttribute("aria-pressed", c.getAttribute("data-sessao") === (filtro.sessao || "") ? "true" : "false");
     });
-    atualizarContagem(visiveis);
+    var selectSessaoAtual = document.getElementById("filtroSessaoSelect");
+    if (selectSessaoAtual) selectSessaoAtual.value = filtro.sessao;
+    atualizarContagem(publicados);
   }
 
   function escolherEdicao(valor) {
@@ -772,6 +815,14 @@
     });
   }
   if (limparAcervo) limparAcervo.addEventListener("click", limparFiltros);
+
+  var selectSessaoCampo = document.getElementById("filtroSessaoSelect");
+  if (selectSessaoCampo) {
+    selectSessaoCampo.addEventListener("change", function () {
+      filtro.sessao = selectSessaoCampo.value;
+      aplicarFiltros();
+    });
+  }
 
   atualizarChipsTipo();
   construirChipsSessao();
